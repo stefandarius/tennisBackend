@@ -18,38 +18,40 @@ use Yii;
  * @property int $inaltime
  * @property int $stare_sanatate
  * @property string $numar_telefon
+ * @property int $localitate 
+ * @property AbonamenteSportivi[] $abonamenteSportivis 
+ * @property Localitati $localitate0 
  */
-class Sportivi extends \yii\db\ActiveRecord
-{
+class Sportivi extends \yii\db\ActiveRecord {
+
     /**
      * {@inheritdoc}
      */
-    public static function tableName()
-    {
+    public static function tableName() {
         return 'sportivi';
     }
 
     /**
      * {@inheritdoc}
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['nume', 'prenume', 'data_nastere', 'nivel', 'email', 'greutate', 'inaltime', 'stare_sanatate', 'numar_telefon'], 'required'],
             [['data_nastere'], 'safe'],
-            [['sex', 'nivel', 'greutate', 'inaltime', 'stare_sanatate'], 'integer'],
+            [['sex', 'nivel', 'greutate', 'inaltime', 'stare_sanatate', 'localitate'], 'integer'],
             [['nume', 'prenume', 'email'], 'string', 'max' => 100],
             [['numar_telefon'], 'string', 'max' => 15],
             [['email'], 'unique'],
             [['numar_telefon'], 'unique'],
+            [['localitate'], 'exist', 'skipOnError' => true, 'targetClass' =>
+                Localitati::className(), 'targetAttribute' => ['localitate' => 'id']],
         ];
     }
 
     /**
      * {@inheritdoc}
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'id' => 'ID',
             'nume' => 'Nume',
@@ -62,10 +64,26 @@ class Sportivi extends \yii\db\ActiveRecord
             'inaltime' => 'Inaltime',
             'stare_sanatate' => 'Stare Sanatate',
             'numar_telefon' => 'Numar Telefon',
+            'localitate' => 'Localitate',
         ];
     }
-    
+
     public function getNumeComplet() {
         return sprintf('%s %s', $this->nume, $this->prenume);
     }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getAbonamenteSportivis() {
+        return $this->hasMany(AbonamenteSportivi::className(), ['sportiv_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getLocalitate0() {
+        return $this->hasOne(Localitati::className(), ['id' => 'localitate']);
+    }
+
 }
