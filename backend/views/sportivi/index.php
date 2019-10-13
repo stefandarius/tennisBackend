@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'layout' => "{items}\n{pager}\n{summary}",
                 'columns' => [
                     ['class' => 'yii\grid\SerialColumn'],
-                    'id',
+                    //'id',
                     'nume',
                     'prenume',
                     'data_nastere',
@@ -39,6 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     //'inaltime:datetime',
                     //'stare_sanatate',
                     //'numar_telefon',
+                    'localitate0.nume:text:Localitate',
                     ['class' => 'yii\grid\ActionColumn'],
                 ],
             ]);
