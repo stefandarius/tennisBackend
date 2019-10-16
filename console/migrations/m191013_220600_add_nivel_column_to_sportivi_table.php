@@ -15,19 +15,19 @@ class m191013_220600_add_stare_sanatate_column_to_sportivi_table extends \yii\db
 
     public function up() {
         $this->createIndex(
-                'idx-sanatate-sportivi', 'sportivi', 'stare_sanatate'
+                'idx-nivel-sportivi', 'sportivi', 'nivel'
         );
 
         // add foreign key for table `user`
         $this->addForeignKey(
-                'fk-sanatate-sportivi', 'sportivi', 'stare_sanatate', 'stari_sanatate', 'id', 'CASCADE'
+                'fk-nivel-sportivi', 'sportivi', 'nivel', 'niveluri', 'id', 'CASCADE'
         );
     }
 
     public function down() {
-        $this->dropForeignKey('fk-sanatate-sportivi', 'sportivi');
-        $this->dropIndex('sportivi','idx-sanatate-sportivi');
-        $this->dropColumn('sportivi', 'stare_sanatate');
+        $this->dropForeignKey('fk-nivel-sportivi', 'sportivi');
+        $this->dropIndex('sportivi','idx-nivel-sportivi');
+        $this->dropColumn('sportivi', 'nivel');
     }
 
 }
