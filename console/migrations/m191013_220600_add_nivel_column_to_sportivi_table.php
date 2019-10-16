@@ -11,23 +11,23 @@
  *
  * @author Marian
  */
-class m191013_220600_add_nivel_column_to_sportivi_table extends \yii\db\Migration {
+class m191013_220600_add_stare_sanatate_column_to_sportivi_table extends \yii\db\Migration {
 
     public function up() {
         $this->createIndex(
-                'idx-nivel-sportivi', 'sportivi', 'nivel'
+                'idx-sanatate-sportivi', 'sportivi', 'stare_sanatate'
         );
 
         // add foreign key for table `user`
         $this->addForeignKey(
-                'fk-nivel-sportivi', 'sportivi', 'nivel', 'niveluri', 'id', 'CASCADE'
+                'fk-sanatate-sportivi', 'sportivi', 'stare_sanatate', 'stari_sanatate', 'id', 'CASCADE'
         );
     }
 
     public function down() {
-        $this->dropForeignKey('fk-nivel-sportivi', 'sportivi');
-        $this->dropIndex('sportivi','idx-nivel-sportivi');
-        $this->dropColumn('sportivi', 'nivel');
+        $this->dropForeignKey('fk-sanatate-sportivi', 'sportivi');
+        $this->dropIndex('sportivi','idx-sanatate-sportivi');
+        $this->dropColumn('sportivi', 'stare_sanatate');
     }
 
 }
