@@ -18,7 +18,7 @@ class m191006_143100_add_gen_column_to_antrenori_table extends \yii\db\Migration
     }
 
     public function down() {
-        $this->dropColumn('antrenori', 'localitate');
+        $this->dropColumn('antrenori', 'gen');
     }
 
 }

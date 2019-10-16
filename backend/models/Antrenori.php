@@ -31,12 +31,10 @@ class Antrenori extends \yii\db\ActiveRecord {
      */
     public function rules() {
         return [
-            [['nume', 'prenume', 'email'], 'required'],
+            [['nume', 'prenume', 'email', 'gen'], 'required'],
             [['localitate', 'gen'], 'integer'],
             [['nume', 'prenume', 'email'], 'string', 'max' => 100],
             [['email'], 'unique'],
-            [['localitate'], 'exist', 'skipOnError' => true, 'targetClass' =>
-                Localitati::className(), 'targetAttribute' => ['localitate' => 'id']],
         ];
     }
 
