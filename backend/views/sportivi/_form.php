@@ -70,12 +70,18 @@ use kartik\form\ActiveForm;
         <fieldset>
             <legend style="color:red">Detalii fizice</legend>  
             <div class="row">
-                <div class="col-sm-6"> <?= $form->field($model, 'stare_sanatate')->textInput() ?></div>
+                <div class="col-sm-6"> 
+                    <?php
+                    echo $form->field($model, 'stare_sanatate')
+                            ->radioButtonGroup(\yii\helpers\ArrayHelper::map(backend\models\StariSanatate::find()->all(), 'id', 'nume'))
+                            ->label('Stare sanatate', ['style' => 'display:block;']);
+                    ?>
+                </div>
                 <div class="col-sm-6">
                     <?php
-                    $data = [1 => 'Incepator', 2 => 'Intermediar', 3 => 'Avansat', 4 => 'Profesionist'];
-                    //$data = [\yii\helpers\ArrayHelper::map(app\models\Niveluri::find()->all(), 'id', 'nume')];
-                    echo $form->field($model, 'nivel')->radioButtonGroup($data)->label('Nivel', ['style' => 'display:block;']);
+                    echo $form->field($model, 'nivel')
+                            ->radioButtonGroup(\yii\helpers\ArrayHelper::map(backend\models\Niveluri::find()->all(), 'id', 'nume'))
+                            ->label('Nivel', ['style' => 'display:block;']);
                     ?>
                 </div>
             </div>
