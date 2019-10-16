@@ -11,43 +11,64 @@ use Yii;
  * @property string $nume
  * @property string $prenume
  * @property string $email
+ * @property int $localitate 
+ * @property int $gen 
+ * 
+ * @property Localitati $localitate0 
+ * @property IstoricAntrenament[] $istoricAntrenaments
  */
-class Antrenori extends \yii\db\ActiveRecord
-{
+class Antrenori extends \yii\db\ActiveRecord {
+
     /**
      * {@inheritdoc}
      */
-    public static function tableName()
-    {
+    public static function tableName() {
         return 'antrenori';
     }
 
     /**
      * {@inheritdoc}
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['nume', 'prenume', 'email'], 'required'],
+            [['localitate', 'gen'], 'integer'],
             [['nume', 'prenume', 'email'], 'string', 'max' => 100],
             [['email'], 'unique'],
+            [['localitate'], 'exist', 'skipOnError' => true, 'targetClass' =>
+                Localitati::className(), 'targetAttribute' => ['localitate' => 'id']],
         ];
     }
 
     /**
      * {@inheritdoc}
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'id' => 'ID',
             'nume' => 'Nume',
             'prenume' => 'Prenume',
             'email' => 'Email',
+            'localitate' => 'Localitate',
+            'gen' => 'Gen',
         ];
     }
-    
+
     public function getNumeComplet() {
-        return sprintf('%s %s',$this->nume,$this->prenume);//$this->nume.' '.$this->prenume;
+        return sprintf('%s %s', $this->nume, $this->prenume); //$this->nume.' '.$this->prenume;
     }
-}
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getLocalitate0() {
+        return $this->hasOne(Localitati::className(), ['id' => 'localitate']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getIstoricAntrenaments() {
+        return $this->hasMany(IstoricAntrenament::className(), ['antrenor_id' => 'id']);
+    }
+}    

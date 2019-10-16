@@ -22,7 +22,6 @@ use kartik\form\ActiveForm;
             <legend>Detalii personale</legend>
             <div class="row">
                 <div class="col-sm-6">
-
                     <?= $form->field($model, 'nume')->textInput(['maxlength' => true]) ?>
                 </div>
                 <div class="col-sm-6">
@@ -68,7 +67,7 @@ use kartik\form\ActiveForm;
 
         </fieldset>
         <fieldset>
-            <legend style="color:red">Detalii fizice</legend>  
+            <legend>Detalii fizice</legend>  
             <div class="row">
                 <div class="col-sm-6"> 
                     <?php
