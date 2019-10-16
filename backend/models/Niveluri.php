@@ -5,19 +5,21 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "nivel".
+ * This is the model class for table "niveluri".
  *
  * @property int $id
  * @property string $nume
+ *
+ * @property Sportivi[] $sportivis
  */
-class Nivel extends \yii\db\ActiveRecord
+class Niveluri extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'nivel';
+        return 'niveluri';
     }
 
     /**
@@ -26,9 +28,7 @@ class Nivel extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nume'], 'required'],
-            [['nume'], 'string', 'max' => 20],
-            [['nume'], 'unique'],
+            [['nume'], 'string', 'max' => 100],
         ];
     }
 
@@ -41,5 +41,13 @@ class Nivel extends \yii\db\ActiveRecord
             'id' => 'ID',
             'nume' => 'Nume',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSportivis()
+    {
+        return $this->hasMany(Sportivi::className(), ['nivel' => 'id']);
     }
 }
