@@ -11,10 +11,6 @@ use kartik\form\ActiveForm;
 
 <div class="sportivi-form box box-info">
 
-    <div class="box-header with-border">
-        <h3 class="box-title"><?= yii\bootstrap\Html::encode($this->title) ?></h3>
-    </div>
-
     <?php $form = ActiveForm::begin(); ?>
 
     <div class="box-body">
@@ -60,11 +56,8 @@ use kartik\form\ActiveForm;
                     <?= $form->field($model, 'localitate')->dropDownList(yii\helpers\ArrayHelper::map(backend\models\Localitati::findAll(['judet' => $model->judet]), 'id', 'nume'), ['prompt' => '--Selectati localitatea--']) ?>
                 </div>
             </div>
-
-
-
-
         </fieldset>
+        
         <fieldset>
             <legend>Detalii fizice</legend>  
             <div class="row">
@@ -84,7 +77,7 @@ use kartik\form\ActiveForm;
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6"> <?= $form->field($model, 'greutate')->textInput() ?></div>
+                <div class="col-sm-6"><?= $form->field($model, 'greutate')->textInput() ?></div>
                 <div class="col-sm-6"><?= $form->field($model, 'inaltime')->textInput() ?></div>  
             </div>      
         </fieldset>

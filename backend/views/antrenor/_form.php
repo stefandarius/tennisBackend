@@ -11,10 +11,6 @@ use kartik\form\ActiveForm;
 
 <div class="antrenori-form box box-info">
 
-    <div class="box-header with-border">
-        <h3 class="box-title"><?= yii\bootstrap\Html::encode($this->title) ?></h3>
-    </div>
-
     <?php $form = ActiveForm::begin(); ?>
 
     <div class="box-body">
