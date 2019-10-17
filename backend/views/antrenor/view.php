@@ -32,6 +32,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'nume',
             'prenume',
+            ['attribute'=>'gen','value'=>$model->gen==1?'Barbat':'Femeie'],
+            'localitate0.nume:text:Localitate',
             'email:email',
         ],
     ]) ?>

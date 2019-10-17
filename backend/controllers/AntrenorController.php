@@ -85,6 +85,8 @@ class AntrenorController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        
+        $model->judet=$model->localitate0->judet;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
