@@ -85,7 +85,10 @@ class SportiviController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
+        //completam judetul prin relatia cu localitati, accesam campul 
+        //localitate0 specific sportivului, iar din acest obiect luam juetul
+        $model->judet=$model->localitate0->judet;
+        
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
