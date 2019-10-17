@@ -29,7 +29,6 @@ use kartik\form\ActiveForm;
                 </div>
             </div>
             <div class="row">
-
                 <div class="col-sm-6">
                     <?= $form->field($model, 'data_nastere')->textInput() ?>
                 </div>
