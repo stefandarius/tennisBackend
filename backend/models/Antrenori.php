@@ -19,6 +19,8 @@ use Yii;
  */
 class Antrenori extends \yii\db\ActiveRecord {
 
+    public $judet;
+    
     /**
      * {@inheritdoc}
      */
@@ -31,8 +33,8 @@ class Antrenori extends \yii\db\ActiveRecord {
      */
     public function rules() {
         return [
-            [['nume', 'prenume', 'email', 'gen'], 'required'],
-            [['localitate', 'gen'], 'integer'],
+            [['nume', 'prenume', 'email', 'gen', 'judet', 'localitate'], 'required'],
+            [['localitate', 'gen', 'judet'], 'integer'],
             [['nume', 'prenume', 'email'], 'string', 'max' => 100],
             [['email'], 'unique'],
         ];
