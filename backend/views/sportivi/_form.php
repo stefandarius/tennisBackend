@@ -30,7 +30,7 @@ use kartik\date\DatePicker;
                 <div class="col-sm-6">
                     <?=
                     $form->field($model, 'data_nastere')->widget(DatePicker::classname(), [
-                        'options' => ['placeholder' => 'Intraduceti data nasterii ...'],
+                        'options' => ['placeholder' => 'Introduceti data nasterii ...'],
                         'pluginOptions' => [
                             'autoclose' => true,
                             'format' => 'dd.mm.yyyy'
@@ -40,7 +40,7 @@ use kartik\date\DatePicker;
                 </div>
                 <div class="col-sm-6">
                     <?php
-                    $data = [1 => 'Barbat', 0 => 'Femeie'];
+                    $data = [1 => 'Baiat', 0 => 'Fata'];
                     echo $form->field($model, 'sex')->radioButtonGroup($data)->label('Gen', ['style' => 'display:block;']);
                     ?>
                 </div>
