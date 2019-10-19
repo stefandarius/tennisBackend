@@ -33,7 +33,7 @@ use kartik\date\DatePicker;
                         'options' => ['placeholder' => 'Intraduceti data nasterii ...'],
                         'pluginOptions' => [
                             'autoclose' => true,
-                            'format' => 'yyyy-mm-dd'
+                            'format' => 'dd.mm.yyyy'
                         ]
                     ]);
                     ?>

@@ -31,8 +31,10 @@ $this->params['breadcrumbs'][] = $this->title;
                     //'id',
                     'nume',
                     'prenume',
-                    'data_nastere',
-                    'sex:text:Gen',
+                    'data_nastere:date',
+                   ['attribute'=>'sex','format'=>'raw','value'=>function($model){
+                        return Html::tag('span',$model->sex?'Baiat':'Fata',['style'=>sprintf('color:%s',$model->sex?'red':'green')]);
+                   },],
                     //'nivel',
                     //'email:email',
                     //'greutate',
