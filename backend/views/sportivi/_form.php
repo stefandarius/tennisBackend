@@ -1,8 +1,10 @@
 <?php
 
 use yii\helpers\Html;
+use yii\bootstrap4\Modal;
 //use yii\widgets\ActiveForm;
 use kartik\form\ActiveForm;
+use kartik\date\DatePicker;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Sportivi */
@@ -26,7 +28,15 @@ use kartik\form\ActiveForm;
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <?= $form->field($model, 'data_nastere')->textInput() ?>
+                    <?=
+                    $form->field($model, 'data_nastere')->widget(DatePicker::classname(), [
+                        'options' => ['placeholder' => 'Intraduceti data nasterii ...'],
+                        'pluginOptions' => [
+                            'autoclose' => true,
+                            'format' => 'yyyy-mm-dd'
+                        ]
+                    ]);
+                    ?>
                 </div>
                 <div class="col-sm-6">
                     <?php
@@ -57,7 +67,7 @@ use kartik\form\ActiveForm;
                 </div>
             </div>
         </fieldset>
-        
+
         <fieldset>
             <legend>Detalii fizice</legend>  
             <div class="row">
