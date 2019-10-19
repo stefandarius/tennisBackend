@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'nume',
             'prenume',
-            'data_nastere',
+            'data_nastere:date',
             ['attribute'=>'sex','value'=>$model->sex==1?'Barbat':'Femeie'],
             'localitate0.nume:text:Localitate',
             'nivel0.nume:text:Nivel',

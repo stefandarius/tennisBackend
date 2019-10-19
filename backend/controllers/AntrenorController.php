@@ -86,7 +86,9 @@ class AntrenorController extends Controller
     {
         $model = $this->findModel($id);
         
-        $model->judet=$model->localitate0->judet;
+        if (!is_null($model->localitate)) {
+            $model->judet = $model->localitate0->judet;
+        }
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
