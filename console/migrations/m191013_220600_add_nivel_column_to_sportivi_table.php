@@ -11,7 +11,7 @@
  *
  * @author Marian
  */
-class m191013_220600_add_stare_sanatate_column_to_sportivi_table extends \yii\db\Migration {
+class m191013_220600_add_nivel_column_to_sportivi_table extends \yii\db\Migration {
 
     public function up() {
         $this->createIndex(
