@@ -92,7 +92,7 @@ use kartik\date\DatePicker;
             </div>      
         </fieldset>
         <div class="form-group">
-            <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+            <?= Html::submitButton('Save', ['class' => 'btn btn-success pull-right']) ?>
         </div>
 
         <?php ActiveForm::end(); ?>
