@@ -5,6 +5,7 @@ use yii\bootstrap4\Modal;
 //use yii\widgets\ActiveForm;
 use kartik\form\ActiveForm;
 use kartik\date\DatePicker;
+use borales\extensions\phoneInput\PhoneInput;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Sportivi */
@@ -30,7 +31,7 @@ use kartik\date\DatePicker;
                 <div class="col-sm-6">
                     <?=
                     $form->field($model, 'data_nastere')->widget(DatePicker::classname(), [
-                        'options' => ['placeholder' => 'Intraduceti data nasterii ...'],
+                        'options' => ['placeholder' => 'Introduceti data nasterii ...'],
                         'pluginOptions' => [
                             'autoclose' => true,
                             'format' => 'dd.mm.yyyy'
@@ -40,7 +41,7 @@ use kartik\date\DatePicker;
                 </div>
                 <div class="col-sm-6">
                     <?php
-                    $data = [1 => 'Barbat', 0 => 'Femeie'];
+                    $data = [1 => 'Baiat', 0 => 'Fata'];
                     echo $form->field($model, 'sex')->radioButtonGroup($data)->label('Gen', ['style' => 'display:block;']);
                     ?>
                 </div>
@@ -50,7 +51,11 @@ use kartik\date\DatePicker;
                     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
                 </div>
                 <div class="col-sm-6">
-                    <?= $form->field($model, 'numar_telefon')->textInput(['maxlength' => true]) ?>
+                    <?= $form->field($model, 'numar_telefon')->widget(PhoneInput::className(), [
+                        'jsOptions' => [
+                        'preferredCountries' => ['ro'],
+                    ]])->label('Numar de telefon', ['style' => 'display:block;']);
+                    ?>
                 </div>
             </div>
             <div class="row">
