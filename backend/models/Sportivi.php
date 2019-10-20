@@ -102,5 +102,13 @@ class Sportivi extends \yii\db\ActiveRecord {
     public function getStareSanatate() {
         return $this->hasOne(StariSanatate::className(), ['id' => 'stare_sanatate']);
     }
+    
+    public function beforeSave($insert) {
+        if(parent::beforeSave($insert)){
+            $this->data_nastere= \backend\components\ProjectUtils::getBDDateFormat($this->data_nastere);
+            return true;
+        }
+        return false;
+    }
 
 }
