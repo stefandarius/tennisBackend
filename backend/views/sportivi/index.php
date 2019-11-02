@@ -38,22 +38,18 @@ $this->params['breadcrumbs'][] = $this->title;
                         'format' => 'raw', 'value' => function($model) {
                             return Html::tag('span', $model->sex ? 'Baiat' : 'Fata', ['style' => sprintf('color:%s', $model->sex ? 'red' : 'green')]);
                         },],
-                    //'nivel',
-                    //'email:email',
-                    //'greutate',
-                    //'inaltime:datetime',
-                    //'stare_sanatate',
-                    //'numar_telefon',
+
                     ['attribute' => 'judet',
                         'filter' => Html::activeDropDownList($searchModel, 'judet', yii\helpers\ArrayHelper::map(\backend\models\Judete::find()->all(), 'id', 'nume'), ['class' => 'selectpicker form-control', 'data-style' => "btn-primary", 'prompt' => '--Toate judetele--']),
                         'value' => function($model) {
 
                             return $model->localitate0->judet0->nume;
+                        }
+                    ],
+                    ['attribute' => 'nume_localitate',
+                        'value' => function($model) {
+                            return $model->localitate0->nume;
                         }],
-                 //   'localitate0.nume:text:Localitate',
-                                ['attribute'=>'nume_localitate','value'=>function($model){
-                                    return $model->localitate0->nume;
-                                }],
                     ['class' => 'yii\grid\ActionColumn'],
                 ],
             ]);

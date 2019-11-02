@@ -19,7 +19,7 @@ class SportivSearch extends Sportivi
     {
         return [
             [['id', 'sex', 'nivel', 'greutate', 'inaltime', 'stare_sanatate', 'localitate', 'judet'], 'integer'],
-            [['nume', 'prenume', 'data_nastere', 'email', 'numar_telefon','nume_localitate'], 'safe'],
+            [['nume', 'prenume', 'data_nastere', 'email', 'numar_telefon', 'nume_localitate'], 'safe']
         ];
     }
 

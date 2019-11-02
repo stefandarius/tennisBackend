@@ -69,7 +69,7 @@ class Sportivi extends \yii\db\ActiveRecord {
             'inaltime' => 'Inaltime',
             'stare_sanatate' => 'Stare Sanatate',
             'numar_telefon' => 'Numar Telefon',
-            'nume_localitate'=>'Localitate'
+            'nume_localitate' => 'Localitate'
         ];
     }
 
