@@ -33,13 +33,15 @@ class SportiviController extends Controller {
      * @return mixed
      */
     public function actionIndex() {
-        $dataProvider = new ActiveDataProvider([
-            'query' => Sportivi::find(),
-        ]);
-
+        
+        $searchModel = new \backend\models\SportiviSearch();
+        
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         return $this->render('index', [
+                    'searchModel' => $searchModel,
                     'dataProvider' => $dataProvider,
         ]);
+        
     }
 
     /**

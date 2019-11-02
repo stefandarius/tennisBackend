@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <div class="box-body">
             <p>
-<?= Html::a('Adaugare sportivi', ['create'], ['class' => 'btn btn-success']) ?>
+                <?= Html::a('Adaugare sportivi', ['create'], ['class' => 'btn btn-success']) ?>
             </p>
 
             <?php Pjax::begin(); ?>
@@ -25,6 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?=
             GridView::widget([
                 'dataProvider' => $dataProvider,
+                'filterModel' => $searchModel,
                 'layout' => "{items}\n{pager}\n{summary}",
                 'columns' => [
                     ['class' => 'yii\grid\SerialColumn'],
@@ -32,22 +33,30 @@ $this->params['breadcrumbs'][] = $this->title;
                     'nume',
                     'prenume',
                     'data_nastere:date',
-                   ['attribute'=>'sex','format'=>'raw','value'=>function($model){
-                        return Html::tag('span',$model->sex?'Baiat':'Fata',['style'=>sprintf('color:%s',$model->sex?'red':'green')]);
-                   },],
+                    ['attribute' => 'sex',
+                        'filter' => Html::activeDropDownList($searchModel, 'sex', [1 => 'Baiat', 0 => 'Fata'], ['class' => 'selectpicker form-control', 'data-style' => "btn-primary", 'prompt' => '--Toti--']),
+                        'format' => 'raw', 'value' => function($model) {
+                            return Html::tag('span', $model->sex ? 'Baiat' : 'Fata', ['style' => sprintf('color:%s', $model->sex ? 'red' : 'green')]);
+                        },],
                     //'nivel',
                     //'email:email',
                     //'greutate',
                     //'inaltime:datetime',
                     //'stare_sanatate',
                     //'numar_telefon',
-                    'localitate0.nume:text:Localitate',
+                    ['attribute' => 'judet',
+                        'filter' => Html::activeDropDownList($searchModel, 'judet', yii\helpers\ArrayHelper::map(\backend\models\Judete::find()->all(), 'id', 'nume'), ['class' => 'selectpicker form-control', 'data-style' => "btn-primary", 'prompt' => '--Toate judetele--']),
+                        'value' => function($model) {
+
+                            return $model->localitate0->judet0->nume;
+                        }],
+                    'localitate', //0.nume:text:Localitate',
                     ['class' => 'yii\grid\ActionColumn'],
                 ],
             ]);
             ?>
 
-<?php Pjax::end(); ?>
+            <?php Pjax::end(); ?>
 
         </div>
     </div>
