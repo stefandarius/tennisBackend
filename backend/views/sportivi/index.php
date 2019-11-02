@@ -50,7 +50,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
                             return $model->localitate0->judet0->nume;
                         }],
-                    'localitate', //0.nume:text:Localitate',
+                 //   'localitate0.nume:text:Localitate',
+                                ['attribute'=>'nume_localitate','value'=>function($model){
+                                    return $model->localitate0->nume;
+                                }],
                     ['class' => 'yii\grid\ActionColumn'],
                 ],
             ]);
