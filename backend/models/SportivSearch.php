@@ -47,6 +47,10 @@ class SportivSearch extends Sportivi
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
+        $dataProvider->sort->attributes['nume_localitate'] = [
+            'asc' => ['l.nume' => SORT_ASC],
+            'desc' => ['l.nume' => SORT_DESC],
+        ];
         
         $query->innerJoin('localitati l', 'l.id=s.localitate');
         $query->innerJoin('judete j', 'j.id=l.judet');
@@ -76,6 +80,7 @@ class SportivSearch extends Sportivi
         $query->andFilterWhere(['like', 'nume', $this->nume])
             ->andFilterWhere(['like', 'prenume', $this->prenume])
             ->andFilterWhere(['like', 'email', $this->email])
+            ->andFilterWhere(['like','l.nume',$this->nume_localitate])
             ->andFilterWhere(['like', 'numar_telefon', $this->numar_telefon]);
 
         return $dataProvider;
