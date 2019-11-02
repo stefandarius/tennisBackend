@@ -4,12 +4,12 @@ namespace backend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Sportivi;
+use backend\models\Antrenori;
 
 /**
- * SportivSearch represents the model behind the search form of `backend\models\Sportivi`.
+ * AntrenorSearch represents the model behind the search form of `backend\models\Antrenori`.
  */
-class SportivSearch extends Sportivi
+class AntrenorSearch extends Antrenori
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,8 @@ class SportivSearch extends Sportivi
     public function rules()
     {
         return [
-            [['id', 'sex', 'nivel', 'greutate', 'inaltime', 'stare_sanatate', 'localitate', 'judet'], 'integer'],
-            [['nume', 'prenume', 'data_nastere', 'email', 'numar_telefon', 'nume_localitate'], 'safe']
+            [['id', 'localitate', 'gen', 'judet'], 'integer'],
+            [['nume', 'prenume', 'email', 'nume_localitate'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class SportivSearch extends Sportivi
      */
     public function search($params)
     {
-        $query = Sportivi::find()->alias('s');
+        $query = Antrenori::find()->alias('a');
 
         // add conditions that should always apply here
 
@@ -55,11 +55,9 @@ class SportivSearch extends Sportivi
             'asc' => ['j.nume' => SORT_ASC],
             'desc' => ['j.nume' => SORT_DESC],
         ];
-        
-        $query->innerJoin('localitati l', 'l.id=s.localitate');
-        $query->innerJoin('judete j', 'j.id=l.judet');
-        $this->load($params);
 
+        $query->innerJoin('localitati l', 'l.id=a.localitate');
+        $query->innerJoin('judete j', 'j.id=l.judet');
         $this->load($params);
 
         if (!$this->validate()) {
@@ -71,21 +69,15 @@ class SportivSearch extends Sportivi
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'data_nastere' => $this->data_nastere,
-            'sex' => $this->sex,
-            'nivel' => $this->nivel,
-            'greutate' => $this->greutate,
-            'inaltime' => $this->inaltime,
-            'stare_sanatate' => $this->stare_sanatate,
             'localitate' => $this->localitate,
+            'gen' => $this->gen,
             'j.id' => $this->judet
         ]);
 
-        $query->andFilterWhere(['like', 's.nume', $this->nume])
-            ->andFilterWhere(['like', 's.prenume', $this->prenume])
-            ->andFilterWhere(['like', 's.email', $this->email])
-            ->andFilterWhere(['like','l.nume',$this->nume_localitate])
-            ->andFilterWhere(['like', 's.numar_telefon', $this->numar_telefon]);
+        $query->andFilterWhere(['like', 'a.nume', $this->nume])
+            ->andFilterWhere(['like', 'a.prenume', $this->prenume])
+            ->andFilterWhere(['like', 'a.email', $this->email])
+            ->andFilterWhere(['like', 'l.nume', $this->nume_localitate]);
 
         return $dataProvider;
     }

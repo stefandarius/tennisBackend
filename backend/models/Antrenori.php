@@ -20,6 +20,7 @@ use Yii;
 class Antrenori extends \yii\db\ActiveRecord {
 
     public $judet;
+    public $nume_localitate;
     
     /**
      * {@inheritdoc}
@@ -50,8 +51,8 @@ class Antrenori extends \yii\db\ActiveRecord {
             'nume' => 'Nume',
             'prenume' => 'Prenume',
             'email' => 'Email',
-            'localitate' => 'Localitate',
             'gen' => 'Gen',
+            'nume_localitate' => 'Localitate'
         ];
     }
 

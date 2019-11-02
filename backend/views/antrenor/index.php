@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="box-body">
 
             <p>
-<?= Html::a('Adauga antrenor', ['create'], ['class' => 'btn btn-success']) ?>
+                <?= Html::a('Adauga antrenor', ['create'], ['class' => 'btn btn-success']) ?>
             </p>
 
             <?php Pjax::begin(); ?>
@@ -26,19 +26,38 @@ $this->params['breadcrumbs'][] = $this->title;
             <?=
             GridView::widget([
                 'dataProvider' => $dataProvider,
+                'filterModel' => $searchModel,
                 'layout' => "{items}\n{pager}\n{summary}",
                 'columns' => [
                     ['class' => 'yii\grid\SerialColumn'],
-                    'id',
                     'nume',
                     'prenume',
                     'email:email',
+                    ['attribute' => 'gen',
+                        'format' => 'raw',
+                        'filter' => Html::activeDropDownList($searchModel, 'gen', [1 => 'Baiat', 0 => 'Fata'], ['prompt' => "--Toate--",
+                            'class' => 'selectpicker form-control',
+                            'data-style' => "btn-primary"]),
+                        'value' => function($model) {
+                            return Html::tag('span', $model->gen ? 'Baiat' : 'Fata', ['style' => sprintf('color:%s', $model->gen ? 'red' : 'green')]);
+                        },],
+                    ['attribute' => 'judet',
+                        'filter' => Html::activeDropDownList($searchModel, 'judet', \yii\helpers\ArrayHelper::map(backend\models\Judete::find()->all(), 'id', 'nume'), ['prompt' => '--Toate--', 'class' => 'selectpicler form-control',
+                            'data-style' => "btn-primary"]),
+                        'value' => function($model) {
+                            return $model->localitate0->judet0->nume;
+                        }
+                    ],
+                    ['attribute' => 'nume_localitate',
+                        'value' => function($model) {
+                            return $model->localitate0->nume;
+                        }],
                     ['class' => 'yii\grid\ActionColumn'],
                 ],
             ]);
             ?>
 
-<?php Pjax::end(); ?>
+            <?php Pjax::end(); ?>
 
         </div>
     </div>
