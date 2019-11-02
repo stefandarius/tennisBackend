@@ -9,14 +9,12 @@ use backend\models\Sportivi;
 /**
  * SportivSearch represents the model behind the search form of `backend\models\Sportivi`.
  */
-class SportivSearch extends Sportivi
-{
- 
+class SportivSearch extends Sportivi {
+    
     /**
      * {@inheritdoc}
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['id', 'sex', 'nivel', 'greutate', 'inaltime', 'stare_sanatate', 'localitate', 'judet'], 'integer'],
             [['nume', 'prenume', 'data_nastere', 'email', 'numar_telefon', 'nume_localitate'], 'safe']
@@ -26,8 +24,7 @@ class SportivSearch extends Sportivi
     /**
      * {@inheritdoc}
      */
-    public function scenarios()
-    {
+    public function scenarios() {
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();
     }
@@ -39,8 +36,7 @@ class SportivSearch extends Sportivi
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
-    {
+    public function search($params) {
         $query = Sportivi::find()->alias('s');
 
         // add conditions that should always apply here
@@ -48,7 +44,11 @@ class SportivSearch extends Sportivi
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
-        
+        $dataProvider->sort->attributes['nume_localitate'] = [
+            'asc' => ['l.nume' => SORT_ASC],
+            'desc' => ['l.nume' => SORT_DESC],
+        ];
+
         $query->innerJoin('localitati l', 'l.id=s.localitate');
         $query->innerJoin('judete j', 'j.id=l.judet');
         $this->load($params);
@@ -75,10 +75,11 @@ class SportivSearch extends Sportivi
         ]);
 
         $query->andFilterWhere(['like', 'nume', $this->nume])
-            ->andFilterWhere(['like', 'prenume', $this->prenume])
-            ->andFilterWhere(['like', 'email', $this->email])
-            ->andFilterWhere(['like', 'numar_telefon', $this->numar_telefon]);
+                ->andFilterWhere(['like', 'prenume', $this->prenume])
+                ->andFilterWhere(['like', 'email', $this->email])
+                ->andFilterWhere(['like', 'numar_telefon', $this->numar_telefon]);
 
         return $dataProvider;
     }
+
 }
