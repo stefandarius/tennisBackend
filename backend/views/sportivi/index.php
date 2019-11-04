@@ -34,15 +34,17 @@ $this->params['breadcrumbs'][] = $this->title;
                     'prenume',
                     'data_nastere:date',
                     ['attribute' => 'sex',
-                        'filter' => Html::activeDropDownList($searchModel, 'sex', [1 => 'Baiat', 0 => 'Fata'], ['class' => 'selectpicker form-control', 'data-style' => "btn-primary", 'prompt' => '--Toti--']),
-                        'format' => 'raw', 'value' => function($model) {
+                        'format' => 'raw',
+                        'filter' => Html::activeDropDownList($searchModel, 'sex', [1 => 'Baiat', 0 => 'Fata'], ['prompt' => "--Toti--",
+                            'class' => 'selectpicker form-control',
+                            'data-style' => "btn-primary"]),
+                        'value' => function($model) {
                             return Html::tag('span', $model->sex ? 'Baiat' : 'Fata', ['style' => sprintf('color:%s', $model->sex ? 'red' : 'green')]);
                         },],
-
                     ['attribute' => 'judet',
-                        'filter' => Html::activeDropDownList($searchModel, 'judet', yii\helpers\ArrayHelper::map(\backend\models\Judete::find()->all(), 'id', 'nume'), ['class' => 'selectpicker form-control', 'data-style' => "btn-primary", 'prompt' => '--Toate judetele--']),
+                        'filter' => Html::activeDropDownList($searchModel, 'judet', \yii\helpers\ArrayHelper::map(backend\models\Judete::find()->all(), 'id', 'nume'), ['prompt' => '--Toate judetele--', 'class' => 'selectpicker form-control',
+                            'data-style' => "btn-primary"]),
                         'value' => function($model) {
-
                             return $model->localitate0->judet0->nume;
                         }
                     ],

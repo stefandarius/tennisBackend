@@ -11,6 +11,8 @@ use backend\models\Sportivi;
  */
 class SportivSearch extends Sportivi {
     
+    public $nume_localitate;
+    
     /**
      * {@inheritdoc}
      */
@@ -44,13 +46,17 @@ class SportivSearch extends Sportivi {
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
+        $query->innerJoin('localitati l', 'l.id=s.localitate');
+        $query->innerJoin('judete j', 'j.id=l.judet');
         $dataProvider->sort->attributes['nume_localitate'] = [
             'asc' => ['l.nume' => SORT_ASC],
             'desc' => ['l.nume' => SORT_DESC],
         ];
-
-        $query->innerJoin('localitati l', 'l.id=s.localitate');
-        $query->innerJoin('judete j', 'j.id=l.judet');
+        $dataProvider->sort->attributes['judet'] = [
+            'asc' => ['j.nume' => SORT_ASC],
+            'desc' => ['j.nume' => SORT_DESC],
+        ];
+        
         $this->load($params);
 
         $this->load($params);
@@ -74,10 +80,11 @@ class SportivSearch extends Sportivi {
             'j.id' => $this->judet
         ]);
 
-        $query->andFilterWhere(['like', 'nume', $this->nume])
-                ->andFilterWhere(['like', 'prenume', $this->prenume])
-                ->andFilterWhere(['like', 'email', $this->email])
-                ->andFilterWhere(['like', 'numar_telefon', $this->numar_telefon]);
+        $query->andFilterWhere(['like', 's.nume', $this->nume])
+            ->andFilterWhere(['like', 's.prenume', $this->prenume])
+            ->andFilterWhere(['like', 'email', $this->email])
+            ->andFilterWhere(['like','l.nume',$this->nume_localitate])
+            ->andFilterWhere(['like', 'numar_telefon', $this->numar_telefon]);
 
         return $dataProvider;
     }
