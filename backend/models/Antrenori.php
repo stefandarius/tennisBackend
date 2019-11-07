@@ -37,7 +37,7 @@ class Antrenori extends \yii\db\ActiveRecord {
             [['nume', 'prenume', 'email', 'gen', 'judet', 'localitate'], 'required'],
             [['localitate', 'gen', 'judet'], 'integer'],
             [['nume', 'prenume', 'email'], 'string', 'max' => 100],
-            [['nume', 'prenume'], 'filter', 'filter' => 'ucfirst'],
+             [['nume', 'prenume'], 'filter', 'filter' => 'ucfirst'],
             [['email'], 'unique'],
         ];
     }

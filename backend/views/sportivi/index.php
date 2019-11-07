@@ -35,20 +35,21 @@ $this->params['breadcrumbs'][] = $this->title;
                     'data_nastere:date',
                     ['attribute' => 'sex',
                         'format' => 'raw',
-                        'filter' => Html::activeDropDownList($searchModel, 'sex', [1 => 'Baiat', 0 => 'Fata'], ['prompt' => "--Toate--",
+                        'filter' => Html::activeDropDownList($searchModel, 'sex', [1 => 'Baiat', 0 => 'Fata'], ['prompt' => "--Toti--",
                             'class' => 'selectpicker form-control',
                             'data-style' => "btn-primary"]),
                         'value' => function($model) {
                             return Html::tag('span', $model->sex ? 'Baiat' : 'Fata', ['style' => sprintf('color:%s', $model->sex ? 'red' : 'green')]);
                         },],
                     ['attribute' => 'judet',
-                        'filter' => Html::activeDropDownList($searchModel, 'judet', \yii\helpers\ArrayHelper::map(backend\models\Judete::find()->all(), 'id', 'nume'), ['prompt' => '--Toate--', 'class' => 'selectpicler form-control',
+                        'filter' => Html::activeDropDownList($searchModel, 'judet', \yii\helpers\ArrayHelper::map(backend\models\Judete::find()->all(), 'id', 'nume'), ['prompt' => '--Toate judetele--', 'class' => 'selectpicker form-control',
                             'data-style' => "btn-primary"]),
                         'value' => function($model) {
                             return $model->localitate0->judet0->nume;
                         }
                     ],
                     ['attribute' => 'nume_localitate',
+                        'label'=>'Localitate',
                         'value' => function($model) {
                             return $model->localitate0->nume;
                         }],

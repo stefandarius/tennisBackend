@@ -1,0 +1,45 @@
+Message-ID: <2c9b3aa0e72a235033c25b3735ff49eb@anunturicl.ro>
+Date: Mon, 01 Aug 2016 12:12:20 +0300
+Subject: Reset password intructions
+From: Animalia Platform <no-reply@animalia.anunturicl.ro>
+To: radumrn@gmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1470042740_9f7e5cd33230e834387e81a6cb345bf2_=_"
+
+
+--_=_swift_v4_1470042740_9f7e5cd33230e834387e81a6cb345bf2_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Reset your password
+Dear admin, in order to reset your password, please c=
+lick the link bellow
+Click here
+
+--_=_swift_v4_1470042740_9f7e5cd33230e834387e81a6cb345bf2_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+    <head>
+        <meta =
+http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8" />
+   =
+ </head>
+    <body bgcolor=3D"#FFFFFF" leftmargin=3D"0" topmargin=3D"0" m=
+arginwidth=3D"0" marginheight=3D"0">
+
+        <div>
+    <h1>Reset you=
+r password</h1>
+    <p>Dear <strong>admin</strong>, in order to reset you=
+r password, please click the link bellow</p>
+    <a href=3D"http://anuntu=
+ricl.ro/animalia/api/web/site/change-password?token=3DoDPM15r4AOWPfQ-4AzIxH=
+FdSoMTTUho8_1470042740">Click here</a>
+</div>
+    </body>
+</html>
+
+--_=_swift_v4_1470042740_9f7e5cd33230e834387e81a6cb345bf2_=_--

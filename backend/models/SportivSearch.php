@@ -10,7 +10,9 @@ use backend\models\Sportivi;
  * SportivSearch represents the model behind the search form of `backend\models\Sportivi`.
  */
 class SportivSearch extends Sportivi {
-
+    
+    public $nume_localitate;
+    
     /**
      * {@inheritdoc}
      */
@@ -44,6 +46,12 @@ class SportivSearch extends Sportivi {
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
+        $query->innerJoin('localitati l', 'l.id=s.localitate');
+        $query->innerJoin('judete j', 'j.id=l.judet');
+         $dataProvider->sort->attributes['judet'] = [
+            'asc' => ['j.nume' => SORT_ASC],
+            'desc' => ['j.nume' => SORT_DESC],
+        ];
         $dataProvider->sort->attributes['nume_localitate'] = [
             'asc' => ['l.nume' => SORT_ASC],
             'desc' => ['l.nume' => SORT_DESC],
