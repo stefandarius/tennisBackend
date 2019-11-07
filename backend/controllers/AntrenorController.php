@@ -32,12 +32,13 @@ class AntrenorController extends Controller {
      * Lists all Antrenori models.
      * @return mixed
      */
-    public function actionIndex() {
-        $dataProvider = new ActiveDataProvider([
-            'query' => Antrenori::find(),
-        ]);
+    public function actionIndex()
+    {
+        $searchModel = new \backend\models\AntrenorSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
+                    'searchModel' => $searchModel,
                     'dataProvider' => $dataProvider,
         ]);
     }
