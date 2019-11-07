@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         }
                     ],
                     ['attribute' => 'nume_localitate',
-                        'header'=>'Localitate',
+                        'label'=>'Localitate',
                         'value' => function($model) {
                             return $model->localitate0->nume;
                         }],

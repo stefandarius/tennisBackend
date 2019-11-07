@@ -4,7 +4,6 @@ namespace backend\controllers;
 
 use Yii;
 use backend\models\Sportivi;
-use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -34,7 +33,7 @@ class SportiviController extends Controller {
      */
     public function actionIndex() {
         
-        $searchModel = new \backend\models\SportiviSearch();
+        $searchModel = new \backend\models\SportivSearch();
         
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         return $this->render('index', [

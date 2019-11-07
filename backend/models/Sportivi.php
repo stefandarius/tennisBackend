@@ -41,14 +41,18 @@ class Sportivi extends \yii\db\ActiveRecord {
      */
     public function rules() {
         return [
-            [['nume', 'prenume', 'data_nastere', 'nivel', 'email', 'greutate', 'inaltime', 'stare_sanatate', 'numar_telefon', 'judet', 'localitate', 'sex'], 'required'],
+            [['nume', 'prenume', 'data_nastere', 'nivel', 'email', 'greutate', 'inaltime', 'stare_sanatate', 'numar_telefon', 'localitate', 'sex'], 'required'],
             [['data_nastere'], 'safe'],
-            [['sex', 'nivel', 'greutate', 'inaltime', 'stare_sanatate', 'localitate', 'judet'], 'integer'],
+            [['sex', 'nivel', 'greutate', 'inaltime', 'stare_sanatate', 'localitate'], 'integer'],
             [['nume', 'prenume', 'email'], 'string', 'max' => 100],
             [['numar_telefon'], 'string', 'max' => 15],
             [['email'], 'unique'],
             [['nume', 'prenume'], 'filter', 'filter' => 'ucfirst'],
             [['numar_telefon'], 'unique'],
+            'judet'=>[
+                'judet','required',
+              
+            ]
         ];
     }
 
