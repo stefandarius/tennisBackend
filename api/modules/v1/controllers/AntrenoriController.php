@@ -16,7 +16,7 @@ namespace api\modules\v1\controllers;
 class AntrenoriController extends BApiController{
     //put your code here
     protected function initializeModelClass() {
-        $this->modelClass= '\backend\models\Antrenori';
+        $this->modelClass= '\api\modules\v1\models\Antrenori';
     }
     
     protected function disableCheckAccessActions() {

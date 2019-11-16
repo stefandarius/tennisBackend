@@ -22,4 +22,12 @@ class Antrenori extends AN {
         unset($rules['judet']);
         return $rules;
     }
+    
+    public function fields() {
+        $fields=parent::fields();
+        $fields['localitate']=function($model){
+            return \yii\helpers\ArrayHelper::toArray($model->localitate0, ['backend\models\Localitati' => ['id', 'nume','oras']]);     
+        };
+        return $fields;
+    }
 }
