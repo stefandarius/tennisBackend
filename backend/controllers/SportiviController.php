@@ -18,6 +18,16 @@ class SportiviController extends Controller {
      */
     public function behaviors() {
         return [
+            'access' => [
+                'class' => \yii\filters\AccessControl::className(),
+                'rules' => [
+                    [
+                        'actions' => [],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -32,15 +42,14 @@ class SportiviController extends Controller {
      * @return mixed
      */
     public function actionIndex() {
-        
+
         $searchModel = new \backend\models\SportivSearch();
-        
+
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         return $this->render('index', [
                     'searchModel' => $searchModel,
                     'dataProvider' => $dataProvider,
         ]);
-        
     }
 
     /**
@@ -83,13 +92,13 @@ class SportiviController extends Controller {
         $model = $this->findModel($id);
         //completam judetul prin relatia cu localitati, accesam campul 
         //localitate0 specific sportivului, iar din acest obiect luam juetul
-        
-        if(!is_null($model->localitate)){
-            $model->judet=$model->localitate0->judet;
+
+        if (!is_null($model->localitate)) {
+            $model->judet = $model->localitate0->judet;
         }
-        
-        $model->data_nastere= \backend\components\ProjectUtils::formatedDate($model->data_nastere);
-        
+
+        $model->data_nastere = \backend\components\ProjectUtils::formatedDate($model->data_nastere);
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
