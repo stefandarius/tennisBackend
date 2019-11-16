@@ -19,7 +19,7 @@ use Yii;
  * @property int $stare_sanatate
  * @property string $numar_telefon
  * @property int $localitate 
- * 
+ * @property AntrenoriSportivi[] $antrenoriSportivis
  * @property AbonamenteSportivi[] $abonamenteSportivis 
  * @property Localitati $localitate0 
  * @property Niveluri $nivel0
@@ -28,7 +28,7 @@ use Yii;
 class Sportivi extends \yii\db\ActiveRecord {
 
     public $judet;
-    
+
     /**
      * {@inheritdoc}
      */
@@ -49,9 +49,8 @@ class Sportivi extends \yii\db\ActiveRecord {
             [['email'], 'unique'],
             [['nume', 'prenume'], 'filter', 'filter' => 'ucfirst'],
             [['numar_telefon'], 'unique'],
-            'judet'=>[
-                'judet','required',
-              
+            'judet' => [
+                'judet', 'required',
             ]
         ];
     }
@@ -86,6 +85,14 @@ class Sportivi extends \yii\db\ActiveRecord {
         return $this->hasMany(AbonamenteSportivi::className(), ['sportiv_id' => 'id']);
     }
 
+    public function getAntrenoriSportivis() {
+        return $this->hasMany(AntrenoriSportivi::className(), ['sportiv' => 'id']);
+    }
+
+    public function getAntrenors() {
+        return $this->hasMany(Antrenori::className(), ['id' => 'antrenor'])->viaTable('antrenori_sportivi', ['sportiv' => 'id']);
+    }
+
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -106,13 +113,29 @@ class Sportivi extends \yii\db\ActiveRecord {
     public function getStareSanatate() {
         return $this->hasOne(StariSanatate::className(), ['id' => 'stare_sanatate']);
     }
-    
+
     public function beforeSave($insert) {
-        if(parent::beforeSave($insert)){
-            $this->data_nastere= \backend\components\ProjectUtils::getBDDateFormat($this->data_nastere);
+        if (parent::beforeSave($insert)) {
+            $this->data_nastere = \backend\components\ProjectUtils::getBDDateFormat($this->data_nastere);
             return true;
         }
         return false;
+    }
+
+    public function save($runValidation = true, $attributeNames = null) {
+        $newRecord = $this->isNewRecord;
+        $transaction = \Yii::$app->db->beginTransaction();
+        $result = parent::save($runValidation, $attributeNames);
+        if ($newRecord) {
+            $antrenorSportiv = new AntrenorSportiv(['antrenor' => \Yii::$app->user->id,
+                'sportiv' => $this->id]);
+            $result = $antrenorSportiv->save();
+            if (!$result) {
+                $this->addErrors($antrenorSportiv->errors);
+            }
+        }
+        $result ? $transaction->commit() : $transaction->rollBack();
+        return $result;
     }
 
 }

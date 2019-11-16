@@ -292,3 +292,289 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1572902900.277
     'REQUEST_TIME' => 1572902900
 ]
+2019-11-16 15:03:34 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(api\modules\v1\actions\CreateCustomAction))
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(api\modules\v1\actions\CreateCustomAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(276): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(api\modules\v1\actions\CreateCustomAction))
+#7 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(api\modules\v1\actions\CreateCustomAction))
+#8 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#9 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/sportivi/cre...', Array)
+#10 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\base\Application->run()
+#12 {main}
+2019-11-16 15:03:34 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'nume' => 'Balea'
+    'prenume' => 'Catalin'
+    'data_nastere' => '14.05.2001'
+    'nivel' => '2'
+    'email' => 'cata@gmail.com'
+    'greutate' => '70'
+    'inaltime' => '175'
+    'stare_sanatate' => '1'
+    'numar_telefon' => '0722635241'
+    'localitate' => '4'
+    'sex' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '5971c3e4-6044-48ef-9f5a-de572f74d5d2'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '167'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php7.2.18;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/TenisBackend/api/web/index.php'
+    'REMOTE_PORT' => '51223'
+    'REDIRECT_URL' => '/TenisBackend/api/web/v1/sportivi'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisBackend/api/web/v1/sportivi'
+    'SCRIPT_NAME' => '/TenisBackend/api/web/index.php'
+    'PHP_SELF' => '/TenisBackend/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573916614.437
+    'REQUEST_TIME' => 1573916614
+]
+2019-11-16 15:24:04 [::1][-][-][error][ReflectionException] ReflectionException: Class api\modules\v1\models\User does not exist in C:\wamp64\www\TenisBackend\api\modules\v1\controllers\BApiController.php:18
+Stack trace:
+#0 C:\wamp64\www\TenisBackend\api\modules\v1\controllers\BApiController.php(18): ReflectionClass->__construct('api\\modules\\v1\\...')
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\BaseObject.php(109): api\modules\v1\controllers\BApiController->init()
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(86): yii\base\BaseObject->__construct(Array)
+#3 [internal function]: yii\base\Controller->__construct('user', Object(api\modules\v1\Module), Array)
+#4 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\di\Container.php(376): ReflectionClass->newInstanceArgs(Array)
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#6 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\BaseYii.php(345): yii\di\Container->get('api\\modules\\v1\\...', Array)
+#7 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(642): yii\BaseYii::createObject('api\\modules\\v1\\...', Array)
+#8 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('user')
+#9 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(588): yii\base\Module->createController('login')
+#10 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('user/login')
+#11 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/user/login', Array)
+#12 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\base\Application->run()
+#14 {main}
+2019-11-16 15:24:04 [::1][-][-][info][application] $_GET = [
+    'user' => 'admin'
+    'pass' => '123456'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'b33b5437668289a5adba9d504b4029fba22149fd7e8aaccc4c0d162900916403a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KE7yNTb7WzxVjPaA0m24KfdKXu7EE8VG\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'f442511c-a5d0-46be-a507-98810e963acb'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b33b5437668289a5adba9d504b4029fba22149fd7e8aaccc4c0d162900916403a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KE7yNTb7WzxVjPaA0m24KfdKXu7EE8VG%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php7.2.18;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/TenisBackend/api/web/index.php'
+    'REMOTE_PORT' => '51293'
+    'REDIRECT_URL' => '/TenisBackend/api/web/v1/users/login/admin/123456'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisBackend/api/web/v1/users/login/admin/123456'
+    'SCRIPT_NAME' => '/TenisBackend/api/web/index.php'
+    'PHP_SELF' => '/TenisBackend/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573917844.939
+    'REQUEST_TIME' => 1573917844
+]
+2019-11-16 15:24:54 [::1][-][-][error][ReflectionException] ReflectionException: Class api\modules\v1\models\User does not exist in C:\wamp64\www\TenisBackend\api\modules\v1\controllers\BApiController.php:18
+Stack trace:
+#0 C:\wamp64\www\TenisBackend\api\modules\v1\controllers\BApiController.php(18): ReflectionClass->__construct('api\\modules\\v1\\...')
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\BaseObject.php(109): api\modules\v1\controllers\BApiController->init()
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(86): yii\base\BaseObject->__construct(Array)
+#3 [internal function]: yii\base\Controller->__construct('user', Object(api\modules\v1\Module), Array)
+#4 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\di\Container.php(376): ReflectionClass->newInstanceArgs(Array)
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#6 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\BaseYii.php(345): yii\di\Container->get('api\\modules\\v1\\...', Array)
+#7 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(642): yii\BaseYii::createObject('api\\modules\\v1\\...', Array)
+#8 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('user')
+#9 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(588): yii\base\Module->createController('login')
+#10 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('user/login')
+#11 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/user/login', Array)
+#12 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\base\Application->run()
+#14 {main}
+2019-11-16 15:24:54 [::1][-][-][info][application] $_GET = [
+    'user' => 'Admin'
+    'pass' => '123456'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'b33b5437668289a5adba9d504b4029fba22149fd7e8aaccc4c0d162900916403a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KE7yNTb7WzxVjPaA0m24KfdKXu7EE8VG\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'b13e55e5-5aeb-40a0-a9c4-87de0c5d1eaa'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b33b5437668289a5adba9d504b4029fba22149fd7e8aaccc4c0d162900916403a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KE7yNTb7WzxVjPaA0m24KfdKXu7EE8VG%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php7.2.18;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/TenisBackend/api/web/index.php'
+    'REMOTE_PORT' => '51298'
+    'REDIRECT_URL' => '/TenisBackend/api/web/v1/users/login/Admin/123456'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisBackend/api/web/v1/users/login/Admin/123456'
+    'SCRIPT_NAME' => '/TenisBackend/api/web/index.php'
+    'PHP_SELF' => '/TenisBackend/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573917894.955
+    'REQUEST_TIME' => 1573917894
+]
+2019-11-16 15:26:11 [::1][-][-][error][ReflectionException] ReflectionException: Class api\modules\v1\models\User does not exist in C:\wamp64\www\TenisBackend\api\modules\v1\controllers\BApiController.php:18
+Stack trace:
+#0 C:\wamp64\www\TenisBackend\api\modules\v1\controllers\BApiController.php(18): ReflectionClass->__construct('api\\modules\\v1\\...')
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\BaseObject.php(109): api\modules\v1\controllers\BApiController->init()
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(86): yii\base\BaseObject->__construct(Array)
+#3 [internal function]: yii\base\Controller->__construct('user', Object(api\modules\v1\Module), Array)
+#4 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\di\Container.php(376): ReflectionClass->newInstanceArgs(Array)
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('api\\modules\\v1\\...', Array, Array)
+#6 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\BaseYii.php(345): yii\di\Container->get('api\\modules\\v1\\...', Array)
+#7 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(642): yii\BaseYii::createObject('api\\modules\\v1\\...', Array)
+#8 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('user')
+#9 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(588): yii\base\Module->createController('login')
+#10 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('user/login')
+#11 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/user/login', Array)
+#12 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\base\Application->run()
+#14 {main}
+2019-11-16 15:26:11 [::1][-][-][info][application] $_GET = [
+    'user' => 'admin'
+    'pass' => '123456'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'b33b5437668289a5adba9d504b4029fba22149fd7e8aaccc4c0d162900916403a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KE7yNTb7WzxVjPaA0m24KfdKXu7EE8VG\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '2da515af-66da-45af-90b5-4e019ce15388'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b33b5437668289a5adba9d504b4029fba22149fd7e8aaccc4c0d162900916403a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KE7yNTb7WzxVjPaA0m24KfdKXu7EE8VG%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php7.2.18;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/TenisBackend/api/web/index.php'
+    'REMOTE_PORT' => '51305'
+    'REDIRECT_URL' => '/TenisBackend/api/web/v1/users/login/admin/123456'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisBackend/api/web/v1/users/login/admin/123456'
+    'SCRIPT_NAME' => '/TenisBackend/api/web/index.php'
+    'PHP_SELF' => '/TenisBackend/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573917971.477
+    'REQUEST_TIME' => 1573917971
+]
