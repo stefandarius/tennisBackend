@@ -56,7 +56,11 @@ class SportivSearch extends Sportivi {
             'asc' => ['l.nume' => SORT_ASC],
             'desc' => ['l.nume' => SORT_DESC],
         ];
-        
+        $dataProvider->sort->attributes['judet'] = [
+            'asc' => ['j.nume' => SORT_ASC],
+            'desc' => ['j.nume' => SORT_DESC],
+        ];
+
         $this->load($params);
 
         if (!$this->validate()) {
@@ -79,10 +83,10 @@ class SportivSearch extends Sportivi {
         ]);
 
         $query->andFilterWhere(['like', 's.nume', $this->nume])
-            ->andFilterWhere(['like', 's.prenume', $this->prenume])
-            ->andFilterWhere(['like', 's.email', $this->email])
-            ->andFilterWhere(['like','l.nume',$this->nume_localitate])
-            ->andFilterWhere(['like', 's.numar_telefon', $this->numar_telefon]);
+                ->andFilterWhere(['like', 's.prenume', $this->prenume])
+                ->andFilterWhere(['like', 's.email', $this->email])
+                ->andFilterWhere(['like', 'l.nume', $this->nume_localitate])
+                ->andFilterWhere(['like', 's.numar_telefon', $this->numar_telefon]);
 
         return $dataProvider;
     }

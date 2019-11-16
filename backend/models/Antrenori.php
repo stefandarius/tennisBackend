@@ -16,12 +16,14 @@ use Yii;
  * 
  * @property Localitati $localitate0 
  * @property IstoricAntrenament[] $istoricAntrenaments
+ * @property AntrenoriSportivi[] $antrenoriSportivis
+ * @property Sportivi[] $sportivs
  */
 class Antrenori extends \yii\db\ActiveRecord {
 
     public $judet;
     public $nume_localitate;
-    
+
     /**
      * {@inheritdoc}
      */
@@ -37,7 +39,7 @@ class Antrenori extends \yii\db\ActiveRecord {
             [['nume', 'prenume', 'email', 'gen', 'judet', 'localitate'], 'required'],
             [['localitate', 'gen', 'judet'], 'integer'],
             [['nume', 'prenume', 'email'], 'string', 'max' => 100],
-             [['nume', 'prenume'], 'filter', 'filter' => 'ucfirst'],
+            [['nume', 'prenume'], 'filter', 'filter' => 'ucfirst'],
             [['email'], 'unique'],
         ];
     }
@@ -73,4 +75,16 @@ class Antrenori extends \yii\db\ActiveRecord {
     public function getIstoricAntrenaments() {
         return $this->hasMany(IstoricAntrenament::className(), ['antrenor_id' => 'id']);
     }
-}    
+
+    public function getAntrenoriSportivis() {
+        return $this->hasMany(AntrenoriSportivi::className(), ['antrenor' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSportivs() {
+        return $this->hasMany(Sportivi::className(), ['id' => 'sportiv'])->viaTable('antrenori_sportivi', ['antrenor' => 'id']);
+    }
+
+}

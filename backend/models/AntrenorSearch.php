@@ -9,13 +9,12 @@ use backend\models\Antrenori;
 /**
  * AntrenorSearch represents the model behind the search form of `backend\models\Antrenori`.
  */
-class AntrenorSearch extends Antrenori
-{
+class AntrenorSearch extends Antrenori {
+
     /**
      * {@inheritdoc}
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['id', 'localitate', 'gen', 'judet'], 'integer'],
             [['nume', 'prenume', 'email', 'nume_localitate'], 'safe'],
@@ -25,8 +24,7 @@ class AntrenorSearch extends Antrenori
     /**
      * {@inheritdoc}
      */
-    public function scenarios()
-    {
+    public function scenarios() {
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();
     }
@@ -38,8 +36,7 @@ class AntrenorSearch extends Antrenori
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
-    {
+    public function search($params) {
         $query = Antrenori::find()->alias('a');
 
         // add conditions that should always apply here
@@ -75,10 +72,11 @@ class AntrenorSearch extends Antrenori
         ]);
 
         $query->andFilterWhere(['like', 'a.nume', $this->nume])
-            ->andFilterWhere(['like', 'a.prenume', $this->prenume])
-            ->andFilterWhere(['like', 'a.email', $this->email])
-            ->andFilterWhere(['like', 'l.nume', $this->nume_localitate]);
+                ->andFilterWhere(['like', 'a.prenume', $this->prenume])
+                ->andFilterWhere(['like', 'a.email', $this->email])
+                ->andFilterWhere(['like', 'l.nume', $this->nume_localitate]);
 
         return $dataProvider;
     }
+
 }

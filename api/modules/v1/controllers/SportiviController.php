@@ -20,7 +20,7 @@ class SportiviController extends BApiController{
     }
     
     protected function disableCheckAccessActions() {
-        return ['index','create','update'];
+        return ['index','update'];
     }
 
 }

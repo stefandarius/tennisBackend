@@ -33,16 +33,12 @@ class Sportivi extends SP {
         $fields['stareSanatateText']=function($model){
             return $model->stareSanatate->nume;
         };
-        $fields['localitateText']=function($model){
-            return $model->localitate0->nume;
-        };
         $fields['localitate']=function($model){
             return \yii\helpers\ArrayHelper::toArray($model->localitate0, ['backend\models\Localitati' => ['id', 'nume','oras']]);     
         };
         $fields['judet']=function($model){
             return \yii\helpers\ArrayHelper::toArray($model->localitate0->judet0, ['backend\models\Judete' => ['id', 'nume']]);     
         };
-        
         $fields['judetText']=function($model){
             return trim($model->localitate0->judet0->nume);
         };
@@ -51,6 +47,9 @@ class Sportivi extends SP {
         };
         $fields['numeComplet']=function($model){
             return sprintf('%s %s',$model->nume,$model->prenume);
+        };
+        $fields['data_nastere']=function($model) {
+            return sprintf('%s', \backend\components\ProjectUtils::formatedDate($model->data_nastere));
         };
         return $fields;
     }

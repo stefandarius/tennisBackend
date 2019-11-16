@@ -22,11 +22,7 @@ class AntrenorController extends Controller {
                 'class' => yii\filters\AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
-                        'allow' => true,
-                    ],
-                    [
-                        'actions' => ['logout', 'index','localitati-by-judet'],
+                        'actions' => [],
                         'allow' => true,
                         'roles' => ['@'],
                     ],

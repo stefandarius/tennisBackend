@@ -19,7 +19,7 @@ class SportiviController extends Controller {
     public function behaviors() {
         return [
             'access' => [
-                'class' => \yii\filters\AccessControl::className(),
+                'class' => yii\filters\AccessControl::className(),
                 'rules' => [
                     [
                         'actions' => [],
