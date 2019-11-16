@@ -56,15 +56,7 @@ class SportivSearch extends Sportivi {
             'asc' => ['l.nume' => SORT_ASC],
             'desc' => ['l.nume' => SORT_DESC],
         ];
-        $dataProvider->sort->attributes['judet'] = [
-            'asc' => ['j.nume' => SORT_ASC],
-            'desc' => ['j.nume' => SORT_DESC],
-        ];
         
-        $query->innerJoin('localitati l', 'l.id=s.localitate');
-        $query->innerJoin('judete j', 'j.id=l.judet');
-        $this->load($params);
-
         $this->load($params);
 
         if (!$this->validate()) {
