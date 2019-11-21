@@ -13,7 +13,7 @@ use Yii;
  * @property string $email
  * @property int $localitate 
  * @property int $gen 
- * 
+ * @property AntrenoriSportivi[] $antrenoriSportivis
  * @property Localitati $localitate0 
  * @property IstoricAntrenament[] $istoricAntrenaments
  * @property AntrenoriSportivi[] $antrenoriSportivis
@@ -60,6 +60,14 @@ class Antrenori extends \yii\db\ActiveRecord {
 
     public function getNumeComplet() {
         return sprintf('%s %s', $this->nume, $this->prenume); //$this->nume.' '.$this->prenume;
+    }
+
+    public function getAntrenoriSportivis() {
+        return $this->hasMany(AntrenoriSportivi::className(), ['antrenor' => 'id']);
+    }
+
+    public function getSportivs() {
+        return $this->hasMany(Sportivi::className(), ['id' => 'sportiv'])->viaTable('antrenori_sportivi', ['antrenor' => 'id']);
     }
 
     /**
