@@ -20,7 +20,6 @@ use Yii;
  * @property string $numar_telefon
  * @property int $localitate 
  * @property AntrenoriSportivi[] $antrenoriSportivis
- * @property AbonamenteSportivi[] $abonamenteSportivis 
  * @property Localitati $localitate0 
  * @property Niveluri $nivel0
  * @property StariSanatate $stareSanatate
@@ -143,17 +142,6 @@ class Sportivi extends \yii\db\ActiveRecord {
             $transaction->rollBack();
         }
         return $result;
-    }
-
-    public function getAntrenoriSportivis() {
-        return $this->hasMany(AntrenoriSportivi::className(), ['sportiv' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getAntrenors() {
-        return $this->hasMany(Antrenori::className(), ['id' => 'antrenor'])->viaTable('antrenori_sportivi', ['sportiv' => 'id']);
     }
 
 }
