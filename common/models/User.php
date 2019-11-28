@@ -139,6 +139,10 @@ class User extends ActiveRecord implements IdentityInterface {
         return $this->auth_key;
     }
 
+    public function getRole() {
+        return $this->hasOne(\backend\models\AuthItem::className(), ['name' => 'item_name'])->viaTable('auth_assignment', ['user_id' => 'id']);
+    }
+
     /**
      * {@inheritdoc}
      */

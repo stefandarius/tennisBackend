@@ -119,7 +119,7 @@ return [
                     //'GET save-dosar/{numar}/{institutie}' => 'save-dosar',
                     //'GET ddd' => 'dosare', // 'xxxxx' refers to 'actionXxxxx'
                     ],
-                    'except' => ['delete', 'create', 'update']
+                    'except' => ['delete', 'update']
                 ],
                 [
                     'class' => 'api\modules\v1\rules\CustomUrlRule',

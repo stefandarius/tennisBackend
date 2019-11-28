@@ -18,21 +18,23 @@ use Yii;
  * @property AuthAssignment[] $authAssignments
  * @property AuthRule $ruleName
  */
-class AuthItem extends \yii\db\ActiveRecord
-{
+class AuthItem extends \yii\db\ActiveRecord {
+    
+    const ROL_ADMIN = 'admin';
+    const ROL_ANTRENOR = 'antrenor';
+    const ROL_SPORTIV = 'sportiv';
+
     /**
      * {@inheritdoc}
      */
-    public static function tableName()
-    {
+    public static function tableName() {
         return 'auth_item';
     }
 
     /**
      * {@inheritdoc}
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['name', 'type'], 'required'],
             [['type', 'created_at', 'updated_at'], 'integer'],
@@ -46,8 +48,7 @@ class AuthItem extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'name' => 'Name',
             'type' => 'Type',
@@ -62,16 +63,15 @@ class AuthItem extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getAuthAssignments()
-    {
+    public function getAuthAssignments() {
         return $this->hasMany(AuthAssignment::className(), ['item_name' => 'name']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getRuleName()
-    {
+    public function getRuleName() {
         return $this->hasOne(AuthRule::className(), ['name' => 'rule_name']);
     }
+
 }

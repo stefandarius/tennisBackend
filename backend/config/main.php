@@ -10,6 +10,7 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [],
+    'name' => 'Tennis App',
     'components' => [
         'view' => [
             'theme' => [

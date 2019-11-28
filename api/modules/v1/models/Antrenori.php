@@ -30,4 +30,39 @@ class Antrenori extends AN {
         };
         return $fields;
     }
+    
+    public function save($runValidation = true, $attributeNames = null) {
+        $newRecord = $this->isNewRecord;
+        $transaction= \Yii::$app->db->beginTransaction();
+        $user = new \common\models\User();
+        $user->email = $this->email;
+        $user->setPassword($this->password);
+        $user->generateAuthKey();
+        $user->status = \common\models\User::STATUS_ACTIVE;
+        $result = $user->save();
+        if($result){
+            $this->user = $user->id;
+        }
+        else{
+            $this->addError($user->errors);
+        }
+        $result = $result && parent::save($runValidation, $attributeNames);
+        if ($newRecord && $result) {
+            $authAssignment = new \backend\models\AuthAssignment(
+                    ['item_name' => \backend\models\AuthItem::ROL_ANTRENOR,
+                'user_id' => strval($user->id), 'created_at' => time()]);
+            if(!$authAssignment->save()) {
+           // $authAssignment->validate();
+                $this->addError($authAssignment->errors);
+                $result = false;
+            }
+        }
+        if($result){
+            $transaction->commit();
+        }
+        else{
+            $transaction->rollBack();
+        }
+        return $result;
+    }
 }
