@@ -12,7 +12,7 @@ use kartik\form\ActiveForm;
 <div class="antrenori-form box box-info">
 
     <?php $form = ActiveForm::begin(); ?>
-
+    
     <div class="box-body">
         <fieldset>
             <legend>Detalii personale</legend>

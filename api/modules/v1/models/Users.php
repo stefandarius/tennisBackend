@@ -18,6 +18,28 @@ use Yii;
  */
 class Users extends UR {
 
+    public $nume;
+    public $prenume;
+    public $data_nastere;
+    public $gen;
+    public $telefon;
+    
+    public function rules() {
+        $rules=parent::rules();
+        $rules[]=[['nume','prenume','data_nastere','gen','telefon'],'required'];
+        //$rules[]=['password','required','on'=>'create'];
+        return $rules;
+    }
+    
+    public function beforeSave($insert) {
+        if(parent::beforeSave($insert)){
+            $this->setPassword($this->password);
+            $this->generateAuthKey();
+            $this->status= static::STATUS_ACTIVE;
+            return true;
+        }
+        return false;
+    }
     
     public function fields() {
         $fields=parent::fields();

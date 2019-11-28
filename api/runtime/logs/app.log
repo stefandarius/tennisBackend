@@ -515,3 +515,1348 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1573917846.55
     'REQUEST_TIME' => 1573917846
 ]
+2019-11-21 18:03:13 [::1][-][-][error][yii\web\HttpException:401] exception 'yii\web\UnauthorizedHttpException' with message 'Your request was made with invalid credentials.' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\OptionsAction))
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\rest\OptionsAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(276): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\rest\OptionsAction))
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(yii\rest\OptionsAction))
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('options', Array)
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/antrenori/op...', Array)
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#12 {main}
+2019-11-21 18:03:12 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'email' => 'radumrn@gmail.com'
+    'password' => '12345678'
+    'nume' => 'Iordache'
+    'prenume' => 'Stefan'
+    'localitate' => '3757'
+    'gen' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '3a125ca7-0280-445d-87e4-0f6f00649977'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '94'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;C:\\Program Files\\nodejs\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Marian\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Marian\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '59729'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/antrenori'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisApp/api/web/v1/antrenori'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1574359392.387
+    'REQUEST_TIME' => 1574359392
+]
+2019-11-21 18:04:22 [::1][-][-][error][yii\web\HttpException:401] exception 'yii\web\UnauthorizedHttpException' with message 'Your request was made with invalid credentials.' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\OptionsAction))
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\rest\OptionsAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(276): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\rest\OptionsAction))
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(yii\rest\OptionsAction))
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('options', Array)
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/antrenori/op...', Array)
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#12 {main}
+2019-11-21 18:04:22 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'email' => 'radumrn@gmail.com'
+    'password' => '12345678'
+    'nume' => 'Iordache'
+    'prenume' => 'Stefan'
+    'localitate' => '3757'
+    'gen' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'c9c1db54-2104-4986-8147-b1f6fa4d2c04'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '94'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;C:\\Program Files\\nodejs\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Marian\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Marian\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '59739'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/antrenori'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisApp/api/web/v1/antrenori'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1574359462.736
+    'REQUEST_TIME' => 1574359462
+]
+2019-11-21 18:04:34 [::1][-][-][error][yii\web\HttpException:401] exception 'yii\web\UnauthorizedHttpException' with message 'Your request was made with invalid credentials.' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\OptionsAction))
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\rest\OptionsAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(276): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\rest\OptionsAction))
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(yii\rest\OptionsAction))
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('options', Array)
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/antrenori/op...', Array)
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#12 {main}
+2019-11-21 18:04:34 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'email' => 'radumrn@gmail.com'
+    'password' => '12345678'
+    'nume' => 'Iordache'
+    'prenume' => 'Stefan'
+    'localitate' => '3757'
+    'gen' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'aaf03089-8b8d-496f-960d-a053ca8e99a2'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '94'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;C:\\Program Files\\nodejs\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Marian\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Marian\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '59741'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/antrenori'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisApp/api/web/v1/antrenori'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1574359474.615
+    'REQUEST_TIME' => 1574359474
+]
+2019-11-21 18:06:33 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'backend\models\common\models\User' not found' in D:\wamp64\www\TenisApp\backend\models\Antrenori.php:93
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\ErrorHandler.php(0): yii\base\ErrorHandler->handleFatalError()
+#1 D:\wamp64\www\TenisApp\api\modules\v1\actions\CreateCustomAction.php(35): backend\models\Antrenori->save()
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): api\modules\v1\actions\CreateCustomAction->run()
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): ::call_user_func_array:{D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php:94}()
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams()
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#6 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#8 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#9 {main}
+2019-11-21 18:06:33 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'email' => 'radumrn@gmail.com'
+    'password' => '12345678'
+    'nume' => 'Iordache'
+    'prenume' => 'Stefan'
+    'localitate' => '3757'
+    'gen' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'f875991f-3325-48ab-8315-8ed56346dd7c'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '94'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;C:\\Program Files\\nodejs\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Marian\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Marian\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '59748'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/antrenori'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisApp/api/web/v1/antrenori'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1574359593.004
+    'REQUEST_TIME' => 1574359593
+]
+2019-11-21 18:07:39 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'username' doesn't have a default value' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php:1290
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1290): PDOStatement->execute()
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `us...')
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('{{%user}}', Array)
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 D:\wamp64\www\TenisApp\backend\models\Antrenori.php(98): yii\db\BaseActiveRecord->save()
+#7 D:\wamp64\www\TenisApp\api\modules\v1\actions\CreateCustomAction.php(35): backend\models\Antrenori->save()
+#8 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#12 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/antrenori/cr...', Array)
+#13 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#15 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000]: General error: 1364 Field 'username' doesn't have a default value
+The SQL being executed was: INSERT INTO `user` (`email`, `password_hash`, `auth_key`, `status`, `created_at`, `updated_at`) VALUES ('radumrn@gmail.com', '$2y$13$wa3eoemaKWPsUKEXIs8yl.RjwTn1hahH/1SFXeppGxMUxHZyQ8mNK', 'jVtBmoRj6ma46pZ_vHmiEaO_IUjf0JTO', 10, 1574359659, 1574359659)' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Schema.php:674
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `us...')
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `us...')
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('{{%user}}', Array)
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 D:\wamp64\www\TenisApp\backend\models\Antrenori.php(98): yii\db\BaseActiveRecord->save()
+#7 D:\wamp64\www\TenisApp\api\modules\v1\actions\CreateCustomAction.php(35): backend\models\Antrenori->save()
+#8 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#12 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/antrenori/cr...', Array)
+#13 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1364
+    [2] => Field 'username' doesn't have a default value
+)
+
+2019-11-21 18:07:38 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'email' => 'radumrn@gmail.com'
+    'password' => '12345678'
+    'nume' => 'Iordache'
+    'prenume' => 'Stefan'
+    'localitate' => '3757'
+    'gen' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '17a91d8d-d396-4f62-930a-c6c94a589fc3'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '94'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;C:\\Program Files\\nodejs\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Marian\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Marian\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '59774'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/antrenori'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisApp/api/web/v1/antrenori'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1574359658.311
+    'REQUEST_TIME' => 1574359658
+]
+2019-11-21 19:57:17 [::1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'radumrn2@gmail.com' for key 'email'' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php:1290
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1290): PDOStatement->execute()
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `us...')
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('{{%user}}', Array)
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 D:\wamp64\www\TenisApp\backend\models\Antrenori.php(101): yii\db\BaseActiveRecord->save()
+#7 D:\wamp64\www\TenisApp\api\modules\v1\actions\CreateCustomAction.php(35): backend\models\Antrenori->save()
+#8 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#12 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/antrenori/cr...', Array)
+#13 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#15 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'radumrn2@gmail.com' for key 'email'
+The SQL being executed was: INSERT INTO `user` (`email`, `password_hash`, `auth_key`, `status`, `created_at`, `updated_at`) VALUES ('radumrn2@gmail.com', '$2y$13$CIWACDkiOmkjPomDe7DECOPwfdVxJpK1Dwmj9yCJuTN0oM.zdIsZC', 'tfWZsSCy1ZJFuPbu3TLo996D_SQfDPJF', 10, 1574366237, 1574366237)' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Schema.php:674
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `us...')
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `us...')
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('{{%user}}', Array)
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 D:\wamp64\www\TenisApp\backend\models\Antrenori.php(101): yii\db\BaseActiveRecord->save()
+#7 D:\wamp64\www\TenisApp\api\modules\v1\actions\CreateCustomAction.php(35): backend\models\Antrenori->save()
+#8 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#12 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/antrenori/cr...', Array)
+#13 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry 'radumrn2@gmail.com' for key 'email'
+)
+
+2019-11-21 19:57:15 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'email' => 'radumrn2@gmail.com'
+    'password' => '12345678'
+    'nume' => 'Iordache'
+    'prenume' => 'Stefan'
+    'localitate' => '3757'
+    'gen' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '6630ae4d-cf6b-421b-bc42-a278a1e6fadb'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '95'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;C:\\Program Files\\nodejs\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Marian\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Marian\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '60067'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/antrenori'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisApp/api/web/v1/antrenori'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1574366235.617
+    'REQUEST_TIME' => 1574366235
+]
+2019-11-21 19:58:12 [::1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'radumrn2@gmail.com' for key 'email'' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php:1290
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1290): PDOStatement->execute()
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `us...')
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('{{%user}}', Array)
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 D:\wamp64\www\TenisApp\backend\models\Antrenori.php(103): yii\db\BaseActiveRecord->save()
+#7 D:\wamp64\www\TenisApp\api\modules\v1\actions\CreateCustomAction.php(35): backend\models\Antrenori->save()
+#8 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#12 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/antrenori/cr...', Array)
+#13 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#15 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'radumrn2@gmail.com' for key 'email'
+The SQL being executed was: INSERT INTO `user` (`email`, `password_hash`, `auth_key`, `status`, `created_at`, `updated_at`) VALUES ('radumrn2@gmail.com', '$2y$13$Mq4Pv0uH0i/6spP8Wo7/U.bGUJAcMlkxxZOaIsOBt1VfVh3bSGBmK', 'uw2UN6tA6Hw4qEwZpB6xfJfshcorPMd1', 10, 1574366292, 1574366292)' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Schema.php:674
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `us...')
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `us...')
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('{{%user}}', Array)
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 D:\wamp64\www\TenisApp\backend\models\Antrenori.php(103): yii\db\BaseActiveRecord->save()
+#7 D:\wamp64\www\TenisApp\api\modules\v1\actions\CreateCustomAction.php(35): backend\models\Antrenori->save()
+#8 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#12 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/antrenori/cr...', Array)
+#13 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry 'radumrn2@gmail.com' for key 'email'
+)
+
+2019-11-21 19:58:11 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'email' => 'radumrn2@gmail.com'
+    'password' => '12345678'
+    'nume' => 'Iordache'
+    'prenume' => 'Stefan'
+    'localitate' => '3757'
+    'gen' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'b52c1ea9-b6ad-4232-a732-ce86748cbcef'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '95'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;C:\\Program Files\\nodejs\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Marian\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Marian\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '60072'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/antrenori'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisApp/api/web/v1/antrenori'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1574366291.409
+    'REQUEST_TIME' => 1574366291
+]
+2019-11-21 19:58:46 [::1][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'radumrn2@gmail.com' for key 'email'' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php:1290
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1290): PDOStatement->execute()
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `us...')
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('{{%user}}', Array)
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 D:\wamp64\www\TenisApp\backend\models\Antrenori.php(103): yii\db\BaseActiveRecord->save()
+#7 D:\wamp64\www\TenisApp\api\modules\v1\actions\CreateCustomAction.php(35): backend\models\Antrenori->save()
+#8 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#12 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/antrenori/cr...', Array)
+#13 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#15 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'radumrn2@gmail.com' for key 'email'
+The SQL being executed was: INSERT INTO `user` (`email`, `password_hash`, `auth_key`, `status`, `created_at`, `updated_at`) VALUES ('radumrn2@gmail.com', '$2y$13$zBtxuoeI./CK3Wd/ZPiCV.kafHjNBqGoKOoUMrqEK/09MkTh//C92', 'NL5OukuvDXjPM5NcyIFJ__PSdlaD9A0k', 10, 1574366326, 1574366326)' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Schema.php:674
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `us...')
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `us...')
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('{{%user}}', Array)
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 D:\wamp64\www\TenisApp\backend\models\Antrenori.php(103): yii\db\BaseActiveRecord->save()
+#7 D:\wamp64\www\TenisApp\api\modules\v1\actions\CreateCustomAction.php(35): backend\models\Antrenori->save()
+#8 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#12 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/antrenori/cr...', Array)
+#13 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry 'radumrn2@gmail.com' for key 'email'
+)
+
+2019-11-21 19:58:45 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'email' => 'radumrn2@gmail.com'
+    'password' => '12345678'
+    'nume' => 'Iordache'
+    'prenume' => 'Stefan'
+    'localitate' => '3757'
+    'gen' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '3edbd299-f4b0-4645-8fc2-56ab0b6c3c6a'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '95'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;C:\\Program Files\\nodejs\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Marian\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Marian\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '60076'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/antrenori'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisApp/api/web/v1/antrenori'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1574366325.173
+    'REQUEST_TIME' => 1574366325
+]
+2019-11-21 20:26:51 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'antrenori.email' in 'where clause'' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php:1290
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1290): PDOStatement->execute()
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1158): yii\db\Command->internalExecute('SELECT EXISTS(S...')
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(425): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Query.php(425): yii\db\Command->queryScalar()
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\UniqueValidator.php(187): yii\db\Query->exists()
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\UniqueValidator.php(145): yii\validators\UniqueValidator->modelExists('api\\modules\\v1\\...', Array, Object(api\modules\v1\models\Antrenori))
+#6 [internal function]: yii\validators\UniqueValidator->yii\validators\{closure}(Object(yii\db\Connection))
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Connection.php(1078): call_user_func(Object(Closure), Object(yii\db\Connection))
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\UniqueValidator.php(146): yii\db\Connection->useMaster(Object(Closure))
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\UniqueValidator->validateAttribute(Object(api\modules\v1\models\Antrenori), 'email')
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(api\modules\v1\models\Antrenori), Array)
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(560): yii\base\Model->validate(NULL)
+#12 D:\wamp64\www\TenisApp\backend\models\Antrenori.php(56): yii\db\ActiveRecord->insert(true, NULL)
+#13 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): backend\models\Antrenori->insert(true, NULL)
+#14 D:\wamp64\www\TenisApp\backend\models\Antrenori.php(131): yii\db\BaseActiveRecord->save(true, NULL)
+#15 D:\wamp64\www\TenisApp\api\modules\v1\actions\CreateCustomAction.php(35): backend\models\Antrenori->save()
+#16 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#17 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#18 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#19 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#20 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/antrenori/cr...', Array)
+#21 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'antrenori.email' in 'where clause'
+The SQL being executed was: SELECT EXISTS(SELECT * FROM `antrenori` WHERE `antrenori`.`email`='radumrn3@gmail.com')' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Schema.php:674
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'SELECT EXISTS(S...')
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1158): yii\db\Command->internalExecute('SELECT EXISTS(S...')
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(425): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Query.php(425): yii\db\Command->queryScalar()
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\UniqueValidator.php(187): yii\db\Query->exists()
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\UniqueValidator.php(145): yii\validators\UniqueValidator->modelExists('api\\modules\\v1\\...', Array, Object(api\modules\v1\models\Antrenori))
+#6 [internal function]: yii\validators\UniqueValidator->yii\validators\{closure}(Object(yii\db\Connection))
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Connection.php(1078): call_user_func(Object(Closure), Object(yii\db\Connection))
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\UniqueValidator.php(146): yii\db\Connection->useMaster(Object(Closure))
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\UniqueValidator->validateAttribute(Object(api\modules\v1\models\Antrenori), 'email')
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(api\modules\v1\models\Antrenori), Array)
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(560): yii\base\Model->validate(NULL)
+#12 D:\wamp64\www\TenisApp\backend\models\Antrenori.php(56): yii\db\ActiveRecord->insert(true, NULL)
+#13 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): backend\models\Antrenori->insert(true, NULL)
+#14 D:\wamp64\www\TenisApp\backend\models\Antrenori.php(131): yii\db\BaseActiveRecord->save(true, NULL)
+#15 D:\wamp64\www\TenisApp\api\modules\v1\actions\CreateCustomAction.php(35): backend\models\Antrenori->save()
+#16 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#17 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#18 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#19 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#20 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/antrenori/cr...', Array)
+#21 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#23 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'antrenori.email' in 'where clause'
+)
+
+2019-11-21 20:26:50 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'email' => 'radumrn3@gmail.com'
+    'password' => '12345678'
+    'nume' => 'Iordache'
+    'prenume' => 'Stefan'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '015cf853-68be-4284-a292-fe831e1151e6'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '73'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;C:\\Program Files\\nodejs\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Marian\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Marian\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '60368'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/antrenori'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisApp/api/web/v1/antrenori'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1574368010.153
+    'REQUEST_TIME' => 1574368010
+]
+2019-11-21 20:27:16 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'antrenori.email' in 'where clause'' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php:1290
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1290): PDOStatement->execute()
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1158): yii\db\Command->internalExecute('SELECT EXISTS(S...')
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(425): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Query.php(425): yii\db\Command->queryScalar()
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\UniqueValidator.php(187): yii\db\Query->exists()
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\UniqueValidator.php(145): yii\validators\UniqueValidator->modelExists('api\\modules\\v1\\...', Array, Object(api\modules\v1\models\Antrenori))
+#6 [internal function]: yii\validators\UniqueValidator->yii\validators\{closure}(Object(yii\db\Connection))
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Connection.php(1078): call_user_func(Object(Closure), Object(yii\db\Connection))
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\UniqueValidator.php(146): yii\db\Connection->useMaster(Object(Closure))
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\UniqueValidator->validateAttribute(Object(api\modules\v1\models\Antrenori), 'email')
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(api\modules\v1\models\Antrenori), Array)
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(560): yii\base\Model->validate(NULL)
+#12 D:\wamp64\www\TenisApp\backend\models\Antrenori.php(56): yii\db\ActiveRecord->insert(true, NULL)
+#13 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): backend\models\Antrenori->insert(true, NULL)
+#14 D:\wamp64\www\TenisApp\backend\models\Antrenori.php(131): yii\db\BaseActiveRecord->save(true, NULL)
+#15 D:\wamp64\www\TenisApp\api\modules\v1\actions\CreateCustomAction.php(35): backend\models\Antrenori->save()
+#16 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#17 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#18 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#19 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#20 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/antrenori/cr...', Array)
+#21 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'antrenori.email' in 'where clause'
+The SQL being executed was: SELECT EXISTS(SELECT * FROM `antrenori` WHERE `antrenori`.`email`='radumrn3@gmail.com')' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Schema.php:674
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'SELECT EXISTS(S...')
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(1158): yii\db\Command->internalExecute('SELECT EXISTS(S...')
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Command.php(425): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Query.php(425): yii\db\Command->queryScalar()
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\UniqueValidator.php(187): yii\db\Query->exists()
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\UniqueValidator.php(145): yii\validators\UniqueValidator->modelExists('api\\modules\\v1\\...', Array, Object(api\modules\v1\models\Antrenori))
+#6 [internal function]: yii\validators\UniqueValidator->yii\validators\{closure}(Object(yii\db\Connection))
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\Connection.php(1078): call_user_func(Object(Closure), Object(yii\db\Connection))
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\UniqueValidator.php(146): yii\db\Connection->useMaster(Object(Closure))
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\UniqueValidator->validateAttribute(Object(api\modules\v1\models\Antrenori), 'email')
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(api\modules\v1\models\Antrenori), Array)
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(560): yii\base\Model->validate(NULL)
+#12 D:\wamp64\www\TenisApp\backend\models\Antrenori.php(56): yii\db\ActiveRecord->insert(true, NULL)
+#13 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): backend\models\Antrenori->insert(true, NULL)
+#14 D:\wamp64\www\TenisApp\backend\models\Antrenori.php(131): yii\db\BaseActiveRecord->save(true, NULL)
+#15 D:\wamp64\www\TenisApp\api\modules\v1\actions\CreateCustomAction.php(35): backend\models\Antrenori->save()
+#16 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#17 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#18 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#19 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#20 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/antrenori/cr...', Array)
+#21 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#23 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'antrenori.email' in 'where clause'
+)
+
+2019-11-21 20:27:14 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'email' => 'radumrn3@gmail.com'
+    'password' => '12345678'
+    'nume' => 'Iordache'
+    'prenume' => 'Stefan'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '5e561550-db48-4d18-98b9-787ebdc07a9e'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '73'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;C:\\Program Files\\nodejs\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Marian\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Marian\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '60371'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/antrenori'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisApp/api/web/v1/antrenori'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1574368034.455
+    'REQUEST_TIME' => 1574368034
+]
+2019-11-21 20:55:59 [::1][-][-][error][yii\web\HttpException:401] exception 'yii\web\UnauthorizedHttpException' with message 'Your request was made with invalid credentials.' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(api\modules\v1\actions\CreateCustomAction))
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(api\modules\v1\actions\CreateCustomAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(276): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(api\modules\v1\actions\CreateCustomAction))
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(api\modules\v1\actions\CreateCustomAction))
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/user/create', Array)
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#12 {main}
+2019-11-21 20:55:59 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'email' => 'radumrn3@gmail.com'
+    'password' => '12345678'
+    'nume' => 'Iordache'
+    'prenume' => 'Stefan'
+    'localitate' => '3757'
+    'gen' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'c148480d-002a-4c84-a403-63b915b0edf3'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '95'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;C:\\Program Files\\nodejs\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Marian\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Marian\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '60532'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/users'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisApp/api/web/v1/users'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1574369759.709
+    'REQUEST_TIME' => 1574369759
+]
+2019-11-21 20:56:50 [::1][-][-][error][yii\base\InvalidArgumentException] exception 'yii\base\InvalidArgumentException' with message 'Unknown scenario: create' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Model.php:357
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(560): yii\base\Model->validate(NULL)
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#2 D:\wamp64\www\TenisApp\api\modules\v1\actions\CreateCustomAction.php(35): yii\db\BaseActiveRecord->save()
+#3 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#6 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/user/create', Array)
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#10 {main}
+2019-11-21 20:56:50 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'email' => 'radumrn3@gmail.com'
+    'password' => '12345678'
+    'nume' => 'Iordache'
+    'prenume' => 'Stefan'
+    'localitate' => '3757'
+    'gen' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'a11c2fa2-67d5-47d2-8315-afe7fe5c8a50'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '95'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;C:\\Program Files\\nodejs\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Marian\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Marian\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '60541'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/users'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisApp/api/web/v1/users'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1574369810.07
+    'REQUEST_TIME' => 1574369810
+]
+2019-11-21 20:56:57 [::1][-][-][error][yii\base\InvalidArgumentException] exception 'yii\base\InvalidArgumentException' with message 'Unknown scenario: create' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Model.php:357
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(560): yii\base\Model->validate(NULL)
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#2 D:\wamp64\www\TenisApp\api\modules\v1\actions\CreateCustomAction.php(35): yii\db\BaseActiveRecord->save()
+#3 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#6 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/user/create', Array)
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#10 {main}
+2019-11-21 20:56:57 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'email' => 'radumrn3@gmail.com'
+    'password' => '12345678'
+    'nume' => 'Iordache'
+    'prenume' => 'Stefan'
+    'localitate' => '3757'
+    'gen' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '5983bf33-f63c-4711-bc72-feb34fecc94c'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '95'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;C:\\Program Files\\nodejs\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Marian\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Marian\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '60544'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/users'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisApp/api/web/v1/users'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1574369817.297
+    'REQUEST_TIME' => 1574369817
+]
+2019-11-21 20:58:22 [::1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Getting write-only property: api\modules\v1\models\Users::password' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Component.php:151
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('password')
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\Validator.php(303): yii\db\BaseActiveRecord->__get('password')
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\Validator->validateAttribute(Object(api\modules\v1\models\Users), 'password')
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(api\modules\v1\models\Users), Array)
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(560): yii\base\Model->validate(NULL)
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 D:\wamp64\www\TenisApp\api\modules\v1\actions\CreateCustomAction.php(35): yii\db\BaseActiveRecord->save()
+#7 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/user/create', Array)
+#12 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#14 {main}
+2019-11-21 20:58:20 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'email' => 'radumrn3@gmail.com'
+    'password' => '12345678'
+    'nume' => 'Iordache'
+    'prenume' => 'Stefan'
+    'localitate' => '3757'
+    'gen' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '99c2e053-646e-4950-9554-c39baa86d06a'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '95'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;C:\\Program Files\\nodejs\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Marian\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Marian\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '60551'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/users'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisApp/api/web/v1/users'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1574369900.645
+    'REQUEST_TIME' => 1574369900
+]
+2019-11-21 21:01:26 [::1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Getting write-only property: api\modules\v1\models\Users::password' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Component.php:151
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('password')
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\Validator.php(303): yii\db\BaseActiveRecord->__get('password')
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\Validator->validateAttribute(Object(api\modules\v1\models\Users), 'password')
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(api\modules\v1\models\Users), Array)
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(560): yii\base\Model->validate(NULL)
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 D:\wamp64\www\TenisApp\api\modules\v1\actions\CreateCustomAction.php(35): yii\db\BaseActiveRecord->save()
+#7 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/user/create', Array)
+#12 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#14 {main}
+2019-11-21 21:01:25 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'email' => 'radumrn3@gmail.com'
+    'password' => '12345678'
+    'nume' => 'Iordache'
+    'prenume' => 'Stefan'
+    'localitate' => '3757'
+    'gen' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '8c7ed245-f848-4f0b-8f15-9d050e6d8371'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '95'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;C:\\Program Files\\nodejs\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Marian\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Marian\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '60561'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/users'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisApp/api/web/v1/users'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1574370085.05
+    'REQUEST_TIME' => 1574370085
+]
+2019-11-21 21:02:47 [::1][-][-][error][yii\base\InvalidArgumentException] exception 'yii\base\InvalidArgumentException' with message 'Unknown scenario: create' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Model.php:357
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\ActiveRecord.php(560): yii\base\Model->validate(NULL)
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#2 D:\wamp64\www\TenisApp\api\modules\v1\actions\CreateCustomAction.php(35): yii\db\BaseActiveRecord->save()
+#3 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#6 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/user/create', Array)
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#10 {main}
+2019-11-21 21:02:47 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    'email' => 'radumrn3@gmail.com'
+    'password' => '12345678'
+    'nume' => 'Iordache'
+    'prenume' => 'Stefan'
+    'localitate' => '3757'
+    'gen' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.19.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '8c4db631-17a6-46d4-8cd6-c41bf1d7d70f'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_LENGTH' => '95'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;C:\\Program Files\\nodejs\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Users\\Marian\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Marian\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '60578'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/users'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisApp/api/web/v1/users'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1574370167.06
+    'REQUEST_TIME' => 1574370167
+]

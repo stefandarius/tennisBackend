@@ -20,6 +20,9 @@ use Yii;
  */
 class AuthItem extends \yii\db\ActiveRecord
 {
+    const ROLE_ADMIN='admin';
+    const ROLE_ANTRENOR='antrenor';
+    const ROLE_SPORTIV='sportiv';
     /**
      * {@inheritdoc}
      */

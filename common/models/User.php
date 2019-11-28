@@ -51,6 +51,7 @@ class User extends ActiveRecord implements IdentityInterface {
     public function rules() {
         return [
             ['status', 'default', 'value' => self::STATUS_INACTIVE],
+            [['email'], 'unique'],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_INACTIVE, self::STATUS_DELETED]],
         ];
     }
@@ -76,7 +77,7 @@ class User extends ActiveRecord implements IdentityInterface {
      * @return static|null
      */
     public static function findByUsername($username) {
-        return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);
+        return static::findOne(['email' => $username, 'status' => self::STATUS_ACTIVE]);
     }
 
     /**
@@ -188,6 +189,13 @@ class User extends ActiveRecord implements IdentityInterface {
      */
     public function removePasswordResetToken() {
         $this->password_reset_token = null;
+    }
+        /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getRol() {
+        return $this->hasOne(\backend\models\AuthItem::className(), 
+                ['name' => 'item_name'])->viaTable('auth_assignment', ['user_id' => 'id']);
     }
 
 }
