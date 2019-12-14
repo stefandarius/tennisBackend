@@ -9,6 +9,7 @@
 namespace api\modules\v1\models;
 
 use common\models\User as UR;
+use backend\models\AuthAssignment;
 use Yii;
 
 /**
@@ -18,31 +19,35 @@ use Yii;
  */
 class Users extends UR {
 
-    public $nume;
-    public $prenume;
-    public $data_nastere;
-    public $gen;
-    public $telefon;
+    public $password;
+    public $type;
     
     public function rules() {
-        $rules=parent::rules();
-        $rules[]=[['nume','prenume','data_nastere','gen','telefon'],'required'];
-        //$rules[]=['password','required','on'=>'create'];
+        $rules = parent::rules();
+        $rules[] = [['password','type','email'], 'required'];
+       // $rules[] = ['type', 'validateAccountType'];
+         $rules[]=['type', 'in', 'range' => [\backend\models\AuthItem::ROLE_ANTRENOR, \backend\models\AuthItem::ROLE_SPORTIV]];
         return $rules;
     }
-    
+
+    public function validateAccountType($attribute, $params, $validator) {
+        if (!\yii\helpers\ArrayHelper::isIn($this->$attribute, ['antrenor', 'sportiv'])) {
+            $this->addError($attribute, \Yii::t('app', 'Tipul contului trebuie sa fie antrenor sau sportiv'));
+        }
+    }
+
     public function beforeSave($insert) {
-        if(parent::beforeSave($insert)){
+        if (parent::beforeSave($insert)) {
             $this->setPassword($this->password);
             $this->generateAuthKey();
-            $this->status= static::STATUS_ACTIVE;
+            $this->status = static::STATUS_ACTIVE;
             return true;
         }
         return false;
     }
-    
+
     public function fields() {
-        $fields=parent::fields();
+        $fields = parent::fields();
         unset($fields['password_hash']);
         unset($fields['password_reset_token']);
         unset($fields['status']);
@@ -51,19 +56,43 @@ class Users extends UR {
         unset($fields['verification_token']);
         return $fields;
     }
-    
-    public function login($username, $password) {
-        $user = static::findOne(['username' => $username]);
+
+    public function login($email, $password) {
+        $user = static::findOne(['email' => $email]);
         if (!is_null($user) && Yii::$app->security->validatePassword($password, $user->password_hash) && $user->status === \common\models\User::STATUS_ACTIVE) {
             return $user;
         } else {
             if (!is_null($user) && \common\models\User::STATUS_DELETED === $user->status) {
-                $this->addError('username', 'User is blocked or deleted.');
+                $this->addError('email', 'Utilizator sters sau blocat.');
             } else {
-                $this->addError('username', 'Invalid credentials');
+                $this->addError('email', 'Credentiale invalide');
             }
             return $this;
         }
+    }
+
+    public function save($runValidation = true, $attributeNames = null) {
+        $newRecord = $this->isNewRecord;
+        $transaction = \Yii::$app->db->beginTransaction();
+        $result = true;
+        if ($newRecord) {
+            $result = $result && parent::save($runValidation, $attributeNames);
+        }
+       // var_dump($this->type);
+        if ($newRecord && $result) {
+            $authAsignment = new AuthAssignment(['item_name' => $this->type,
+                'user_id' => strval($this->id), 'created_at' => time()]);
+            if (!$authAsignment->save()) {
+                $this->addErrors($authAsignment->errors);
+                $result = false;
+            }
+        }
+        if ($result) {
+            $transaction->commit();
+        } else {
+            $transaction->rollBack();
+        }
+        return $result;
     }
 
 }

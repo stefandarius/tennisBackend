@@ -103,5 +103,19 @@ class ProjectUtils {
     public static function substr_startswith($haystack, $needle) {
         return substr($haystack, 0, strlen($needle)) === $needle;
     }
+    
+    public static function getPublicAttributesAndValues($model,$publics){
+        $keyValue=[];
+        foreach ($publics as $public){
+            $keyValue[$public]=$model->$public;
+        }
+        return $keyValue;
+    }
+
+    public static function unsetFields(&$fields,$data) {
+        foreach ($data as $field){
+            unset($fields[$field]);
+        }
+    }
 
 }

@@ -3,7 +3,7 @@ actor: ApiTester
 modules:
     enabled:
         - REST:
-            #url: http://localhost/FitApp/api/web/v1
+            #url: http://localhost/TenisApp/api/web/v1
             url: 'v1/'
             depends: Yii2
             # depends: PhpBrowser
@@ -13,8 +13,8 @@ modules:
     config:
         - Yii2:
            #     configFile: 'codeception/config/functional.php'
-           # entryUrl: http://localhost/FitApp
+           # entryUrl: http://localhost/TenisApp
            part: [fixtures, orm]
            cleanup: false
-           transaction: false
+           transaction: true
        
