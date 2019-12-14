@@ -131,7 +131,7 @@ class UserController extends BApiController {
     }
     
     protected function disableCheckAccessActions() {
-        return ['login'];
+        return ['login', 'create'];
     }
 
 }
