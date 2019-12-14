@@ -3,31 +3,23 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\Antrenori;
+use backend\models\Profil;
+use backend\models\ProfilSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * AntrenorController implements the CRUD actions for Antrenori model.
+ * AntrenorController implements the CRUD actions for Profil model.
  */
-class AntrenorController extends Controller {
-
+class AntrenorController extends Controller
+{
     /**
      * {@inheritdoc}
      */
-    public function behaviors() {
+    public function behaviors()
+    {
         return [
-            'access' => [
-                'class' => yii\filters\AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => [],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -38,99 +30,98 @@ class AntrenorController extends Controller {
     }
 
     /**
-     * Lists all Antrenori models.
+     * Lists all Profil models.
      * @return mixed
      */
-    public function actionIndex() {
-        $searchModel = new \backend\models\AntrenorSearch();
+    public function actionIndex()
+    {
+        $searchModel = new ProfilSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
-                    'searchModel' => $searchModel,
-                    'dataProvider' => $dataProvider,
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
         ]);
     }
 
     /**
-     * Displays a single Antrenori model.
+     * Displays a single Profil model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionView($id) {
+    public function actionView($id)
+    {
         return $this->render('view', [
-                    'model' => $this->findModel($id),
+            'model' => $this->findModel($id),
         ]);
     }
 
     /**
-     * Creates a new Antrenori model.
+     * Creates a new Profil model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate() {
-        $model = new Antrenori();
-        $model->scenario = 'create';
+    public function actionCreate()
+    {
+        $model = new Profil();
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
-                    'model' => $model,
+            'model' => $model,
         ]);
     }
 
     /**
-     * Updates an existing Antrenori model.
+     * Updates an existing Profil model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($id) {
+    public function actionUpdate($id)
+    {
         $model = $this->findModel($id);
-        if (!is_null($model->user0)) {
-            $model->user = $model->user0->id;
-        }
-        if (!is_null($model->localitate)) {
-            $model->judet = $model->localitate0->judet;
-        }
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [
-                    'model' => $model,
+            'model' => $model,
         ]);
     }
 
     /**
-     * Deletes an existing Antrenori model.
+     * Deletes an existing Profil model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionDelete($id) {
+    public function actionDelete($id)
+    {
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
 
     /**
-     * Finds the Antrenori model based on its primary key value.
+     * Finds the Profil model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Antrenori the loaded model
+     * @return Profil the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id) {
-        if (($model = Antrenori::findOne($id)) !== null) {
+    protected function findModel($id)
+    {
+        if (($model = Profil::findOne($id)) !== null) {
             return $model;
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
-
 }

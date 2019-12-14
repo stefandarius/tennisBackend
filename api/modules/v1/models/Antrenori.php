@@ -13,13 +13,24 @@ namespace api\modules\v1\models;
  *
  * @author Marian
  */
-use backend\models\Antrenori as AN;
+use backend\models\Profil as AN;
+
 class Antrenori extends AN {
     //put your code here
     
+    public $nume;
+    public $prenume;
+    public $data_nastere;
+    public $localitate;
+    public $sex;
+    public $telefon;
+
+
     public function rules() {
-        $rules=parent::rules();
-        unset($rules['judet']);
+        $rules = parent::rules();
+        $rules[] = [['nume', 'prenume', 'data_nastere', 'localitate', 'sex','telefon'], 'required'];
+        $rules[] = [['localitate', 'sex'], 'integer'];
+        $rules[] = [['adresa'], 'safe'];
         return $rules;
     }
     

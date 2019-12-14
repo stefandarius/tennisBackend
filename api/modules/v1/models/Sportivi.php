@@ -24,13 +24,6 @@ class Sportivi extends SP {
     public $sex;
     public $telefon;
 
-    //put your code here
-    public $nume;
-    public $prenume;
-    public $data_nastere;
-    public $localitate;
-    public $sex;
-    public $numar_telefon;
 
     public function rules() {
         $rules = parent::rules();
@@ -87,30 +80,6 @@ class Sportivi extends SP {
             return $model->stareSanatate->nume;
         };
         return $fields;
-    }
-    
-    public function save($runValidation = true, $attributeNames = null) {
-        $newRecord = $this->isNewRecord;
-        $transaction = \Yii::$app->db->beginTransaction();
-        $result = true;
-        if ($newRecord) {
-            $result = $result && parent::save($runValidation, $attributeNames);
-        }
-        if ($newRecord && $result) {
-            $profil = new \backend\models\Profil(['nume' => $this->nume, 'prenume' => $this->prenume,
-                'gen' => $this->sex, 'localitate' => $this->localitate, 
-                'data_nastere' => $this->data_nastere, 'numar_telefon' => $this->numar_telefon]);
-            if (!$profil->save()) {
-                $this->addError($profil->errors);
-                $result = false;
-            }
-        }
-        if ($result) {
-            $transaction->commit();
-        } else {
-            $transaction->rollBack();
-        }
-        return $result;
     }
 
 }

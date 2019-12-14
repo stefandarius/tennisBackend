@@ -22,4 +22,18 @@ if (!YII_ENV_TEST) {
     ];
 }
 
+if (YII_ENV_DEV) {    
+    $config['modules']['gii'] = [
+        'class' => 'yii\gii\Module',
+        'generators' => [ // HERE
+            'crud' => [
+                'class' => 'yii\gii\generators\crud\Generator',
+                'templates' => [
+                    'adminlte' => '@vendor/dmstr/yii2-adminlte-asset/gii/templates/crud/simple',
+                ]
+            ]
+        ],
+    ];
+}
+
 return $config;

@@ -4,14 +4,14 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Antrenori */
+/* @var $model backend\models\Profil */
 
-$this->title = $model->numeComplet;
-$this->params['breadcrumbs'][] = ['label' => 'Antrenori', 'url' => ['index']];
+$this->title = $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Profils', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="antrenori-view">
+<div class="profil-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -32,9 +32,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'nume',
             'prenume',
-            ['attribute'=>'gen','value'=>$model->gen==1?'Barbat':'Femeie'],
-            'localitate0.nume:text:Localitate',
-            'email:email',
+            'gen',
+            'data_nastere',
+            'telefon',
+            'localitate',
+            'adresa',
+            'user',
         ],
     ]) ?>
 

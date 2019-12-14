@@ -13,7 +13,7 @@ class DetaliiSportiviSearch extends DetaliiSportivi {
 
     public $gen;
     public $data_nastere;
-    public $nume, $prenume,$localitate_nume, $telefon, $judet;
+    public $nume, $prenume, $localitate_nume, $telefon, $judet;
 
     /**
      * {@inheritdoc}
@@ -21,7 +21,7 @@ class DetaliiSportiviSearch extends DetaliiSportivi {
     public function rules() {
         return [
             [['id', 'profil', 'judet', 'gen', 'nivel', 'greutate', 'inaltime', 'stare_sanatate'], 'integer'],
-            [['data_nastere', 'nume', 'prenume', 'telefon','localitate_nume'], 'safe']
+            [['data_nastere', 'nume', 'prenume', 'telefon', 'localitate_nume'], 'safe']
         ];
     }
 
@@ -41,13 +41,19 @@ class DetaliiSportiviSearch extends DetaliiSportivi {
      * @return ActiveDataProvider
      */
     public function search($params) {
-        $query = DetaliiSportivi::find();
+        $query = DetaliiSportivi::find()->alias('ds');
 
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
+        $query->innerJoin('profil p', 'p.id=ds.profil');
+
+        $query->innerJoin('localitati l', 'l.id=p.localitate');
+        $query->innerJoin('judete j', 'j.id=l.judet');
+        $query->innerJoin('user u', 'p.user=u.id');
+        $query->innerJoin('auth_assignment aa', 'aa.user_id=u.id');
 
         $dataProvider->sort->attributes['nume'] = [
             'asc' => ['p.nume' => SORT_ASC],
@@ -73,7 +79,7 @@ class DetaliiSportiviSearch extends DetaliiSportivi {
             'asc' => ['p.gen' => SORT_ASC],
             'desc' => ['p.gen' => SORT_DESC],
         ];
-         $dataProvider->sort->attributes['localitate_nume'] = [
+        $dataProvider->sort->attributes['localitate_nume'] = [
             'asc' => ['l.nume' => SORT_ASC],
             'desc' => ['l.nume' => SORT_DESC],
         ];
@@ -84,8 +90,6 @@ class DetaliiSportiviSearch extends DetaliiSportivi {
             // $query->where('0=1');
             return $dataProvider;
         }
-        $query->joinWith('profil0 p');
-        $query->innerJoin('localitati l', 'p.localitate=l.id');
 
         // grid filtering conditions
         $query->andFilterWhere([
@@ -96,11 +100,12 @@ class DetaliiSportiviSearch extends DetaliiSportivi {
             'inaltime' => $this->inaltime,
             'stare_sanatate' => $this->stare_sanatate,
             'l.judet' => $this->judet,
+            'aa.item_name' => 'sportiv'
         ]);
         $query->andFilterWhere(['LIKE', 'p.nume', $this->nume])
                 ->andFilterWhere(['LIKE', 'p.prenume', $this->prenume])
                 ->andFilterWhere(['LIKE', 'p.telefon', $this->telefon])
-                 ->andFilterWhere(['LIKE', 'l.nume', $this->localitate_nume]);
+                ->andFilterWhere(['LIKE', 'l.nume', $this->localitate_nume]);
 
         return $dataProvider;
     }

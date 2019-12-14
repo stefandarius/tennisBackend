@@ -23,6 +23,8 @@ use Yii;
  */
 class Profil extends \yii\db\ActiveRecord {
 
+    public $judet;
+    
     /**
      * {@inheritdoc}
      */
