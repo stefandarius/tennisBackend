@@ -13,9 +13,16 @@ namespace api\modules\v1\models;
  *
  * @author Marian
  */
-use backend\models\DetaliiSportiv as DP;
+use backend\models\DetaliiSportivi as SP;
 
-class Sportivi extends DP {
+class Sportivi extends SP {
+
+    public $nume;
+    public $prenume;
+    public $data_nastere;
+    public $localitate;
+    public $sex;
+    public $telefon;
 
     //put your code here
     public $nume;
@@ -27,26 +34,58 @@ class Sportivi extends DP {
 
     public function rules() {
         $rules = parent::rules();
-        unset($rules['judet']);
-        $rules[] = [['nume', 'prenume', 'data_nastere', 'localitate', 'sex', 'numar_telefon'], 'required'];
+        $rules[] = [['nume', 'prenume', 'data_nastere', 'localitate', 'sex','telefon'], 'required'];
         $rules[] = [['localitate', 'sex'], 'integer'];
+        $rules[] = [['adresa'], 'safe'];
         return $rules;
     }
-    
+
+//    public function safeAttributes() {
+//        return array_merge(['nume','prenume','data_nastere','localitate','sex'],parent::safeAttributes());
+//    }
+
+    public function save($runValidation = true, $attributeNames = null) {
+        $newRecord = $this->isNewRecord;
+        $transaction = \Yii::$app->db->beginTransaction();
+        $result = true;
+        $profil = new \backend\models\Profil();
+        if(!$newRecord){
+            $profil= $this->profil0;  
+        }
+        else{
+            $profil->user= \Yii::$app->user->id;
+        }
+        $profil->attributes = \backend\components\ProjectUtils::getPublicAttributesAndValues($this, \yii\base\Model::attributes());
+        
+        if ($profil->save()) {
+            $result = true;
+        } else {
+            $result = false;
+            $this->addErrors($profil->errors);
+        }
+        if($newRecord && $result){
+            $this->profil=$profil->id;
+        }
+        $result = $result && parent::save($runValidation, $attributeNames);
+        if ($result) {
+            $transaction->commit();
+        } else {
+            $transaction->rollBack();
+        }
+        return $result;
+    }
+
     public function fields() {
-        $fields=parent::fields();
-        unset($fields['nivel']);
-        unset($fields['stare_sanatate']);
-        $fields['nivelText']=function($model){
+        $fields = parent::fields();
+        $fields['nivelText'] = function($model) {
             return $model->nivel0->nume;
         };
-        $fields['stareSanatateText']=function($model){
+        $fields['profil']=function($model){
+            return \yii\helpers\ArrayHelper::toArray($model->profil0, ['backend\models\Profil' => []]);     
+        };
+        $fields['stareSanatateText'] = function($model) {
             return $model->stareSanatate->nume;
         };
-        $fields['numeComplet']=function($model){
-            return sprintf('%s %s',$model->nume,$model->prenume);
-        };
-        
         return $fields;
     }
     

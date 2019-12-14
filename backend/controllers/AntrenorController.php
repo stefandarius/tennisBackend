@@ -41,8 +41,7 @@ class AntrenorController extends Controller {
      * Lists all Antrenori models.
      * @return mixed
      */
-    public function actionIndex()
-    {
+    public function actionIndex() {
         $searchModel = new \backend\models\AntrenorSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -71,7 +70,7 @@ class AntrenorController extends Controller {
      */
     public function actionCreate() {
         $model = new Antrenori();
-
+        $model->scenario = 'create';
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
@@ -90,6 +89,9 @@ class AntrenorController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->findModel($id);
+        if (!is_null($model->user0)) {
+            $model->user = $model->user0->id;
+        }
         if (!is_null($model->localitate)) {
             $model->judet = $model->localitate0->judet;
         }

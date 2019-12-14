@@ -9,9 +9,9 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-        'authManager' => [
+         'authManager' => [
             'class' => 'yii\rbac\DbManager',
-            'defaultRoles' => ['guest'],
+            'defaultRoles'=>['guest']
         ],
     ],
 ];

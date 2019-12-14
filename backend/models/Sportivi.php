@@ -23,7 +23,6 @@ use Yii;
  * @property Localitati $localitate0 
  * @property Niveluri $nivel0
  * @property StariSanatate $stareSanatate
- * @property AntrenoriSportivi[] $antrenoriSportivis
  * @property Antrenori[] $antrenors
  */
 class Sportivi extends \yii\db\ActiveRecord {
@@ -86,10 +85,6 @@ class Sportivi extends \yii\db\ActiveRecord {
         return $this->hasMany(AbonamenteSportivi::className(), ['sportiv_id' => 'id']);
     }
 
-    public function getAntrenoriSportivis() {
-        return $this->hasMany(AntrenoriSportivi::className(), ['sportiv' => 'id']);
-    }
-
     public function getAntrenors() {
         return $this->hasMany(Antrenori::className(), ['id' => 'antrenor'])->viaTable('antrenori_sportivi', ['sportiv' => 'id']);
     }
@@ -144,4 +139,7 @@ class Sportivi extends \yii\db\ActiveRecord {
         return $result;
     }
 
+    public function getAntrenoriSportivis() {
+        return $this->hasMany(AntrenoriSportivi::className(), ['sportiv' => 'id']);
+    }
 }

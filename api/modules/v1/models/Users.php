@@ -9,6 +9,7 @@
 namespace api\modules\v1\models;
 
 use common\models\User as UR;
+use backend\models\AuthAssignment;
 use Yii;
 use backend\models\AuthAssignment;
 
@@ -21,12 +22,12 @@ class Users extends UR {
 
     public $password;
     public $type;
-
+    
     public function rules() {
         $rules = parent::rules();
-        $rules[] = [['password', 'type'], 'required'];
-        $rules[] = ['type', 'validateAccountType'];
-
+        $rules[] = [['password','type','email'], 'required'];
+       // $rules[] = ['type', 'validateAccountType'];
+         $rules[]=['type', 'in', 'range' => [\backend\models\AuthItem::ROLE_ANTRENOR, \backend\models\AuthItem::ROLE_SPORTIV]];
         return $rules;
     }
 
@@ -34,6 +35,16 @@ class Users extends UR {
         if (!\yii\helpers\ArrayHelper::isIn($this->$attribute, ['antrenor', 'sportiv'])) {
             $this->addError($attribute, \Yii::t('app', 'Tipul contului trebuie sa fie antrenor sau sportiv'));
         }
+    }
+
+    public function beforeSave($insert) {
+        if (parent::beforeSave($insert)) {
+            $this->setPassword($this->password);
+            $this->generateAuthKey();
+            $this->status = static::STATUS_ACTIVE;
+            return true;
+        }
+        return false;
     }
 
     public function fields() {
@@ -55,20 +66,10 @@ class Users extends UR {
             if (!is_null($user) && \common\models\User::STATUS_DELETED === $user->status) {
                 $this->addError('email', 'Utilizator sters sau blocat.');
             } else {
-                $this->addError('email', 'Credentiale invalide.');
+                $this->addError('email', 'Credentiale invalide');
             }
             return $this;
         }
-    }
-
-    public function beforeSave($insert) {
-        if (parent::beforeSave($insert)) {
-            $this->setPassword($this->password);
-            $this->generateAuthKey();
-            $this->status = static::STATUS_ACTIVE;
-            return true;
-        }
-        return false;
     }
 
     public function save($runValidation = true, $attributeNames = null) {
@@ -78,12 +79,12 @@ class Users extends UR {
         if ($newRecord) {
             $result = $result && parent::save($runValidation, $attributeNames);
         }
+       // var_dump($this->type);
         if ($newRecord && $result) {
-            $authAssignment = new \backend\models\AuthAssignment(
-                    ['item_name' => $this->type,
+            $authAsignment = new AuthAssignment(['item_name' => $this->type,
                 'user_id' => strval($this->id), 'created_at' => time()]);
-            if (!$authAssignment->save()) {
-                $this->addError($authAssignment->errors);
+            if (!$authAsignment->save()) {
+                $this->addErrors($authAsignment->errors);
                 $result = false;
             }
         }

@@ -18,12 +18,11 @@ use Yii;
  * @property AuthAssignment[] $authAssignments
  * @property AuthRule $ruleName
  */
-class AuthItem extends \yii\db\ActiveRecord {
-    
-    const ROL_ADMIN = 'admin';
-    const ROL_ANTRENOR = 'antrenor';
-    const ROL_SPORTIV = 'sportiv';
-
+class AuthItem extends \yii\db\ActiveRecord
+{
+    const ROLE_ADMIN='admin';
+    const ROLE_ANTRENOR='antrenor';
+    const ROLE_SPORTIV='sportiv';
     /**
      * {@inheritdoc}
      */

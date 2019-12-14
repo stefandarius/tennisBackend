@@ -20,7 +20,7 @@ class AntrenoriController extends BApiController{
     }
     
     protected function disableCheckAccessActions() {
-        return ['index', 'create'];
+        return ['index','create'];
     }
 
 }
