@@ -11,8 +11,8 @@ use Yii;
  * @property int $antrenor
  * @property int $sportiv
  *
- * @property Antrenori $antrenor0
- * @property Sportivi $sportiv0
+ * @property Profil $antrenor0
+ * @property Profil $sportiv0
  */
 class AntrenoriSportivi extends \yii\db\ActiveRecord
 {
@@ -32,8 +32,8 @@ class AntrenoriSportivi extends \yii\db\ActiveRecord
         return [
             [['antrenor', 'sportiv'], 'integer'],
             [['antrenor', 'sportiv'], 'unique', 'targetAttribute' => ['antrenor', 'sportiv']],
-            [['antrenor'], 'exist', 'skipOnError' => true, 'targetClass' => Antrenori::className(), 'targetAttribute' => ['antrenor' => 'id']],
-            [['sportiv'], 'exist', 'skipOnError' => true, 'targetClass' => Sportivi::className(), 'targetAttribute' => ['sportiv' => 'id']],
+            [['antrenor'], 'exist', 'skipOnError' => true, 'targetClass' => Profil::className(), 'targetAttribute' => ['antrenor' => 'id']],
+            [['sportiv'], 'exist', 'skipOnError' => true, 'targetClass' => Profil::className(), 'targetAttribute' => ['sportiv' => 'id']],
         ];
     }
 
@@ -54,7 +54,7 @@ class AntrenoriSportivi extends \yii\db\ActiveRecord
      */
     public function getAntrenor0()
     {
-        return $this->hasOne(Antrenori::className(), ['id' => 'antrenor']);
+        return $this->hasOne(Profil::className(), ['id' => 'antrenor']);
     }
 
     /**
@@ -62,6 +62,6 @@ class AntrenoriSportivi extends \yii\db\ActiveRecord
      */
     public function getSportiv0()
     {
-        return $this->hasOne(Sportivi::className(), ['id' => 'sportiv']);
+        return $this->hasOne(Profil::className(), ['id' => 'sportiv']);
     }
 }

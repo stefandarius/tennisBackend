@@ -1,0 +1,1 @@
+apidoc  -o documentation/ -i modules/v1/apiDoc
