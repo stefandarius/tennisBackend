@@ -14,10 +14,12 @@ use Yii;
  * @property int $grad_dificultate
  * @property int $rating
  * @property string $data_antrenament
+ * @property string $descriere
+ * @property int $created_at
  *
- * @property Antrenori $antrenor
  * @property AbonamenteSportivi $abonamentSpotiv
  * @property TipAntrenament $tipAntrenament
+ * @property Profil $antrenor
  */
 class IstoricAntrenament extends \yii\db\ActiveRecord
 {
@@ -35,12 +37,13 @@ class IstoricAntrenament extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['antrenor_id', 'abonamentSpotiv_id', 'tipAntrenament_id', 'grad_dificultate', 'rating', 'data_antrenament'], 'required'],
-            [['antrenor_id', 'abonamentSpotiv_id', 'tipAntrenament_id', 'grad_dificultate', 'rating'], 'integer'],
+            [['antrenor_id', 'abonamentSpotiv_id', 'tipAntrenament_id', 'grad_dificultate', 'rating', 'data_antrenament', 'created_at'], 'required'],
+            [['antrenor_id', 'abonamentSpotiv_id', 'tipAntrenament_id', 'grad_dificultate', 'rating', 'created_at'], 'integer'],
             [['data_antrenament'], 'safe'],
-            [['antrenor_id'], 'exist', 'skipOnError' => true, 'targetClass' => Antrenori::className(), 'targetAttribute' => ['antrenor_id' => 'id']],
+            [['descriere'], 'string', 'max' => 500],
             [['abonamentSpotiv_id'], 'exist', 'skipOnError' => true, 'targetClass' => AbonamenteSportivi::className(), 'targetAttribute' => ['abonamentSpotiv_id' => 'id']],
             [['tipAntrenament_id'], 'exist', 'skipOnError' => true, 'targetClass' => TipAntrenament::className(), 'targetAttribute' => ['tipAntrenament_id' => 'id']],
+            [['antrenor_id'], 'exist', 'skipOnError' => true, 'targetClass' => Profil::className(), 'targetAttribute' => ['antrenor_id' => 'id']],
         ];
     }
 
@@ -57,15 +60,9 @@ class IstoricAntrenament extends \yii\db\ActiveRecord
             'grad_dificultate' => 'Grad Dificultate',
             'rating' => 'Rating',
             'data_antrenament' => 'Data Antrenament',
+            'descriere' => 'Descriere',
+            'created_at' => 'Created At',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getAntrenor()
-    {
-        return $this->hasOne(Antrenori::className(), ['id' => 'antrenor_id']);
     }
 
     /**
@@ -82,5 +79,13 @@ class IstoricAntrenament extends \yii\db\ActiveRecord
     public function getTipAntrenament()
     {
         return $this->hasOne(TipAntrenament::className(), ['id' => 'tipAntrenament_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getAntrenor()
+    {
+        return $this->hasOne(Profil::className(), ['id' => 'antrenor_id']);
     }
 }

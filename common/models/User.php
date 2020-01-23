@@ -202,5 +202,10 @@ class User extends ActiveRecord implements IdentityInterface {
         return $this->hasOne(\backend\models\AuthItem::className(), 
                 ['name' => 'item_name'])->viaTable('auth_assignment', ['user_id' => 'id']);
     }
+    
+    public function getProfil() {
+        return $this->hasOne(\backend\models\Profil::className(),
+                ['user' => 'id']);
+    }
 
 }

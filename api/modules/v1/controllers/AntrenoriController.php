@@ -8,6 +8,8 @@
 
 namespace api\modules\v1\controllers;
 
+use api\modules\v1\models\Sportivi;
+
 /**
  * Description of AntrenoriController
  *
@@ -21,6 +23,12 @@ class AntrenoriController extends BApiController{
     
     protected function disableCheckAccessActions() {
         return ['index','create'];
+    }
+    
+    public function actionListaSportivi() {
+        return Sportivi::find()
+                    ->innerJoin('antrenori_sportivi ai','ai.sportiv=detalii_sportivi.profil')
+                    ->innerJoin('profil p','p.id=ai.antrenor')->where(['p.user'=> \Yii::$app->user->id])->all();
     }
 
 }

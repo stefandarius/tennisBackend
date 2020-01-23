@@ -1,0 +1,422 @@
+a:13:{s:6:"config";s:3036:"a:5:{s:10:"phpVersion";s:6:"7.2.18";s:10:"yiiVersion";s:6:"2.0.28";s:11:"application";a:8:{s:3:"yii";s:6:"2.0.28";s:4:"name";s:14:"My Application";s:7:"version";s:3:"1.0";s:8:"language";s:2:"ro";s:14:"sourceLanguage";s:5:"en-US";s:7:"charset";s:5:"UTF-8";s:3:"env";s:3:"dev";s:5:"debug";b:1;}s:3:"php";a:5:{s:7:"version";s:6:"7.2.18";s:6:"xdebug";b:1;s:3:"apc";b:0;s:8:"memcache";b:0;s:9:"memcached";b:0;}s:10:"extensions";a:12:{s:24:"rmrevin/yii2-fontawesome";a:3:{s:4:"name";s:24:"rmrevin/yii2-fontawesome";s:7:"version";s:8:"2.17.1.0";s:5:"alias";a:1:{s:24:"@rmrevin/yii/fontawesome";s:58:"C:\wamp64\www\TenisBackend\vendor/rmrevin/yii2-fontawesome";}}s:18:"cebe/yii2-gravatar";a:3:{s:4:"name";s:18:"cebe/yii2-gravatar";s:7:"version";s:7:"1.1.0.0";s:5:"alias";a:1:{s:14:"@cebe/gravatar";s:66:"C:\wamp64\www\TenisBackend\vendor/cebe/yii2-gravatar/cebe/gravatar";}}s:22:"yiisoft/yii2-bootstrap";a:3:{s:4:"name";s:22:"yiisoft/yii2-bootstrap";s:7:"version";s:8:"2.0.10.0";s:5:"alias";a:1:{s:14:"@yii/bootstrap";s:60:"C:\wamp64\www\TenisBackend\vendor/yiisoft/yii2-bootstrap/src";}}s:25:"dmstr/yii2-adminlte-asset";a:3:{s:4:"name";s:25:"dmstr/yii2-adminlte-asset";s:7:"version";s:7:"2.6.2.0";s:5:"alias";a:1:{s:6:"@dmstr";s:59:"C:\wamp64\www\TenisBackend\vendor/dmstr/yii2-adminlte-asset";}}s:25:"kartik-v/yii2-krajee-base";a:3:{s:4:"name";s:25:"kartik-v/yii2-krajee-base";s:7:"version";s:7:"2.0.5.0";s:5:"alias";a:1:{s:12:"@kartik/base";s:63:"C:\wamp64\www\TenisBackend\vendor/kartik-v/yii2-krajee-base/src";}}s:31:"kartik-v/yii2-widget-activeform";a:3:{s:4:"name";s:31:"kartik-v/yii2-widget-activeform";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:12:"@kartik/form";s:69:"C:\wamp64\www\TenisBackend\vendor/kartik-v/yii2-widget-activeform/src";}}s:24:"yiisoft/yii2-swiftmailer";a:3:{s:4:"name";s:24:"yiisoft/yii2-swiftmailer";s:7:"version";s:7:"2.1.2.0";s:5:"alias";a:1:{s:16:"@yii/swiftmailer";s:62:"C:\wamp64\www\TenisBackend\vendor/yiisoft/yii2-swiftmailer/src";}}s:18:"yiisoft/yii2-debug";a:3:{s:4:"name";s:18:"yiisoft/yii2-debug";s:7:"version";s:7:"2.1.9.0";s:5:"alias";a:1:{s:10:"@yii/debug";s:56:"C:\wamp64\www\TenisBackend\vendor/yiisoft/yii2-debug/src";}}s:16:"yiisoft/yii2-gii";a:3:{s:4:"name";s:16:"yiisoft/yii2-gii";s:7:"version";s:7:"2.1.2.0";s:5:"alias";a:1:{s:8:"@yii/gii";s:54:"C:\wamp64\www\TenisBackend\vendor/yiisoft/yii2-gii/src";}}s:18:"yiisoft/yii2-faker";a:3:{s:4:"name";s:18:"yiisoft/yii2-faker";s:7:"version";s:7:"2.0.4.0";s:5:"alias";a:1:{s:10:"@yii/faker";s:52:"C:\wamp64\www\TenisBackend\vendor/yiisoft/yii2-faker";}}s:31:"kartik-v/yii2-widget-datepicker";a:3:{s:4:"name";s:31:"kartik-v/yii2-widget-datepicker";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:12:"@kartik/date";s:69:"C:\wamp64\www\TenisBackend\vendor/kartik-v/yii2-widget-datepicker/src";}}s:24:"borales/yii2-phone-input";a:3:{s:4:"name";s:24:"borales/yii2-phone-input";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:30:"@borales/extensions/phoneInput";s:62:"C:\wamp64\www\TenisBackend\vendor/borales/yii2-phone-input/src";}}}}";s:7:"request";s:3970:"a:15:{s:7:"flashes";a:0:{}s:10:"statusCode";i:200;s:14:"requestHeaders";a:8:{s:10:"user-agent";s:21:"PostmanRuntime/7.22.0";s:6:"accept";s:3:"*/*";s:13:"cache-control";s:8:"no-cache";s:13:"postman-token";s:36:"d0bd45c1-ffc6-4541-8aa9-e6fac9a50a26";s:4:"host";s:9:"localhost";s:15:"accept-encoding";s:17:"gzip, deflate, br";s:6:"cookie";s:172:"_csrf=7ecdc155bf9bb63a8689cfa896e7993ac7b953b0e85bc46ce8b919b65c0115cfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KjwzPA4RFM7tgkvqYo8I--zdPbUEq-jn%22%3B%7D";s:10:"connection";s:10:"keep-alive";}s:15:"responseHeaders";a:5:{s:12:"X-Powered-By";s:10:"PHP/7.2.18";s:12:"Content-Type";s:31:"application/json; charset=UTF-8";s:11:"X-Debug-Tag";s:13:"5e2323d6dc9bf";s:16:"X-Debug-Duration";s:3:"578";s:12:"X-Debug-Link";s:58:"/TenisBackend/api/web/debug/default/view?tag=5e2323d6dc9bf";}s:5:"route";s:13:"v1/user/login";s:6:"action";s:56:"api\modules\v1\controllers\UserController::actionLogin()";s:12:"actionParams";a:2:{i:0;s:15:"lord1@yahoo.com";i:1;s:8:"12345678";}s:7:"general";a:5:{s:6:"method";s:3:"GET";s:6:"isAjax";b:0;s:6:"isPjax";b:0;s:7:"isFlash";b:0;s:18:"isSecureConnection";b:0;}s:11:"requestBody";a:0:{}s:6:"SERVER";a:37:{s:15:"REDIRECT_STATUS";s:3:"200";s:15:"HTTP_USER_AGENT";s:21:"PostmanRuntime/7.22.0";s:11:"HTTP_ACCEPT";s:3:"*/*";s:18:"HTTP_CACHE_CONTROL";s:8:"no-cache";s:18:"HTTP_POSTMAN_TOKEN";s:36:"d0bd45c1-ffc6-4541-8aa9-e6fac9a50a26";s:9:"HTTP_HOST";s:9:"localhost";s:20:"HTTP_ACCEPT_ENCODING";s:17:"gzip, deflate, br";s:11:"HTTP_COOKIE";s:172:"_csrf=7ecdc155bf9bb63a8689cfa896e7993ac7b953b0e85bc46ce8b919b65c0115cfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KjwzPA4RFM7tgkvqYo8I--zdPbUEq-jn%22%3B%7D";s:15:"HTTP_CONNECTION";s:10:"keep-alive";s:4:"PATH";s:600:"C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\wamp64\bin\php\php7.2.18;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps";s:10:"SystemRoot";s:10:"C:\WINDOWS";s:7:"COMSPEC";s:27:"C:\WINDOWS\system32\cmd.exe";s:7:"PATHEXT";s:53:".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC";s:6:"WINDIR";s:10:"C:\WINDOWS";s:16:"SERVER_SIGNATURE";s:80:"<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+";s:15:"SERVER_SOFTWARE";s:32:"Apache/2.4.39 (Win64) PHP/7.2.18";s:11:"SERVER_NAME";s:9:"localhost";s:11:"SERVER_ADDR";s:3:"::1";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:3:"::1";s:13:"DOCUMENT_ROOT";s:13:"C:/wamp64/www";s:14:"REQUEST_SCHEME";s:4:"http";s:14:"CONTEXT_PREFIX";s:0:"";s:21:"CONTEXT_DOCUMENT_ROOT";s:13:"C:/wamp64/www";s:12:"SERVER_ADMIN";s:29:"wampserver@wampserver.invalid";s:15:"SCRIPT_FILENAME";s:44:"C:/wamp64/www/TenisBackend/api/web/index.php";s:11:"REMOTE_PORT";s:5:"58617";s:12:"REDIRECT_URL";s:61:"/TenisBackend/api/web/v1/users/login/lord1@yahoo.com/12345678";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.1";s:14:"REQUEST_METHOD";s:3:"GET";s:12:"QUERY_STRING";s:0:"";s:11:"REQUEST_URI";s:61:"/TenisBackend/api/web/v1/users/login/lord1@yahoo.com/12345678";s:11:"SCRIPT_NAME";s:31:"/TenisBackend/api/web/index.php";s:8:"PHP_SELF";s:31:"/TenisBackend/api/web/index.php";s:18:"REQUEST_TIME_FLOAT";d:1579361238.885;s:12:"REQUEST_TIME";i:1579361238;}s:3:"GET";a:2:{s:4:"user";s:15:"lord1@yahoo.com";s:4:"pass";s:8:"12345678";}s:4:"POST";a:0:{}s:6:"COOKIE";a:1:{s:5:"_csrf";s:130:"7ecdc155bf9bb63a8689cfa896e7993ac7b953b0e85bc46ce8b919b65c0115cfa:2:{i:0;s:5:"_csrf";i:1;s:32:"KjwzPA4RFM7tgkvqYo8I--zdPbUEq-jn";}";}s:5:"FILES";a:0:{}s:7:"SESSION";a:0:{}}";s:6:"router";s:3793:"a:3:{s:8:"messages";a:18:{i:5;a:6:{i:0;a:3:{s:4:"rule";s:3:"gii";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1579361238.906543;i:4;a:0:{}i:5;i:1551040;}i:6;a:6:{i:0;a:3:{s:4:"rule";s:12:"gii/<id:\w+>";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1579361238.906593;i:4;a:0:{}i:5;i:1551832;}i:7;a:6:{i:0;a:3:{s:4:"rule";s:41:"gii/<controller:[\w\-]+>/<action:[\w\-]+>";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1579361238.906626;i:4;a:0:{}i:5;i:1552664;}i:8;a:6:{i:0;a:3:{s:4:"rule";s:5:"debug";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1579361238.906656;i:4;a:0:{}i:5;i:1553448;}i:9;a:6:{i:0;a:3:{s:4:"rule";s:43:"debug/<controller:[\w\-]+>/<action:[\w\-]+>";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1579361238.906705;i:4;a:0:{}i:5;i:1554600;}i:10;a:6:{i:0;a:3:{s:4:"rule";s:16:"yii\rest\UrlRule";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1579361238.906737;i:4;a:0:{}i:5;i:1555352;}i:11;a:6:{i:0;a:3:{s:4:"rule";s:34:"api\modules\v1\rules\CustomUrlRule";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1579361238.906762;i:4;a:0:{}i:5;i:1556104;}i:12;a:6:{i:0;a:3:{s:4:"rule";s:34:"api\modules\v1\rules\CustomUrlRule";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1579361238.906785;i:4;a:0:{}i:5;i:1556856;}i:13;a:6:{i:0;a:3:{s:4:"rule";s:34:"api\modules\v1\rules\CustomUrlRule";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1579361238.906808;i:4;a:0:{}i:5;i:1557608;}i:14;a:6:{i:0;a:3:{s:4:"rule";s:16:"yii\rest\UrlRule";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1579361238.906831;i:4;a:0:{}i:5;i:1558360;}i:15;a:6:{i:0;a:3:{s:4:"rule";s:18:"POST v1/users/edit";s:5:"match";b:0;s:6:"parent";s:16:"yii\rest\UrlRule";}i:1;i:8;i:2;s:30:"yii\rest\UrlRule::parseRequest";i:3;d:1579361238.906884;i:4;a:0:{}i:5;i:1559536;}i:16;a:6:{i:0;a:3:{s:4:"rule";s:47:"DELETE v1/users/delete-disponibilitate/<id:\w+>";s:5:"match";b:0;s:6:"parent";s:16:"yii\rest\UrlRule";}i:1;i:8;i:2;s:30:"yii\rest\UrlRule::parseRequest";i:3;d:1579361238.906925;i:4;a:0:{}i:5;i:1560368;}i:17;a:6:{i:0;a:3:{s:4:"rule";s:33:"POST v1/users/add-disponibilitate";s:5:"match";b:0;s:6:"parent";s:16:"yii\rest\UrlRule";}i:1;i:8;i:2;s:30:"yii\rest\UrlRule::parseRequest";i:3;d:1579361238.906964;i:4;a:0:{}i:5;i:1561824;}i:18;a:6:{i:0;a:3:{s:4:"rule";s:27:"POST v1/users/add-rezervare";s:5:"match";b:0;s:6:"parent";s:16:"yii\rest\UrlRule";}i:1;i:8;i:2;s:30:"yii\rest\UrlRule::parseRequest";i:3;d:1579361238.907002;i:4;a:0:{}i:5;i:1562632;}i:19;a:6:{i:0;a:3:{s:4:"rule";s:43:"POST v1/users/edit-disponibilitate/<id:\w+>";s:5:"match";b:0;s:6:"parent";s:16:"yii\rest\UrlRule";}i:1;i:8;i:2;s:30:"yii\rest\UrlRule::parseRequest";i:3;d:1579361238.90704;i:4;a:0:{}i:5;i:1563464;}i:20;a:6:{i:0;s:60:"Request parsed with URL rule: v1/users/login/<user:>/<pass:>";i:1;i:8;i:2;s:29:"yii\web\UrlRule::parseRequest";i:3;d:1579361238.907093;i:4;a:0:{}i:5;i:1565312;}i:21;a:6:{i:0;a:3:{s:4:"rule";s:34:"GET v1/users/login/<user:>/<pass:>";s:5:"match";b:1;s:6:"parent";s:16:"yii\rest\UrlRule";}i:1;i:8;i:2;s:30:"yii\rest\UrlRule::parseRequest";i:3;d:1579361238.907122;i:4;a:0:{}i:5;i:1565584;}i:22;a:6:{i:0;a:3:{s:4:"rule";s:16:"yii\rest\UrlRule";s:5:"match";b:1;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1579361238.907143;i:4;a:0:{}i:5;i:1565960;}}s:5:"route";s:13:"v1/user/login";s:6:"action";s:56:"api\modules\v1\controllers\UserController::actionLogin()";}";s:3:"log";s:13126:"a:1:{s:8:"messages";a:29:{i:0;a:6:{i:0;s:33:"Bootstrap with yii\log\Dispatcher";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1579361238.897061;i:4;a:0:{}i:5;i:1004768;}i:1;a:6:{i:0;s:21:"Loading module: debug";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1579361238.897147;i:4;a:0:{}i:5;i:1005888;}i:2;a:6:{i:0;s:44:"Bootstrap with yii\debug\Module::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1579361238.903378;i:4;a:0:{}i:5;i:1279632;}i:3;a:6:{i:0;s:19:"Loading module: gii";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1579361238.905456;i:4;a:0:{}i:5;i:1525312;}i:4;a:6:{i:0;s:42:"Bootstrap with yii\gii\Module::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1579361238.90569;i:4;a:0:{}i:5;i:1531808;}i:23;a:6:{i:0;s:32:"Route requested: 'v1/user/login'";i:1;i:8;i:2;s:34:"yii\web\Application::handleRequest";i:3;d:1579361238.907168;i:4;a:0:{}i:5;i:1565272;}i:24;a:6:{i:0;s:18:"Loading module: v1";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1579361238.907222;i:4;a:0:{}i:5;i:1566896;}i:25;a:6:{i:0;s:27:"Route to run: v1/user/login";i:1;i:8;i:2;s:30:"yii\base\Controller::runAction";i:3;d:1579361238.910441;i:4;a:0:{}i:5;i:1807528;}i:26;a:6:{i:0;s:39:"Rate limit skipped: user not logged in.";i:1;i:4;i:2;s:37:"yii\filters\RateLimiter::beforeAction";i:3;d:1579361238.913106;i:4;a:0:{}i:5;i:1849704;}i:27;a:6:{i:0;s:72:"Running action: api\modules\v1\controllers\UserController::actionLogin()";i:1;i:8;i:2;s:36:"yii\base\InlineAction::runWithParams";i:3;d:1579361238.913407;i:4;a:0:{}i:5;i:1849272;}i:28;a:6:{i:0;s:29:"SHOW FULL COLUMNS FROM `user`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1579361238.915621;i:4;a:2:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:72:"C:\wamp64\www\TenisBackend\api\modules\v1\controllers\UserController.php";s:4:"line";i:66;s:8:"function";s:5:"login";s:5:"class";s:27:"api\modules\v1\models\Users";s:4:"type";s:2:"->";}}i:5;i:1993776;}i:29;a:6:{i:0;s:56:"Opening DB connection: mysql:host=localhost;dbname=tenis";i:1;i:4;i:2;s:23:"yii\db\Connection::open";i:3;d:1579361238.915719;i:4;a:2:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:72:"C:\wamp64\www\TenisBackend\api\modules\v1\controllers\UserController.php";s:4:"line";i:66;s:8:"function";s:5:"login";s:5:"class";s:27:"api\modules\v1\models\Users";s:4:"type";s:2:"->";}}i:5;i:1996528;}i:34;a:6:{i:0;s:595:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1579361238.924066;i:4;a:2:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:72:"C:\wamp64\www\TenisBackend\api\modules\v1\controllers\UserController.php";s:4:"line";i:66;s:8:"function";s:5:"login";s:5:"class";s:27:"api\modules\v1\models\Users";s:4:"type";s:2:"->";}}i:5;i:2036272;}i:37;a:6:{i:0;s:52:"SELECT * FROM `user` WHERE `email`='lord1@yahoo.com'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1579361238.92791;i:4;a:2:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:72:"C:\wamp64\www\TenisBackend\api\modules\v1\controllers\UserController.php";s:4:"line";i:66;s:8:"function";s:5:"login";s:5:"class";s:27:"api\modules\v1\models\Users";s:4:"type";s:2:"->";}}i:5;i:2130360;}i:40;a:6:{i:0;s:184:"SELECT `detalii_sportivi`.* FROM `detalii_sportivi` INNER JOIN `profil` `p` ON p.id=detalii_sportivi.profil INNER JOIN `antrenori_sportivi` `ai` ON ai.antrenor=p.id WHERE `p`.`user`=22";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.441946;i:4;a:1:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:58;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:2181560;}i:43;a:6:{i:0;s:41:"SHOW FULL COLUMNS FROM `detalii_sportivi`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.445395;i:4;a:1:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:58;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:2189712;}i:46;a:6:{i:0;s:619:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'detalii_sportivi' AND kcu.table_name = 'detalii_sportivi'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.446672;i:4;a:1:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:58;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:2201856;}i:49;a:6:{i:0;s:35:"SELECT * FROM `profil` WHERE `id`=7";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.448534;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2224384;}i:52;a:6:{i:0;s:31:"SHOW FULL COLUMNS FROM `profil`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.449207;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2232144;}i:55;a:6:{i:0;s:599:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'profil' AND kcu.table_name = 'profil'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.45069;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2245888;}i:58;a:6:{i:0;s:39:"SELECT * FROM `localitati` WHERE `id`=1";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.453273;i:4;a:2:{i:0;a:5:{s:4:"file";s:52:"C:\wamp64\www\TenisBackend\backend\models\Profil.php";s:4:"line";i:98;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:7:"toArray";s:5:"class";s:27:"yii\helpers\BaseArrayHelper";s:4:"type";s:2:"::";}}i:5;i:2360792;}i:61;a:6:{i:0;s:35:"SHOW FULL COLUMNS FROM `localitati`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.455395;i:4;a:2:{i:0;a:5:{s:4:"file";s:52:"C:\wamp64\www\TenisBackend\backend\models\Profil.php";s:4:"line";i:98;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:7:"toArray";s:5:"class";s:27:"yii\helpers\BaseArrayHelper";s:4:"type";s:2:"::";}}i:5;i:2369016;}i:64;a:6:{i:0;s:607:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'localitati' AND kcu.table_name = 'localitati'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.457503;i:4;a:2:{i:0;a:5:{s:4:"file";s:52:"C:\wamp64\www\TenisBackend\backend\models\Profil.php";s:4:"line";i:98;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:7:"toArray";s:5:"class";s:27:"yii\helpers\BaseArrayHelper";s:4:"type";s:2:"::";}}i:5;i:2381448;}i:67;a:6:{i:0;s:37:"SELECT * FROM `niveluri` WHERE `id`=1";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.459958;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:82;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2402504;}i:70;a:6:{i:0;s:33:"SHOW FULL COLUMNS FROM `niveluri`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.461335;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:82;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2409472;}i:73;a:6:{i:0;s:603:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'niveluri' AND kcu.table_name = 'niveluri'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.462289;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:82;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2419936;}i:76;a:6:{i:0;s:43:"SELECT * FROM `stari_sanatate` WHERE `id`=1";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.463499;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:88;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2435248;}i:79;a:6:{i:0;s:39:"SHOW FULL COLUMNS FROM `stari_sanatate`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.46534;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:88;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2442208;}i:82;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'stari_sanatate' AND kcu.table_name = 'stari_sanatate'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.466319;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:88;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2452672;}}}";s:9:"profiling";s:23201:"a:3:{s:6:"memory";i:2464440;s:4:"time";d:0.5826539993286133;s:8:"messages";a:38:{i:30;a:6:{i:0;s:56:"Opening DB connection: mysql:host=localhost;dbname=tenis";i:1;i:80;i:2;s:23:"yii\db\Connection::open";i:3;d:1579361238.91577;i:4;a:2:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:72:"C:\wamp64\www\TenisBackend\api\modules\v1\controllers\UserController.php";s:4:"line";i:66;s:8:"function";s:5:"login";s:5:"class";s:27:"api\modules\v1\models\Users";s:4:"type";s:2:"->";}}i:5;i:1998032;}i:31;a:6:{i:0;s:56:"Opening DB connection: mysql:host=localhost;dbname=tenis";i:1;i:96;i:2;s:23:"yii\db\Connection::open";i:3;d:1579361238.917777;i:4;a:2:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:72:"C:\wamp64\www\TenisBackend\api\modules\v1\controllers\UserController.php";s:4:"line";i:66;s:8:"function";s:5:"login";s:5:"class";s:27:"api\modules\v1\models\Users";s:4:"type";s:2:"->";}}i:5;i:2015000;}i:32;a:6:{i:0;s:29:"SHOW FULL COLUMNS FROM `user`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361238.917928;i:4;a:2:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:72:"C:\wamp64\www\TenisBackend\api\modules\v1\controllers\UserController.php";s:4:"line";i:66;s:8:"function";s:5:"login";s:5:"class";s:27:"api\modules\v1\models\Users";s:4:"type";s:2:"->";}}i:5;i:2015600;}i:33;a:6:{i:0;s:29:"SHOW FULL COLUMNS FROM `user`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361238.920839;i:4;a:2:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:72:"C:\wamp64\www\TenisBackend\api\modules\v1\controllers\UserController.php";s:4:"line";i:66;s:8:"function";s:5:"login";s:5:"class";s:27:"api\modules\v1\models\Users";s:4:"type";s:2:"->";}}i:5;i:2028632;}i:35;a:6:{i:0;s:595:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361238.924204;i:4;a:2:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:72:"C:\wamp64\www\TenisBackend\api\modules\v1\controllers\UserController.php";s:4:"line";i:66;s:8:"function";s:5:"login";s:5:"class";s:27:"api\modules\v1\models\Users";s:4:"type";s:2:"->";}}i:5;i:2039064;}i:36;a:6:{i:0;s:595:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361238.926326;i:4;a:2:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:72:"C:\wamp64\www\TenisBackend\api\modules\v1\controllers\UserController.php";s:4:"line";i:66;s:8:"function";s:5:"login";s:5:"class";s:27:"api\modules\v1\models\Users";s:4:"type";s:2:"->";}}i:5;i:2041568;}i:38;a:6:{i:0;s:52:"SELECT * FROM `user` WHERE `email`='lord1@yahoo.com'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361238.927985;i:4;a:2:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:72:"C:\wamp64\www\TenisBackend\api\modules\v1\controllers\UserController.php";s:4:"line";i:66;s:8:"function";s:5:"login";s:5:"class";s:27:"api\modules\v1\models\Users";s:4:"type";s:2:"->";}}i:5;i:2132200;}i:39;a:6:{i:0;s:52:"SELECT * FROM `user` WHERE `email`='lord1@yahoo.com'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361238.928439;i:4;a:2:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:72:"C:\wamp64\www\TenisBackend\api\modules\v1\controllers\UserController.php";s:4:"line";i:66;s:8:"function";s:5:"login";s:5:"class";s:27:"api\modules\v1\models\Users";s:4:"type";s:2:"->";}}i:5;i:2135480;}i:41;a:6:{i:0;s:184:"SELECT `detalii_sportivi`.* FROM `detalii_sportivi` INNER JOIN `profil` `p` ON p.id=detalii_sportivi.profil INNER JOIN `antrenori_sportivi` `ai` ON ai.antrenor=p.id WHERE `p`.`user`=22";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.442024;i:4;a:1:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:58;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:2182656;}i:42;a:6:{i:0;s:184:"SELECT `detalii_sportivi`.* FROM `detalii_sportivi` INNER JOIN `profil` `p` ON p.id=detalii_sportivi.profil INNER JOIN `antrenori_sportivi` `ai` ON ai.antrenor=p.id WHERE `p`.`user`=22";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.445007;i:4;a:1:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:58;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:2185896;}i:44;a:6:{i:0;s:41:"SHOW FULL COLUMNS FROM `detalii_sportivi`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.445519;i:4;a:1:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:58;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:2191104;}i:45;a:6:{i:0;s:41:"SHOW FULL COLUMNS FROM `detalii_sportivi`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.446168;i:4;a:1:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:58;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:2198928;}i:47;a:6:{i:0;s:619:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'detalii_sportivi' AND kcu.table_name = 'detalii_sportivi'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.44676;i:4;a:1:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:58;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:2204208;}i:48;a:6:{i:0;s:619:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'detalii_sportivi' AND kcu.table_name = 'detalii_sportivi'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.447313;i:4;a:1:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:58;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:2208368;}i:50;a:6:{i:0;s:35:"SELECT * FROM `profil` WHERE `id`=7";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.448604;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2225808;}i:51;a:6:{i:0;s:35:"SELECT * FROM `profil` WHERE `id`=7";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.448941;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2228576;}i:53;a:6:{i:0;s:31:"SHOW FULL COLUMNS FROM `profil`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.449273;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2233496;}i:54;a:6:{i:0;s:31:"SHOW FULL COLUMNS FROM `profil`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.449885;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2244696;}i:56;a:6:{i:0;s:599:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'profil' AND kcu.table_name = 'profil'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.450767;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2248240;}i:57;a:6:{i:0;s:599:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'profil' AND kcu.table_name = 'profil'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.451316;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2251736;}i:59;a:6:{i:0;s:39:"SELECT * FROM `localitati` WHERE `id`=1";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.45335;i:4;a:2:{i:0;a:5:{s:4:"file";s:52:"C:\wamp64\www\TenisBackend\backend\models\Profil.php";s:4:"line";i:98;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:7:"toArray";s:5:"class";s:27:"yii\helpers\BaseArrayHelper";s:4:"type";s:2:"::";}}i:5;i:2362616;}i:60;a:6:{i:0;s:39:"SELECT * FROM `localitati` WHERE `id`=1";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.455026;i:4;a:2:{i:0;a:5:{s:4:"file";s:52:"C:\wamp64\www\TenisBackend\backend\models\Profil.php";s:4:"line";i:98;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:7:"toArray";s:5:"class";s:27:"yii\helpers\BaseArrayHelper";s:4:"type";s:2:"::";}}i:5;i:2364936;}i:62;a:6:{i:0;s:35:"SHOW FULL COLUMNS FROM `localitati`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.455532;i:4;a:2:{i:0;a:5:{s:4:"file";s:52:"C:\wamp64\www\TenisBackend\backend\models\Profil.php";s:4:"line";i:98;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:7:"toArray";s:5:"class";s:27:"yii\helpers\BaseArrayHelper";s:4:"type";s:2:"::";}}i:5;i:2370760;}i:63;a:6:{i:0;s:35:"SHOW FULL COLUMNS FROM `localitati`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.456907;i:4;a:2:{i:0;a:5:{s:4:"file";s:52:"C:\wamp64\www\TenisBackend\backend\models\Profil.php";s:4:"line";i:98;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:7:"toArray";s:5:"class";s:27:"yii\helpers\BaseArrayHelper";s:4:"type";s:2:"::";}}i:5;i:2377112;}i:65;a:6:{i:0;s:607:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'localitati' AND kcu.table_name = 'localitati'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.457598;i:4;a:2:{i:0;a:5:{s:4:"file";s:52:"C:\wamp64\www\TenisBackend\backend\models\Profil.php";s:4:"line";i:98;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:7:"toArray";s:5:"class";s:27:"yii\helpers\BaseArrayHelper";s:4:"type";s:2:"::";}}i:5;i:2389808;}i:66;a:6:{i:0;s:607:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'localitati' AND kcu.table_name = 'localitati'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.458512;i:4;a:2:{i:0;a:5:{s:4:"file";s:52:"C:\wamp64\www\TenisBackend\backend\models\Profil.php";s:4:"line";i:98;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:7:"toArray";s:5:"class";s:27:"yii\helpers\BaseArrayHelper";s:4:"type";s:2:"::";}}i:5;i:2393152;}i:68;a:6:{i:0;s:37:"SELECT * FROM `niveluri` WHERE `id`=1";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.460044;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:82;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2403952;}i:69;a:6:{i:0;s:37:"SELECT * FROM `niveluri` WHERE `id`=1";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.46107;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:82;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2405704;}i:71;a:6:{i:0;s:33:"SHOW FULL COLUMNS FROM `niveluri`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.461409;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:82;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2410840;}i:72;a:6:{i:0;s:33:"SHOW FULL COLUMNS FROM `niveluri`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.461919;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:82;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2414912;}i:74;a:6:{i:0;s:603:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'niveluri' AND kcu.table_name = 'niveluri'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.462364;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:82;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2422288;}i:75;a:6:{i:0;s:603:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'niveluri' AND kcu.table_name = 'niveluri'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.462772;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:82;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2424416;}i:77;a:6:{i:0;s:43:"SELECT * FROM `stari_sanatate` WHERE `id`=1";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.463563;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:88;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2436696;}i:78;a:6:{i:0;s:43:"SELECT * FROM `stari_sanatate` WHERE `id`=1";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.465039;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:88;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2438440;}i:80;a:6:{i:0;s:39:"SHOW FULL COLUMNS FROM `stari_sanatate`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.465414;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:88;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2443576;}i:81;a:6:{i:0;s:39:"SHOW FULL COLUMNS FROM `stari_sanatate`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.466041;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:88;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2447648;}i:83;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'stari_sanatate' AND kcu.table_name = 'stari_sanatate'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.466388;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:88;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2455024;}i:84;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'stari_sanatate' AND kcu.table_name = 'stari_sanatate'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.466815;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:88;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2457152;}}}";s:2:"db";s:21993:"a:1:{s:8:"messages";a:36:{i:32;a:6:{i:0;s:29:"SHOW FULL COLUMNS FROM `user`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361238.917928;i:4;a:2:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:72:"C:\wamp64\www\TenisBackend\api\modules\v1\controllers\UserController.php";s:4:"line";i:66;s:8:"function";s:5:"login";s:5:"class";s:27:"api\modules\v1\models\Users";s:4:"type";s:2:"->";}}i:5;i:2015600;}i:33;a:6:{i:0;s:29:"SHOW FULL COLUMNS FROM `user`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361238.920839;i:4;a:2:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:72:"C:\wamp64\www\TenisBackend\api\modules\v1\controllers\UserController.php";s:4:"line";i:66;s:8:"function";s:5:"login";s:5:"class";s:27:"api\modules\v1\models\Users";s:4:"type";s:2:"->";}}i:5;i:2028632;}i:35;a:6:{i:0;s:595:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361238.924204;i:4;a:2:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:72:"C:\wamp64\www\TenisBackend\api\modules\v1\controllers\UserController.php";s:4:"line";i:66;s:8:"function";s:5:"login";s:5:"class";s:27:"api\modules\v1\models\Users";s:4:"type";s:2:"->";}}i:5;i:2039064;}i:36;a:6:{i:0;s:595:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361238.926326;i:4;a:2:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:72:"C:\wamp64\www\TenisBackend\api\modules\v1\controllers\UserController.php";s:4:"line";i:66;s:8:"function";s:5:"login";s:5:"class";s:27:"api\modules\v1\models\Users";s:4:"type";s:2:"->";}}i:5;i:2041568;}i:38;a:6:{i:0;s:52:"SELECT * FROM `user` WHERE `email`='lord1@yahoo.com'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361238.927985;i:4;a:2:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:72:"C:\wamp64\www\TenisBackend\api\modules\v1\controllers\UserController.php";s:4:"line";i:66;s:8:"function";s:5:"login";s:5:"class";s:27:"api\modules\v1\models\Users";s:4:"type";s:2:"->";}}i:5;i:2132200;}i:39;a:6:{i:0;s:52:"SELECT * FROM `user` WHERE `email`='lord1@yahoo.com'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361238.928439;i:4;a:2:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:64;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:72:"C:\wamp64\www\TenisBackend\api\modules\v1\controllers\UserController.php";s:4:"line";i:66;s:8:"function";s:5:"login";s:5:"class";s:27:"api\modules\v1\models\Users";s:4:"type";s:2:"->";}}i:5;i:2135480;}i:41;a:6:{i:0;s:184:"SELECT `detalii_sportivi`.* FROM `detalii_sportivi` INNER JOIN `profil` `p` ON p.id=detalii_sportivi.profil INNER JOIN `antrenori_sportivi` `ai` ON ai.antrenor=p.id WHERE `p`.`user`=22";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.442024;i:4;a:1:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:58;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:2182656;}i:42;a:6:{i:0;s:184:"SELECT `detalii_sportivi`.* FROM `detalii_sportivi` INNER JOIN `profil` `p` ON p.id=detalii_sportivi.profil INNER JOIN `antrenori_sportivi` `ai` ON ai.antrenor=p.id WHERE `p`.`user`=22";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.445007;i:4;a:1:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:58;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:2185896;}i:44;a:6:{i:0;s:41:"SHOW FULL COLUMNS FROM `detalii_sportivi`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.445519;i:4;a:1:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:58;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:2191104;}i:45;a:6:{i:0;s:41:"SHOW FULL COLUMNS FROM `detalii_sportivi`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.446168;i:4;a:1:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:58;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:2198928;}i:47;a:6:{i:0;s:619:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'detalii_sportivi' AND kcu.table_name = 'detalii_sportivi'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.44676;i:4;a:1:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:58;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:2204208;}i:48;a:6:{i:0;s:619:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'detalii_sportivi' AND kcu.table_name = 'detalii_sportivi'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.447313;i:4;a:1:{i:0;a:5:{s:4:"file";s:58:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Users.php";s:4:"line";i:58;s:8:"function";s:3:"all";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}i:5;i:2208368;}i:50;a:6:{i:0;s:35:"SELECT * FROM `profil` WHERE `id`=7";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.448604;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2225808;}i:51;a:6:{i:0;s:35:"SELECT * FROM `profil` WHERE `id`=7";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.448941;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2228576;}i:53;a:6:{i:0;s:31:"SHOW FULL COLUMNS FROM `profil`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.449273;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2233496;}i:54;a:6:{i:0;s:31:"SHOW FULL COLUMNS FROM `profil`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.449885;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2244696;}i:56;a:6:{i:0;s:599:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'profil' AND kcu.table_name = 'profil'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.450767;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2248240;}i:57;a:6:{i:0;s:599:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'profil' AND kcu.table_name = 'profil'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.451316;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2251736;}i:59;a:6:{i:0;s:39:"SELECT * FROM `localitati` WHERE `id`=1";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.45335;i:4;a:2:{i:0;a:5:{s:4:"file";s:52:"C:\wamp64\www\TenisBackend\backend\models\Profil.php";s:4:"line";i:98;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:7:"toArray";s:5:"class";s:27:"yii\helpers\BaseArrayHelper";s:4:"type";s:2:"::";}}i:5;i:2362616;}i:60;a:6:{i:0;s:39:"SELECT * FROM `localitati` WHERE `id`=1";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.455026;i:4;a:2:{i:0;a:5:{s:4:"file";s:52:"C:\wamp64\www\TenisBackend\backend\models\Profil.php";s:4:"line";i:98;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:7:"toArray";s:5:"class";s:27:"yii\helpers\BaseArrayHelper";s:4:"type";s:2:"::";}}i:5;i:2364936;}i:62;a:6:{i:0;s:35:"SHOW FULL COLUMNS FROM `localitati`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.455532;i:4;a:2:{i:0;a:5:{s:4:"file";s:52:"C:\wamp64\www\TenisBackend\backend\models\Profil.php";s:4:"line";i:98;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:7:"toArray";s:5:"class";s:27:"yii\helpers\BaseArrayHelper";s:4:"type";s:2:"::";}}i:5;i:2370760;}i:63;a:6:{i:0;s:35:"SHOW FULL COLUMNS FROM `localitati`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.456907;i:4;a:2:{i:0;a:5:{s:4:"file";s:52:"C:\wamp64\www\TenisBackend\backend\models\Profil.php";s:4:"line";i:98;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:7:"toArray";s:5:"class";s:27:"yii\helpers\BaseArrayHelper";s:4:"type";s:2:"::";}}i:5;i:2377112;}i:65;a:6:{i:0;s:607:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'localitati' AND kcu.table_name = 'localitati'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.457598;i:4;a:2:{i:0;a:5:{s:4:"file";s:52:"C:\wamp64\www\TenisBackend\backend\models\Profil.php";s:4:"line";i:98;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:7:"toArray";s:5:"class";s:27:"yii\helpers\BaseArrayHelper";s:4:"type";s:2:"::";}}i:5;i:2389808;}i:66;a:6:{i:0;s:607:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'localitati' AND kcu.table_name = 'localitati'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.458512;i:4;a:2:{i:0;a:5:{s:4:"file";s:52:"C:\wamp64\www\TenisBackend\backend\models\Profil.php";s:4:"line";i:98;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:85;s:8:"function";s:7:"toArray";s:5:"class";s:27:"yii\helpers\BaseArrayHelper";s:4:"type";s:2:"::";}}i:5;i:2393152;}i:68;a:6:{i:0;s:37:"SELECT * FROM `niveluri` WHERE `id`=1";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.460044;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:82;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2403952;}i:69;a:6:{i:0;s:37:"SELECT * FROM `niveluri` WHERE `id`=1";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.46107;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:82;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2405704;}i:71;a:6:{i:0;s:33:"SHOW FULL COLUMNS FROM `niveluri`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.461409;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:82;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2410840;}i:72;a:6:{i:0;s:33:"SHOW FULL COLUMNS FROM `niveluri`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.461919;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:82;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2414912;}i:74;a:6:{i:0;s:603:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'niveluri' AND kcu.table_name = 'niveluri'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.462364;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:82;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2422288;}i:75;a:6:{i:0;s:603:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'niveluri' AND kcu.table_name = 'niveluri'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.462772;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:82;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2424416;}i:77;a:6:{i:0;s:43:"SELECT * FROM `stari_sanatate` WHERE `id`=1";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.463563;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:88;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2436696;}i:78;a:6:{i:0;s:43:"SELECT * FROM `stari_sanatate` WHERE `id`=1";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.465039;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:88;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2438440;}i:80;a:6:{i:0;s:39:"SHOW FULL COLUMNS FROM `stari_sanatate`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.465414;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:88;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2443576;}i:81;a:6:{i:0;s:39:"SHOW FULL COLUMNS FROM `stari_sanatate`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.466041;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:88;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2447648;}i:83;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'stari_sanatate' AND kcu.table_name = 'stari_sanatate'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.466388;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:88;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2455024;}i:84;a:6:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'stari_sanatate' AND kcu.table_name = 'stari_sanatate'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1579361239.466815;i:4;a:1:{i:0;a:5:{s:4:"file";s:61:"C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php";s:4:"line";i:88;s:8:"function";s:5:"__get";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"->";}}i:5;i:2457152;}}}";s:5:"event";s:5627:"a:32:{i:0;a:5:{s:4:"time";d:1579361238.90626;s:4:"name";s:13:"beforeRequest";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:19:"yii\web\Application";}i:1;a:5:{s:4:"time";d:1579361238.910722;s:4:"name";s:12:"beforeAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:19:"yii\web\Application";}i:2;a:5:{s:4:"time";d:1579361238.910838;s:4:"name";s:12:"beforeAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:21:"api\modules\v1\Module";}i:3;a:5:{s:4:"time";d:1579361238.91331;s:4:"name";s:12:"beforeAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:41:"api\modules\v1\controllers\UserController";}i:4;a:5:{s:4:"time";d:1579361238.913938;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:27:"api\modules\v1\models\Users";}i:5;a:5:{s:4:"time";d:1579361238.914766;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:6;a:5:{s:4:"time";d:1579361238.917727;s:4:"name";s:9:"afterOpen";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"yii\db\Connection";}i:7;a:5:{s:4:"time";d:1579361238.928601;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:27:"api\modules\v1\models\Users";}i:8;a:5:{s:4:"time";d:1579361238.928775;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:27:"api\modules\v1\models\Users";}i:9;a:5:{s:4:"time";d:1579361239.440561;s:4:"name";s:11:"afterAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:41:"api\modules\v1\controllers\UserController";}i:10;a:5:{s:4:"time";d:1579361239.441478;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:11;a:5:{s:4:"time";d:1579361239.445177;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:30:"api\modules\v1\models\Sportivi";}i:12;a:5:{s:4:"time";d:1579361239.447547;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:30:"api\modules\v1\models\Sportivi";}i:13;a:5:{s:4:"time";d:1579361239.447729;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:30:"api\modules\v1\models\Sportivi";}i:14;a:5:{s:4:"time";d:1579361239.448078;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:15;a:5:{s:4:"time";d:1579361239.44908;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:21:"backend\models\Profil";}i:16;a:5:{s:4:"time";d:1579361239.451561;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:21:"backend\models\Profil";}i:17;a:5:{s:4:"time";d:1579361239.452964;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:18;a:5:{s:4:"time";d:1579361239.45519;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"backend\models\Localitati";}i:19;a:5:{s:4:"time";d:1579361239.458771;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"backend\models\Localitati";}i:20;a:5:{s:4:"time";d:1579361239.459545;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:21;a:5:{s:4:"time";d:1579361239.46119;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:23:"backend\models\Niveluri";}i:22;a:5:{s:4:"time";d:1579361239.462916;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:23:"backend\models\Niveluri";}i:23;a:5:{s:4:"time";d:1579361239.463217;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"yii\db\ActiveQuery";}i:24;a:5:{s:4:"time";d:1579361239.465185;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:28:"backend\models\StariSanatate";}i:25;a:5:{s:4:"time";d:1579361239.466952;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:28:"backend\models\StariSanatate";}i:26;a:5:{s:4:"time";d:1579361239.467116;s:4:"name";s:11:"afterAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:21:"api\modules\v1\Module";}i:27;a:5:{s:4:"time";d:1579361239.46715;s:4:"name";s:11:"afterAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:19:"yii\web\Application";}i:28;a:5:{s:4:"time";d:1579361239.467188;s:4:"name";s:12:"afterRequest";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:19:"yii\web\Application";}i:29;a:5:{s:4:"time";d:1579361239.467277;s:4:"name";s:10:"beforeSend";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\web\Response";}i:30;a:5:{s:4:"time";d:1579361239.467931;s:4:"name";s:12:"afterPrepare";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\web\Response";}i:31;a:5:{s:4:"time";d:1579361239.468014;s:4:"name";s:9:"afterSend";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\web\Response";}}";s:4:"mail";s:6:"a:0:{}";s:8:"timeline";s:91:"a:3:{s:5:"start";d:1579361238.890651;s:3:"end";d:1579361239.480915;s:6:"memory";i:2464440;}";s:4:"user";s:2:"N;";s:4:"dump";s:6:"a:0:{}";s:7:"summary";a:12:{s:3:"tag";s:13:"5e2323d6dc9bf";s:3:"url";s:77:"http://localhost/TenisBackend/api/web/v1/users/login/lord1@yahoo.com/12345678";s:4:"ajax";i:0;s:6:"method";s:3:"GET";s:2:"ip";s:3:"::1";s:4:"time";d:1579361238.885;s:10:"statusCode";i:200;s:8:"sqlCount";i:18;s:9:"mailCount";i:0;s:9:"mailFiles";a:0:{}s:10:"peakMemory";i:2464440;s:14:"processingTime";d:0.5826539993286133;}s:10:"exceptions";a:0:{}}

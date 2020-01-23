@@ -117,7 +117,7 @@ return [
                     ],
                     'extraPatterns' => [
                     //'GET save-dosar/{numar}/{institutie}' => 'save-dosar',
-                    //'GET ddd' => 'dosare', // 'xxxxx' refers to 'actionXxxxx'
+                    'GET lista-sportivi' => 'lista-sportivi', // 'xxxxx' refers to 'actionXxxxx'
                     ],
                     'except' => ['delete', 'update']
                 ],

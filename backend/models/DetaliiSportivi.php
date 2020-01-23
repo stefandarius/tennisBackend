@@ -18,21 +18,19 @@ use Yii;
  * @property Niveluri $nivel0
  * @property StariSanatate $stareSanatate
  */
-class DetaliiSportivi extends \yii\db\ActiveRecord
-{
+class DetaliiSportivi extends \yii\db\ActiveRecord {
+
     /**
      * {@inheritdoc}
      */
-    public static function tableName()
-    {
+    public static function tableName() {
         return 'detalii_sportivi';
     }
 
     /**
      * {@inheritdoc}
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['profil', 'nivel', 'greutate', 'inaltime', 'stare_sanatate'], 'integer'],
             [['nivel', 'greutate', 'inaltime', 'stare_sanatate'], 'required'],
@@ -45,8 +43,7 @@ class DetaliiSportivi extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'id' => 'ID',
             'profil' => 'Profil',
@@ -60,24 +57,22 @@ class DetaliiSportivi extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getProfil0()
-    {
+    public function getProfil0() {
         return $this->hasOne(Profil::className(), ['id' => 'profil']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getNivel0()
-    {
+    public function getNivel0() {
         return $this->hasOne(Niveluri::className(), ['id' => 'nivel']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getStareSanatate()
-    {
+    public function getStareSanatate() {
         return $this->hasOne(StariSanatate::className(), ['id' => 'stare_sanatate']);
     }
+
 }

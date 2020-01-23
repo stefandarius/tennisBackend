@@ -46,6 +46,7 @@ class Sportivi extends SP {
             $profil= $this->profil0;  
         }
         else{
+            if(\Yii::$app->user->can('sportiv'))
             $profil->user= \Yii::$app->user->id;
         }
         $profil->attributes = \backend\components\ProjectUtils::getPublicAttributesAndValues($this, \yii\base\Model::attributes());
@@ -60,6 +61,13 @@ class Sportivi extends SP {
             $this->profil=$profil->id;
         }
         $result = $result && parent::save($runValidation, $attributeNames);
+        if(\Yii::$app->user->can('antrenor')){
+            $antrenor_sportiv = new \backend\models\AntrenoriSportivi();
+            $antrenor_sportiv->antrenor = \Yii::$app->user->identity->profil->id;
+            $antrenor_sportiv->sportiv = $this->profil;
+            $result= ($result && $antrenor_sportiv->save());
+            
+        }
         if ($result) {
             $transaction->commit();
         } else {

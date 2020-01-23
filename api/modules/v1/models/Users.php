@@ -54,6 +54,12 @@ class Users extends UR {
         unset($fields['created_at']);
         unset($fields['updated_at']);
         unset($fields['verification_token']);
+        $fields['sportivi'] = function($model) {
+            
+            return Sportivi::find()
+                    ->innerJoin('antrenori_sportivi ai','ai.sportiv=detalii_sportivi.profil')
+                    ->innerJoin('profil p','p.id=ai.antrenor')->where(['p.user'=>$model->id])->all();
+        };
         return $fields;
     }
 
