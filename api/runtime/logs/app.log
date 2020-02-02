@@ -3163,3 +3163,337 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1579360233.212
     'REQUEST_TIME' => 1579360233
 ]
+2020-01-23 16:58:18 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(api\modules\v1\actions\CreateCustomAction))
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(api\modules\v1\actions\CreateCustomAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(276): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(api\modules\v1\actions\CreateCustomAction))
+#7 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(api\modules\v1\actions\CreateCustomAction))
+#8 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#9 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/istoric-antr...', Array)
+#10 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\base\Application->run()
+#12 {main}
+2020-01-23 16:58:17 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.22.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'd43da4da-32d3-4779-9a55-98be9047ca56'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php7.2.18;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/TenisBackend/api/web/index.php'
+    'REMOTE_PORT' => '57603'
+    'REDIRECT_URL' => '/TenisBackend/api/web/v1/istoric-antrenament'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisBackend/api/web/v1/istoric-antrenament'
+    'SCRIPT_NAME' => '/TenisBackend/api/web/index.php'
+    'PHP_SELF' => '/TenisBackend/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1579798697.127
+    'REQUEST_TIME' => 1579798697
+]
+2020-01-23 17:13:06 [::1][22][-][error][yii\db\Exception] PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '1' for column 'data_antrenament' at row 1 in C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php:1290
+Stack trace:
+#0 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php(1290): PDOStatement->execute()
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `is...')
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('istoric_antrena...', Array)
+#4 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\wamp64\www\TenisBackend\api\modules\v1\actions\CreateCustomAction.php(35): yii\db\BaseActiveRecord->save()
+#7 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#8 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#9 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#10 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#11 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/istoric-antr...', Array)
+#12 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '1' for column 'data_antrenament' at row 1
+The SQL being executed was: INSERT INTO `istoric_antrenament` (`tipAntrenament_id`, `data_antrenament`, `antrenor_id`, `created_at`) VALUES (1, '1', 22, 1579799586) in C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Schema.php:674
+Stack trace:
+#0 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `is...')
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `is...')
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('istoric_antrena...', Array)
+#4 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\wamp64\www\TenisBackend\api\modules\v1\actions\CreateCustomAction.php(35): yii\db\BaseActiveRecord->save()
+#7 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#8 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#9 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#10 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#11 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/istoric-antr...', Array)
+#12 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 22007
+    [1] => 1292
+    [2] => Incorrect datetime value: '1' for column 'data_antrenament' at row 1
+)
+
+2020-01-23 17:13:06 [::1][22][-][info][application] $_GET = []
+
+$_POST = [
+    'tipAntrenament_id' => '1'
+    'data_antrenament' => '1'
+    'sportiv_id' => '23'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '953250273389d938f8ee9ab0cdb48faef18400c58f7a3fcdd755e65bf9237301a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"RF_YeKX71iitXxN42Qulv0_KTzYC6Slf\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.22.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'e5a92a04-901b-4509-a9d3-9befbcd540b7'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'CONTENT_LENGTH' => '52'
+    'HTTP_COOKIE' => '_csrf=953250273389d938f8ee9ab0cdb48faef18400c58f7a3fcdd755e65bf9237301a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22RF_YeKX71iitXxN42Qulv0_KTzYC6Slf%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php7.2.18;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/TenisBackend/api/web/index.php'
+    'REMOTE_PORT' => '57704'
+    'REDIRECT_URL' => '/TenisBackend/api/web/v1/istoric-antrenament'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisBackend/api/web/v1/istoric-antrenament'
+    'SCRIPT_NAME' => '/TenisBackend/api/web/index.php'
+    'PHP_SELF' => '/TenisBackend/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1579799586.885
+    'REQUEST_TIME' => 1579799586
+]
+2020-01-23 17:17:24 [::1][22][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000]: General error: 1364 Field 'abonamentSpotiv_id' doesn't have a default value in C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php:1290
+Stack trace:
+#0 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php(1290): PDOStatement->execute()
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `is...')
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('istoric_antrena...', Array)
+#4 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\wamp64\www\TenisBackend\api\modules\v1\actions\CreateCustomAction.php(35): yii\db\BaseActiveRecord->save()
+#7 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#8 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#9 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#10 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#11 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/istoric-antr...', Array)
+#12 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1364 Field 'abonamentSpotiv_id' doesn't have a default value
+The SQL being executed was: INSERT INTO `istoric_antrenament` (`tipAntrenament_id`, `data_antrenament`, `antrenor_id`, `created_at`) VALUES (1, '2020-01-23 19:17:00', 22, 1579799844) in C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Schema.php:674
+Stack trace:
+#0 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `is...')
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `is...')
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('istoric_antrena...', Array)
+#4 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\wamp64\www\TenisBackend\api\modules\v1\actions\CreateCustomAction.php(35): yii\db\BaseActiveRecord->save()
+#7 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#8 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#9 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#10 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#11 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/istoric-antr...', Array)
+#12 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1364
+    [2] => Field 'abonamentSpotiv_id' doesn't have a default value
+)
+
+2020-01-23 17:17:24 [::1][22][-][info][application] $_GET = []
+
+$_POST = [
+    'tipAntrenament_id' => '1'
+    'data_antrenament' => '2020-01-23 19:17:00'
+    'sportiv_id' => '23'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'a1c53d9ae43dd0a478ab6fae180070e92dffacf8847cef5cec050e7d828c5678a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nUdt-kvsj_V5Vta3R_A94halSm8IDsxP\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.22.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '55b0ed1c-15ee-4ac9-9e49-fc194b1b997d'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'CONTENT_LENGTH' => '76'
+    'HTTP_COOKIE' => '_csrf=a1c53d9ae43dd0a478ab6fae180070e92dffacf8847cef5cec050e7d828c5678a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nUdt-kvsj_V5Vta3R_A94halSm8IDsxP%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php7.2.18;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/TenisBackend/api/web/index.php'
+    'REMOTE_PORT' => '57752'
+    'REDIRECT_URL' => '/TenisBackend/api/web/v1/istoric-antrenament'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisBackend/api/web/v1/istoric-antrenament'
+    'SCRIPT_NAME' => '/TenisBackend/api/web/index.php'
+    'PHP_SELF' => '/TenisBackend/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1579799844.426
+    'REQUEST_TIME' => 1579799844
+]
+2020-01-23 18:09:29 [::1][22][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'id' of non-object in C:\wamp64\www\TenisBackend\api\modules\v1\models\IstoricAntrenament.php:40
+Stack trace:
+#0 C:\wamp64\www\TenisBackend\api\modules\v1\models\IstoricAntrenament.php(40): yii\web\ErrorHandler->handleError()
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(596): api\modules\v1\models\IstoricAntrenament->beforeSave()
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(566): api\modules\v1\models\IstoricAntrenament->insertInternal()
+#3 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): api\modules\v1\models\IstoricAntrenament->insert()
+#4 C:\wamp64\www\TenisBackend\api\modules\v1\actions\CreateCustomAction.php(35): api\modules\v1\models\IstoricAntrenament->save()
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Action.php(94): api\modules\v1\actions\CreateCustomAction->run()
+#6 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Action.php(94): ::call_user_func_array:{C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Action.php:94}()
+#7 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(157): api\modules\v1\actions\CreateCustomAction->runWithParams()
+#8 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(528): api\modules\v1\controllers\IstoricAntrenamentController->runAction()
+#9 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\web\Application->runAction()
+#10 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#11 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\web\Application->run()
+#12 {main}
+2020-01-23 18:09:29 [::1][22][-][info][application] $_GET = []
+
+$_POST = [
+    'tipAntrenament_id' => '1'
+    'data_antrenament' => '2020-01-23 19:17:00'
+    'sportiv_id' => '23'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '2e4647d382ef1a5853f27fe139497ea12c7d96dee423584df29d7062f871f5ffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"XIF5G15sK-rzG1rJ000ghMCFdKgw6Rqo\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.22.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '446ef5fe-81d3-4286-91a6-3f2eb9e1d2f0'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'CONTENT_LENGTH' => '76'
+    'HTTP_COOKIE' => '_csrf=2e4647d382ef1a5853f27fe139497ea12c7d96dee423584df29d7062f871f5ffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22XIF5G15sK-rzG1rJ000ghMCFdKgw6Rqo%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php7.2.18;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/TenisBackend/api/web/index.php'
+    'REMOTE_PORT' => '58090'
+    'REDIRECT_URL' => '/TenisBackend/api/web/v1/istoric-antrenament'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisBackend/api/web/v1/istoric-antrenament'
+    'SCRIPT_NAME' => '/TenisBackend/api/web/index.php'
+    'PHP_SELF' => '/TenisBackend/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1579802969.253
+    'REQUEST_TIME' => 1579802969
+]

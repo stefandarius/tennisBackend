@@ -215,7 +215,7 @@ return [
                 ],
                 [
                     'class' => 'yii\rest\UrlRule',
-                    'controller' => 'v1/raport-detalii', // our country api rule,
+                    'controller' => 'v1/istoric-antrenament', // our country api rule,
                     'pluralize' => false,
                     'tokens' => [
                         '{id}' => '<id:\\w+>'
