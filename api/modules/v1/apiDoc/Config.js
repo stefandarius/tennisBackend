@@ -6,7 +6,7 @@
  * @apiDescription Read the application config data from server
  *
  * @apiExample Example usage:
- * curl -i http://localhost/TenisApp/api/web/v1/config
+ * curl -i http://tenis.anunturicl.ro/api/web/v1/config
  *
  * @apiSuccess {Boolean}  success      					Request status
  * @apiSuccess {Object}   data       					Config data object

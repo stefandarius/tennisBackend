@@ -117,7 +117,7 @@ return [
                     ],
                     'extraPatterns' => [
                     //'GET save-dosar/{numar}/{institutie}' => 'save-dosar',
-                    //'GET ddd' => 'dosare', // 'xxxxx' refers to 'actionXxxxx'
+                    'GET lista-sportivi' => 'lista-sportivi', // 'xxxxx' refers to 'actionXxxxx'
                     ],
                     'except' => ['delete', 'update']
                 ],
@@ -215,7 +215,7 @@ return [
                 ],
                 [
                     'class' => 'yii\rest\UrlRule',
-                    'controller' => 'v1/raport-detalii', // our country api rule,
+                    'controller' => 'v1/istoric-antrenament', // our country api rule,
                     'pluralize' => false,
                     'tokens' => [
                         '{id}' => '<id:\\w+>'

@@ -12,7 +12,7 @@ use Yii;
  * @property int $abonament_id
  * @property string $data_inceput
  *
- * @property Sportivi $sportiv
+ * @property Profil $sportiv
  * @property Abonamente $abonament
  * @property IstoricAntrenament[] $istoricAntrenaments
  */
@@ -35,7 +35,7 @@ class AbonamenteSportivi extends \yii\db\ActiveRecord
             [['sportiv_id', 'abonament_id', 'data_inceput'], 'required'],
             [['sportiv_id', 'abonament_id'], 'integer'],
             [['data_inceput'], 'safe'],
-            [['sportiv_id'], 'exist', 'skipOnError' => true, 'targetClass' => Sportivi::className(), 'targetAttribute' => ['sportiv_id' => 'id']],
+            [['sportiv_id'], 'exist', 'skipOnError' => true, 'targetClass' => Profil::className(), 'targetAttribute' => ['sportiv_id' => 'id']],
             [['abonament_id'], 'exist', 'skipOnError' => true, 'targetClass' => Abonamente::className(), 'targetAttribute' => ['abonament_id' => 'id']],
         ];
     }
@@ -58,7 +58,7 @@ class AbonamenteSportivi extends \yii\db\ActiveRecord
      */
     public function getSportiv()
     {
-        return $this->hasOne(Sportivi::className(), ['id' => 'sportiv_id']);
+        return $this->hasOne(Profil::className(), ['id' => 'sportiv_id']);
     }
 
     /**

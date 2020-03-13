@@ -6,8 +6,29 @@
  * @apiDescription Read the application localitati array of data from server
  *
  * @apiExample Example usage:
- * curl -i http://localhost/TenisApp/api/web/v1/localitati
- *
+ * curl -i http://tenis.anunturicl.ro/api/web/v1/localitati
+ * @apiSampleRequest off
+ * @apiParam (Query string) {String} [fields] Provide only the database fields where you are interested in. Eg: 
+ * ```
+ * fields=nume,judet
+ * ```
+ * @apiParam (Query string) {String} [filter[field_name]] Filter the data based on a selector. `field_name` should be the database field. 
+ * Available selectors: EQ (default), NEQ, GT, GTE, LT, LTE, IN, NIN, AND, OR, NOT, LIKE. Eg: 
+ * ```
+ * filter[nume][LIKE] = %Melroy%
+ * ```
+ * @apiParam (Query string) {String} [sort] Order either ascending (ASC) or descending (DESC). Eg: 
+ * ```
+ * sort=-nume (DESC)|sort=nume (ASC)
+ * ```
+ * @apiParam (Query string) {Integer} [page] Page number. Eg: 
+ * ```
+ * page=2
+ * ```
+ * @apiParam (Query string) {Integer} [per-page] Number of records per page. Eg: 
+ * ```
+ * per-page=5
+ * ```
  * @apiSuccess {Boolean}  success      					Request status
  * @apiSuccess {Object}   data       					Config data object
  * @apiSuccess {Object[]} data.localitatis 				List of localitatit(Array of Objects).

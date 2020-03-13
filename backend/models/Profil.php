@@ -47,13 +47,13 @@ class Profil extends \yii\db\ActiveRecord {
         return [
             [['gen', 'localitate', 'user'], 'integer'],
             [['data_nastere'], 'safe'],
-            [['localitate', 'user'], 'required'],
+            [['localitate'], 'required'],
             [['nume', 'prenume'], 'string', 'max' => 100],
             [['telefon'], 'string', 'max' => 15],
             [['telefon'], 'unique'],
             [['adresa'], 'string', 'max' => 150],
             [['localitate'], 'exist', 'skipOnError' => true, 'targetClass' => Localitati::className(), 'targetAttribute' => ['localitate' => 'id']],
-            [['user'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user' => 'id']],
+            //[['user'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user' => 'id']],
         ];
     }
 

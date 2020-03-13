@@ -21,12 +21,12 @@ class Users extends UR {
 
     public $password;
     public $type;
-    
+
     public function rules() {
         $rules = parent::rules();
-        $rules[] = [['password','type','email'], 'required'];
-       // $rules[] = ['type', 'validateAccountType'];
-         $rules[]=['type', 'in', 'range' => [\backend\models\AuthItem::ROLE_ANTRENOR, \backend\models\AuthItem::ROLE_SPORTIV]];
+        $rules[] = [['password', 'type', 'email'], 'required'];
+        // $rules[] = ['type', 'validateAccountType'];
+        $rules[] = ['type', 'in', 'range' => [\backend\models\AuthItem::ROLE_ANTRENOR, \backend\models\AuthItem::ROLE_SPORTIV]];
         return $rules;
     }
 
@@ -54,6 +54,17 @@ class Users extends UR {
         unset($fields['created_at']);
         unset($fields['updated_at']);
         unset($fields['verification_token']);
+        if ($this->type === 'antrenor') {
+            $fields['sportivi'] = function($model) {
+
+                return Sportivi::find()
+                                ->innerJoin('antrenori_sportivi ai', 'ai.sportiv=detalii_sportivi.profil')
+                                ->innerJoin('profil p', 'p.id=ai.antrenor')->where(['p.user' => $model->id])->all();
+            };
+        }
+        $fields['rol'] = function($model) {
+            return $model->type;
+        };
         return $fields;
     }
 
@@ -78,7 +89,7 @@ class Users extends UR {
         if ($newRecord) {
             $result = $result && parent::save($runValidation, $attributeNames);
         }
-       // var_dump($this->type);
+        // var_dump($this->type);
         if ($newRecord && $result) {
             $authAsignment = new AuthAssignment(['item_name' => $this->type,
                 'user_id' => strval($this->id), 'created_at' => time()]);

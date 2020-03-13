@@ -6,7 +6,7 @@
  * @apiDescription Read all sportivi array of data from server
  *
  * @apiExample Example usage:
- * curl -i http://localhost/TenisApp/api/web/v1/sportivi
+ * curl -i http://tenis.anunturicl.ro/api/web/v1/sportivi
  *
  * @apiSuccess {Boolean}  success      							Request status
  * @apiSuccess {Object}   data       							Config data object
@@ -186,6 +186,7 @@
  * @apiSuccess {Object[]} messages								Lista de mesaje
  * @apiSuccess {String}	  message								Mesajul de eroare sau null
  * @apiSuccess {String}	  code									Codul requestului
+ * @apiPermission sportiv
  * @apiSuccessExample {json} Success-Response:
  * HTTP/1.1 200 OK
  {

@@ -9,7 +9,7 @@
  * @apiParam {String} password The User password
  *
  * @apiExample Example usage:
- * curl -i http://localhost/TenisApp/api/web/v1/users/login/admin@tennisapp.com/123456
+ * curl -i http://tenis.anunturicl.ro/api/web/v1/users/login/admin@tennisapp.com/123456
  *
  * @apiSuccess {Boolean}  success      					Request status
  * @apiSuccess {Object}   data       					Config data object

@@ -1,6 +1,216 @@
 define({ "api": [
   {
     "type": "get",
+    "url": "/antrenori/lista-sportivi",
+    "title": "1. Read all sportivi",
+    "version": "0.1.0",
+    "name": "GetAntrenorSportivi",
+    "group": "Antrenor",
+    "description": "<p>Read all antrenor sportivi array of data from server</p>",
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl -i http://tenis.anunturicl.ro/api/web/v1/antrenori/lista-sportivi",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "success",
+            "description": "<p>Request status</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>List of sportivi(Array of Objects).</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.id",
+            "description": "<p>Id sportiv.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "data.profil",
+            "description": "<p>Profilul sportivului.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.profil.nume",
+            "description": "<p>Numele sportivului.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.profil.prenume",
+            "description": "<p>Prenumele sportivului.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.profil.gen",
+            "description": "<p>Genul sportivului.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "data.profil.data_nastere",
+            "description": "<p>Data nasterii sportivului</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.profil.telefon",
+            "description": "<p>Telefonul sportivului.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Nunber",
+            "optional": false,
+            "field": "data.profil.localitate",
+            "description": "<p>Id-ul localitatii sportivului.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.profil.adresa",
+            "description": "<p>Restul adresei sportivului.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.profil.localitateText",
+            "description": "<p>Numele localitatii sportivului.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.nivel",
+            "description": "<p>Id nivel sportiv.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Nunber",
+            "optional": false,
+            "field": "data.greutate",
+            "description": "<p>Greutatea sportivului.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.inaltime",
+            "description": "<p>Inaltimea sportivului.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.stare_sanatate",
+            "description": "<p>Id-ul starii de sanatate a sportivului.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.nivelText",
+            "description": "<p>Denumirea nivelului.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.stareSanatateText",
+            "description": "<p>Denumirea starii de sanatate.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "messages",
+            "description": "<p>Lista de mesaje</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Mesajul de eroare sau null</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>Codul requestului</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n {\n    \"success\": true,\n    \"data\":[\n            {\n                \"id\": 12,\n                \"profil\": {\n                    \"nume\": \"radu2\",\n                    \"prenume\": \"gheorghe1\",\n                    \"gen\": 1,\n                    \"data_nastere\": \"12.10.2001\",\n                    \"telefon\": \"+0726213098\",\n                    \"localitate\": 1,\n                    \"adresa\": null,\n                    \"localitateText\": \"Alba Iulia\"\n                },\n                \"nivel\": 1,\n                \"greutate\": 70,\n                \"inaltime\": 181,\n                \"stare_sanatate\": 1,\n                \"nivelText\": \"Incepator\",\n                \"stareSanatateText\": \"Sanatos\"\n            }\n       ],\n    \"messages\": null,\n    \"message\": \"OK\",\n    \"code\": 200\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "permission": [
+      {
+        "name": "antrenor",
+        "title": "Antrenor access only",
+        "description": "<p>Doar utilizatorii autentificati ca antrenor pot accesa aceasta resursa.</p>"
+      }
+    ],
+    "filename": "modules/v1/apiDoc/Antrenori.js",
+    "groupTitle": "Antrenor",
+    "sampleRequest": [
+      {
+        "url": "http://tenis.anunturicl.ro/api/web/v1/antrenori/lista-sportivi"
+      }
+    ],
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>Auth header with JWT Token</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Authorization-Example:",
+          "content": "Authorization: Bearer <jwt-token>",
+          "type": "String"
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
     "url": "/config",
     "title": "1. Read application config",
     "version": "0.1.0",
@@ -10,7 +220,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://localhost/TenisApp/api/web/v1/config",
+        "content": "curl -i http://tenis.anunturicl.ro/api/web/v1/config",
         "type": "json"
       }
     ],
@@ -136,7 +346,7 @@ define({ "api": [
     "groupTitle": "App",
     "sampleRequest": [
       {
-        "url": "http://localhost/TenisApp/api/web/v1/config"
+        "url": "http://tenis.anunturicl.ro/api/web/v1/config"
       }
     ]
   },
@@ -151,10 +361,51 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://localhost/TenisApp/api/web/v1/localitati",
+        "content": "curl -i http://tenis.anunturicl.ro/api/web/v1/localitati",
         "type": "json"
       }
     ],
+    "parameter": {
+      "fields": {
+        "Query string": [
+          {
+            "group": "Query string",
+            "type": "String",
+            "optional": true,
+            "field": "fields",
+            "description": "<p>Provide only the database fields where you are interested in. Eg:</p> <pre class=\"prettyprint\">fields=nume,judet </code></pre>"
+          },
+          {
+            "group": "Query string",
+            "type": "String",
+            "optional": true,
+            "field": "filter[field_name]",
+            "description": "<p>Filter the data based on a selector. <code>field_name</code> should be the database field. Available selectors: EQ (default), NEQ, GT, GTE, LT, LTE, IN, NIN, AND, OR, NOT, LIKE. Eg:</p> <pre class=\"prettyprint\">filter[nume][LIKE] = %Melroy% </code></pre>"
+          },
+          {
+            "group": "Query string",
+            "type": "String",
+            "optional": true,
+            "field": "sort",
+            "description": "<p>Order either ascending (ASC) or descending (DESC). Eg:</p> <pre class=\"prettyprint\">sort=-nume (DESC)|sort=nume (ASC) </code></pre>"
+          },
+          {
+            "group": "Query string",
+            "type": "Integer",
+            "optional": true,
+            "field": "page",
+            "description": "<p>Page number. Eg:</p> <pre class=\"prettyprint\">page=2 </code></pre>"
+          },
+          {
+            "group": "Query string",
+            "type": "Integer",
+            "optional": true,
+            "field": "per-page",
+            "description": "<p>Number of records per page. Eg:</p> <pre class=\"prettyprint\">per-page=5 </code></pre>"
+          }
+        ]
+      }
+    },
     "success": {
       "fields": {
         "Success 200": [
@@ -218,10 +469,124 @@ define({ "api": [
       ]
     },
     "filename": "modules/v1/apiDoc/Localitati.js",
+    "groupTitle": "App"
+  },
+  {
+    "type": "get",
+    "url": "/localitati",
+    "title": "2. Read all localitati",
+    "version": "0.1.0",
+    "name": "GetLocalitati",
+    "group": "App",
+    "description": "<p>Read the application localitati array of data from server</p>",
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl -i http://tenis.anunturicl.ro/api/web/v1/localitati",
+        "type": "json"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Query string": [
+          {
+            "group": "Query string",
+            "type": "String",
+            "optional": true,
+            "field": "fields",
+            "description": "<p>Provide only the database fields where you are interested in. Eg:</p> <pre class=\"prettyprint\">fields=nume,judet </code></pre>"
+          },
+          {
+            "group": "Query string",
+            "type": "String",
+            "optional": true,
+            "field": "sort",
+            "description": "<p>Order either ascending (ASC) or descending (DESC). Eg:</p> <pre class=\"prettyprint\">sort=-nume (DESC)|sort=nume (ASC) </code></pre>"
+          },
+          {
+            "group": "Query string",
+            "type": "Integer",
+            "optional": true,
+            "field": "page",
+            "description": "<p>Page number. Eg:</p> <pre class=\"prettyprint\">page=2 </code></pre>"
+          },
+          {
+            "group": "Query string",
+            "type": "Integer",
+            "optional": true,
+            "field": "per-page",
+            "description": "<p>Number of records per page. Eg:</p> <pre class=\"prettyprint\">per-page=5 </code></pre>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "success",
+            "description": "<p>Request status</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Config data object</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "data.localitatis",
+            "description": "<p>List of localitatit(Array of Objects).</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.localitatis.id",
+            "description": "<p>Id judet.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.localitatis.judet",
+            "description": "<p>Judetul localitatii.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.localitatis.nume",
+            "description": "<p>Denumirea localitatii.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "data.localitatis.oras",
+            "description": "<p>Daca localitatea este un oras sau nu</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n {\n    \"success\": true,\n    \"data\": {\n        \"localitatis\": [\n            {\n                \"id\": 1,\n                \"judet\": 1,\n                \"nume\": \"Alba Iulia\",\n                \"oras\": 1\n            }\n        ],\n        \"_links\": {\n            \"self\": {\n                \"href\": \"http://localhost/TenisApp/api/web/v1/localitati?id=1&page=1\"\n            },\n            \"next\": {\n                \"href\": \"http://localhost/TenisApp/api/web/v1/localitati?id=1&page=2\"\n            },\n            \"last\": {\n                \"href\": \"http://localhost/TenisApp/api/web/v1/localitati?id=1&page=635\"\n            }\n        },\n        \"_meta\": {\n            \"totalCount\": 12699,\n            \"pageCount\": 635,\n            \"currentPage\": 1,\n            \"perPage\": 20\n        }\n    },\n    \"messages\": null,\n    \"message\": \"OK\",\n    \"code\": 200\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "modules/v1/apiDoc/Localitati1.js",
     "groupTitle": "App",
     "sampleRequest": [
       {
-        "url": "http://localhost/TenisApp/api/web/v1/localitati"
+        "url": "http://tenis.anunturicl.ro/api/web/v1/localitati"
       }
     ]
   },
@@ -478,7 +843,7 @@ define({ "api": [
     "groupTitle": "Sportiv",
     "sampleRequest": [
       {
-        "url": "http://localhost/TenisApp/api/web/v1/sportivi"
+        "url": "http://tenis.anunturicl.ro/api/web/v1/sportivi"
       }
     ],
     "header": {
@@ -513,7 +878,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://localhost/TenisApp/api/web/v1/sportivi",
+        "content": "curl -i http://tenis.anunturicl.ro/api/web/v1/sportivi",
         "type": "json"
       }
     ],
@@ -688,7 +1053,7 @@ define({ "api": [
     "groupTitle": "Sportiv",
     "sampleRequest": [
       {
-        "url": "http://localhost/TenisApp/api/web/v1/sportivi"
+        "url": "http://tenis.anunturicl.ro/api/web/v1/sportivi"
       }
     ]
   },
@@ -948,11 +1313,18 @@ define({ "api": [
         }
       ]
     },
+    "permission": [
+      {
+        "name": "sportiv",
+        "title": "Sportiv access only",
+        "description": "<p>Doar utilizatorii autentificati ca sportiv pot accesa aceasta resursa.</p>"
+      }
+    ],
     "filename": "modules/v1/apiDoc/Sportivi.js",
     "groupTitle": "Sportiv",
     "sampleRequest": [
       {
-        "url": "http://localhost/TenisApp/api/web/v1/sportivi/:id"
+        "url": "http://tenis.anunturicl.ro/api/web/v1/sportivi/:id"
       }
     ],
     "header": {
@@ -1087,7 +1459,7 @@ define({ "api": [
     "groupTitle": "Utilizator",
     "sampleRequest": [
       {
-        "url": "http://localhost/TenisApp/api/web/v1/users"
+        "url": "http://tenis.anunturicl.ro/api/web/v1/users"
       }
     ]
   },
@@ -1122,7 +1494,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://localhost/TenisApp/api/web/v1/users/login/admin@tennisapp.com/123456",
+        "content": "curl -i http://tenis.anunturicl.ro/api/web/v1/users/login/admin@tennisapp.com/123456",
         "type": "json"
       }
     ],
@@ -1201,7 +1573,7 @@ define({ "api": [
     "groupTitle": "Utilizator",
     "sampleRequest": [
       {
-        "url": "http://localhost/TenisApp/api/web/v1/users/login/:email/:password"
+        "url": "http://tenis.anunturicl.ro/api/web/v1/users/login/:email/:password"
       }
     ]
   }

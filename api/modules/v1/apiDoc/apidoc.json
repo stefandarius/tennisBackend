@@ -2,8 +2,8 @@
   "name": "TennisApp REST API",
   "version": "0.1.0",
   "title": "REST Api documentation TennisApp",
-  "url" : "http://localhost/TenisApp/api/web/v1",
-  "sampleUrl": "http://localhost/TenisApp/api/web/v1",
+  "url" : "http://tenis.anunturicl.ro/api/web/v1",
+  "sampleUrl": "http://tenis.anunturicl.ro/api/web/v1",
   "order": [
 	"App",
 	"Utilizator",

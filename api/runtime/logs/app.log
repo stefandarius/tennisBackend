@@ -2781,22 +2781,738 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1576340451.276
     'REQUEST_TIME' => 1576340451
 ]
-2020-02-28 12:50:35 [::1][-][-][error][yii\web\HttpException:401] exception 'yii\web\UnauthorizedHttpException' with message 'Your request was made with invalid credentials.' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+2020-01-18 14:57:53 [::1][22][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: common\models\User::profil in C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('profil')
+#1 C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php(65): yii\db\BaseActiveRecord->__get('profil')
+#2 C:\wamp64\www\TenisBackend\api\modules\v1\actions\CreateCustomAction.php(35): api\modules\v1\models\Sportivi->save()
+#3 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#4 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#6 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#7 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/sportivi/cre...', Array)
+#8 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\base\Application->run()
+#10 {main}
+2020-01-18 14:57:53 [::1][22][-][info][application] $_GET = []
+
+$_POST = [
+    'nume' => 'Popa'
+    'prenume' => 'Marian'
+    'data_nastere' => '14.05.2001'
+    'nivel' => '2'
+    'email' => 'cata10293@gmail.fr'
+    'greutate' => '70'
+    'inaltime' => '175'
+    'stare_sanatate' => '1'
+    'telefon' => '0785240989'
+    'localitate' => '4'
+    'sex' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.22.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '4e7c08c9-9a1b-4132-8507-770b577ee3c5'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'CONTENT_LENGTH' => '163'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php7.2.18;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/TenisBackend/api/web/index.php'
+    'REMOTE_PORT' => '58157'
+    'REDIRECT_URL' => '/TenisBackend/api/web/v1/sportivi'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisBackend/api/web/v1/sportivi'
+    'SCRIPT_NAME' => '/TenisBackend/api/web/index.php'
+    'PHP_SELF' => '/TenisBackend/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1579359472.999
+    'REQUEST_TIME' => 1579359472
+]
+2020-01-18 15:01:23 [::1][22][-][error][yii\web\HttpException:500] yii\web\ServerErrorHttpException: Failed to create the object for unknown reason. in C:\wamp64\www\TenisBackend\api\modules\v1\actions\CreateCustomAction.php:42
+Stack trace:
+#0 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#3 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#4 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/sportivi/cre...', Array)
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\base\Application->run()
+#7 {main}
+2020-01-18 15:01:23 [::1][22][-][info][application] $_GET = []
+
+$_POST = [
+    'nume' => 'Popa'
+    'prenume' => 'Marian'
+    'data_nastere' => '14.05.2001'
+    'nivel' => '2'
+    'email' => 'cata10293@gmail.fr'
+    'greutate' => '70'
+    'inaltime' => '175'
+    'stare_sanatate' => '1'
+    'telefon' => '0785240989'
+    'localitate' => '4'
+    'sex' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'd062c2b688bd4e5b3374eeeb60be404d9537249f06b2266cfcba4a478e022ff1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PzUK7DV0fVhGJjsGrxpixkdkBnOx5qAg\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.22.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '11b599e6-1613-475b-8845-a4174ffbf3ae'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'CONTENT_LENGTH' => '163'
+    'HTTP_COOKIE' => '_csrf=d062c2b688bd4e5b3374eeeb60be404d9537249f06b2266cfcba4a478e022ff1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PzUK7DV0fVhGJjsGrxpixkdkBnOx5qAg%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php7.2.18;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/TenisBackend/api/web/index.php'
+    'REMOTE_PORT' => '58205'
+    'REDIRECT_URL' => '/TenisBackend/api/web/v1/sportivi'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisBackend/api/web/v1/sportivi'
+    'SCRIPT_NAME' => '/TenisBackend/api/web/index.php'
+    'PHP_SELF' => '/TenisBackend/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1579359683.127
+    'REQUEST_TIME' => 1579359683
+]
+2020-01-18 15:02:32 [::1][22][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: common\models\User::user in C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('user')
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Model.php(1026): yii\db\BaseActiveRecord->__get('user')
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRelationTrait.php(526): yii\base\Model->offsetGet('user')
+#3 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveQuery.php(196): yii\db\ActiveQuery->filterByModels(Array)
+#4 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\QueryBuilder.php(227): yii\db\ActiveQuery->prepare(Object(yii\db\mysql\QueryBuilder))
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\QueryBuilder->build(Object(yii\db\ActiveQuery))
+#6 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Query.php(274): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#7 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveQuery.php(304): yii\db\Query->one(NULL)
+#8 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRelationTrait.php(186): yii\db\ActiveQuery->one()
+#9 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\BaseActiveRecord.php(301): yii\db\ActiveQuery->findFor('profil', Object(common\models\User))
+#10 C:\wamp64\www\TenisBackend\api\modules\v1\models\Sportivi.php(65): yii\db\BaseActiveRecord->__get('profil')
+#11 C:\wamp64\www\TenisBackend\api\modules\v1\actions\CreateCustomAction.php(35): api\modules\v1\models\Sportivi->save()
+#12 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#13 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#14 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#15 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#16 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/sportivi/cre...', Array)
+#17 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\base\Application->run()
+#19 {main}
+2020-01-18 15:02:32 [::1][22][-][info][application] $_GET = []
+
+$_POST = [
+    'nume' => 'Popa'
+    'prenume' => 'Marian'
+    'data_nastere' => '14.05.2001'
+    'nivel' => '2'
+    'email' => 'cata10293@gmail.fr'
+    'greutate' => '70'
+    'inaltime' => '175'
+    'stare_sanatate' => '1'
+    'telefon' => '0785240989'
+    'localitate' => '4'
+    'sex' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'e30e5ae3c0fa3c18b7e73c8b66ed08d8def291ff651f6442505bc62eeab30c3aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"e26a6ja-jnRGJAVxMZ-Sv9ADULUh59iW\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.22.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '405a42bf-a9ab-41c3-9900-56bae7b6794b'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'CONTENT_LENGTH' => '163'
+    'HTTP_COOKIE' => '_csrf=e30e5ae3c0fa3c18b7e73c8b66ed08d8def291ff651f6442505bc62eeab30c3aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22e26a6ja-jnRGJAVxMZ-Sv9ADULUh59iW%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php7.2.18;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/TenisBackend/api/web/index.php'
+    'REMOTE_PORT' => '58232'
+    'REDIRECT_URL' => '/TenisBackend/api/web/v1/sportivi'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisBackend/api/web/v1/sportivi'
+    'SCRIPT_NAME' => '/TenisBackend/api/web/index.php'
+    'PHP_SELF' => '/TenisBackend/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1579359752.523
+    'REQUEST_TIME' => 1579359752
+]
+2020-01-18 15:05:17 [::1][22][-][error][yii\web\HttpException:500] yii\web\ServerErrorHttpException: Failed to create the object for unknown reason. in C:\wamp64\www\TenisBackend\api\modules\v1\actions\CreateCustomAction.php:42
+Stack trace:
+#0 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#3 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#4 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/sportivi/cre...', Array)
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\base\Application->run()
+#7 {main}
+2020-01-18 15:05:17 [::1][22][-][info][application] $_GET = []
+
+$_POST = [
+    'nume' => 'Popa'
+    'prenume' => 'Marian'
+    'data_nastere' => '14.05.2001'
+    'nivel' => '2'
+    'email' => 'cata10293@gmail.fr'
+    'greutate' => '70'
+    'inaltime' => '175'
+    'stare_sanatate' => '1'
+    'telefon' => '0785240989'
+    'localitate' => '4'
+    'sex' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '167994ceeecec24cf2d9079958154063078b7c1650923803be1519af0921b05ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QgiC9jlpXAPRH3S6R6ZuyGJjsnQcFAQn\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.22.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'df9af8d2-58c0-4e7b-88e1-5a52b9fece6b'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'CONTENT_LENGTH' => '163'
+    'HTTP_COOKIE' => '_csrf=167994ceeecec24cf2d9079958154063078b7c1650923803be1519af0921b05ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QgiC9jlpXAPRH3S6R6ZuyGJjsnQcFAQn%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php7.2.18;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/TenisBackend/api/web/index.php'
+    'REMOTE_PORT' => '58303'
+    'REDIRECT_URL' => '/TenisBackend/api/web/v1/sportivi'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisBackend/api/web/v1/sportivi'
+    'SCRIPT_NAME' => '/TenisBackend/api/web/index.php'
+    'PHP_SELF' => '/TenisBackend/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1579359917.874
+    'REQUEST_TIME' => 1579359917
+]
+2020-01-18 15:10:33 [::1][22][-][error][yii\web\HttpException:500] yii\web\ServerErrorHttpException: Failed to create the object for unknown reason. in C:\wamp64\www\TenisBackend\api\modules\v1\actions\CreateCustomAction.php:42
+Stack trace:
+#0 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#3 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#4 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/sportivi/cre...', Array)
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\base\Application->run()
+#7 {main}
+2020-01-18 15:10:33 [::1][22][-][info][application] $_GET = []
+
+$_POST = [
+    'nume' => 'Popa'
+    'prenume' => 'Marian'
+    'data_nastere' => '14.05.2001'
+    'nivel' => '2'
+    'email' => 'cata10293@gmail.de'
+    'greutate' => '70'
+    'inaltime' => '175'
+    'stare_sanatate' => '1'
+    'telefon' => '0785240980'
+    'localitate' => '4'
+    'sex' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '18b536dfe8dba8e7eaf1c0ea85693a5966407f8be1b61e3a75aeb121085e9700a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"kw6ObzWrxz1T-FaE2vVvsCd_5hDtIhYz\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.22.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'ca671f25-fbe9-4384-b5af-bc28c1fc0453'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'CONTENT_LENGTH' => '163'
+    'HTTP_COOKIE' => '_csrf=18b536dfe8dba8e7eaf1c0ea85693a5966407f8be1b61e3a75aeb121085e9700a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22kw6ObzWrxz1T-FaE2vVvsCd_5hDtIhYz%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php7.2.18;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/TenisBackend/api/web/index.php'
+    'REMOTE_PORT' => '58442'
+    'REDIRECT_URL' => '/TenisBackend/api/web/v1/sportivi'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisBackend/api/web/v1/sportivi'
+    'SCRIPT_NAME' => '/TenisBackend/api/web/index.php'
+    'PHP_SELF' => '/TenisBackend/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1579360233.212
+    'REQUEST_TIME' => 1579360233
+]
+2020-01-23 16:58:18 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(api\modules\v1\actions\CreateCustomAction))
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(api\modules\v1\actions\CreateCustomAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(276): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(api\modules\v1\actions\CreateCustomAction))
+#7 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(api\modules\v1\actions\CreateCustomAction))
+#8 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#9 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/istoric-antr...', Array)
+#10 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\base\Application->run()
+#12 {main}
+2020-01-23 16:58:17 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.22.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'd43da4da-32d3-4779-9a55-98be9047ca56'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php7.2.18;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/TenisBackend/api/web/index.php'
+    'REMOTE_PORT' => '57603'
+    'REDIRECT_URL' => '/TenisBackend/api/web/v1/istoric-antrenament'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisBackend/api/web/v1/istoric-antrenament'
+    'SCRIPT_NAME' => '/TenisBackend/api/web/index.php'
+    'PHP_SELF' => '/TenisBackend/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1579798697.127
+    'REQUEST_TIME' => 1579798697
+]
+2020-01-23 17:13:06 [::1][22][-][error][yii\db\Exception] PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '1' for column 'data_antrenament' at row 1 in C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php:1290
+Stack trace:
+#0 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php(1290): PDOStatement->execute()
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `is...')
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('istoric_antrena...', Array)
+#4 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\wamp64\www\TenisBackend\api\modules\v1\actions\CreateCustomAction.php(35): yii\db\BaseActiveRecord->save()
+#7 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#8 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#9 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#10 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#11 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/istoric-antr...', Array)
+#12 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '1' for column 'data_antrenament' at row 1
+The SQL being executed was: INSERT INTO `istoric_antrenament` (`tipAntrenament_id`, `data_antrenament`, `antrenor_id`, `created_at`) VALUES (1, '1', 22, 1579799586) in C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Schema.php:674
+Stack trace:
+#0 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `is...')
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `is...')
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('istoric_antrena...', Array)
+#4 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\wamp64\www\TenisBackend\api\modules\v1\actions\CreateCustomAction.php(35): yii\db\BaseActiveRecord->save()
+#7 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#8 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#9 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#10 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#11 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/istoric-antr...', Array)
+#12 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 22007
+    [1] => 1292
+    [2] => Incorrect datetime value: '1' for column 'data_antrenament' at row 1
+)
+
+2020-01-23 17:13:06 [::1][22][-][info][application] $_GET = []
+
+$_POST = [
+    'tipAntrenament_id' => '1'
+    'data_antrenament' => '1'
+    'sportiv_id' => '23'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '953250273389d938f8ee9ab0cdb48faef18400c58f7a3fcdd755e65bf9237301a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"RF_YeKX71iitXxN42Qulv0_KTzYC6Slf\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.22.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'e5a92a04-901b-4509-a9d3-9befbcd540b7'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'CONTENT_LENGTH' => '52'
+    'HTTP_COOKIE' => '_csrf=953250273389d938f8ee9ab0cdb48faef18400c58f7a3fcdd755e65bf9237301a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22RF_YeKX71iitXxN42Qulv0_KTzYC6Slf%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php7.2.18;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/TenisBackend/api/web/index.php'
+    'REMOTE_PORT' => '57704'
+    'REDIRECT_URL' => '/TenisBackend/api/web/v1/istoric-antrenament'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisBackend/api/web/v1/istoric-antrenament'
+    'SCRIPT_NAME' => '/TenisBackend/api/web/index.php'
+    'PHP_SELF' => '/TenisBackend/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1579799586.885
+    'REQUEST_TIME' => 1579799586
+]
+2020-01-23 17:17:24 [::1][22][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000]: General error: 1364 Field 'abonamentSpotiv_id' doesn't have a default value in C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php:1290
+Stack trace:
+#0 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php(1290): PDOStatement->execute()
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `is...')
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('istoric_antrena...', Array)
+#4 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\wamp64\www\TenisBackend\api\modules\v1\actions\CreateCustomAction.php(35): yii\db\BaseActiveRecord->save()
+#7 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#8 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#9 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#10 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#11 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/istoric-antr...', Array)
+#12 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1364 Field 'abonamentSpotiv_id' doesn't have a default value
+The SQL being executed was: INSERT INTO `istoric_antrenament` (`tipAntrenament_id`, `data_antrenament`, `antrenor_id`, `created_at`) VALUES (1, '2020-01-23 19:17:00', 22, 1579799844) in C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Schema.php:674
+Stack trace:
+#0 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `is...')
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `is...')
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('istoric_antrena...', Array)
+#4 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\wamp64\www\TenisBackend\api\modules\v1\actions\CreateCustomAction.php(35): yii\db\BaseActiveRecord->save()
+#7 [internal function]: api\modules\v1\actions\CreateCustomAction->run()
+#8 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#9 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#10 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#11 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/istoric-antr...', Array)
+#12 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1364
+    [2] => Field 'abonamentSpotiv_id' doesn't have a default value
+)
+
+2020-01-23 17:17:24 [::1][22][-][info][application] $_GET = []
+
+$_POST = [
+    'tipAntrenament_id' => '1'
+    'data_antrenament' => '2020-01-23 19:17:00'
+    'sportiv_id' => '23'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'a1c53d9ae43dd0a478ab6fae180070e92dffacf8847cef5cec050e7d828c5678a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nUdt-kvsj_V5Vta3R_A94halSm8IDsxP\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.22.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '55b0ed1c-15ee-4ac9-9e49-fc194b1b997d'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'CONTENT_LENGTH' => '76'
+    'HTTP_COOKIE' => '_csrf=a1c53d9ae43dd0a478ab6fae180070e92dffacf8847cef5cec050e7d828c5678a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nUdt-kvsj_V5Vta3R_A94halSm8IDsxP%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php7.2.18;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/TenisBackend/api/web/index.php'
+    'REMOTE_PORT' => '57752'
+    'REDIRECT_URL' => '/TenisBackend/api/web/v1/istoric-antrenament'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisBackend/api/web/v1/istoric-antrenament'
+    'SCRIPT_NAME' => '/TenisBackend/api/web/index.php'
+    'PHP_SELF' => '/TenisBackend/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1579799844.426
+    'REQUEST_TIME' => 1579799844
+]
+2020-01-23 18:09:29 [::1][22][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'id' of non-object in C:\wamp64\www\TenisBackend\api\modules\v1\models\IstoricAntrenament.php:40
+Stack trace:
+#0 C:\wamp64\www\TenisBackend\api\modules\v1\models\IstoricAntrenament.php(40): yii\web\ErrorHandler->handleError()
+#1 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(596): api\modules\v1\models\IstoricAntrenament->beforeSave()
+#2 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\ActiveRecord.php(566): api\modules\v1\models\IstoricAntrenament->insertInternal()
+#3 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): api\modules\v1\models\IstoricAntrenament->insert()
+#4 C:\wamp64\www\TenisBackend\api\modules\v1\actions\CreateCustomAction.php(35): api\modules\v1\models\IstoricAntrenament->save()
+#5 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Action.php(94): api\modules\v1\actions\CreateCustomAction->run()
+#6 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Action.php(94): ::call_user_func_array:{C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Action.php:94}()
+#7 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Controller.php(157): api\modules\v1\actions\CreateCustomAction->runWithParams()
+#8 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Module.php(528): api\modules\v1\controllers\IstoricAntrenamentController->runAction()
+#9 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\web\Application.php(103): yii\web\Application->runAction()
+#10 C:\wamp64\www\TenisBackend\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#11 C:\wamp64\www\TenisBackend\api\web\index.php(22): yii\web\Application->run()
+#12 {main}
+2020-01-23 18:09:29 [::1][22][-][info][application] $_GET = []
+
+$_POST = [
+    'tipAntrenament_id' => '1'
+    'data_antrenament' => '2020-01-23 19:17:00'
+    'sportiv_id' => '23'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '2e4647d382ef1a5853f27fe139497ea12c7d96dee423584df29d7062f871f5ffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"XIF5G15sK-rzG1rJ000ghMCFdKgw6Rqo\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.22.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '446ef5fe-81d3-4286-91a6-3f2eb9e1d2f0'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'CONTENT_LENGTH' => '76'
+    'HTTP_COOKIE' => '_csrf=2e4647d382ef1a5853f27fe139497ea12c7d96dee423584df29d7062f871f5ffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22XIF5G15sK-rzG1rJ000ghMCFdKgw6Rqo%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Python27\\;C:\\Python27\\Scripts;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php7.2.18;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) PHP/7.2.18 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) PHP/7.2.18'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/TenisBackend/api/web/index.php'
+    'REMOTE_PORT' => '58090'
+    'REDIRECT_URL' => '/TenisBackend/api/web/v1/istoric-antrenament'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisBackend/api/web/v1/istoric-antrenament'
+    'SCRIPT_NAME' => '/TenisBackend/api/web/index.php'
+    'PHP_SELF' => '/TenisBackend/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1579802969.253
+    'REQUEST_TIME' => 1579802969
+]
+2020-02-29 17:55:54 [::1][-][-][error][yii\web\HttpException:401] exception 'yii\web\UnauthorizedHttpException' with message 'Your request was made with invalid credentials.' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
 Stack trace:
 #0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
-#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\OptionsAction))
-#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\rest\OptionsAction))
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
 #3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
 #4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
 #5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(276): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
-#6 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\rest\OptionsAction))
-#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(yii\rest\OptionsAction))
-#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('options', Array)
-#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/config/optio...', Array)
+#6 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('lista-sportivi', Array)
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/antrenori/li...', Array)
 #10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
 #11 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
 #12 {main}
-2020-02-28 12:50:35 [::1][-][-][info][application] $_GET = []
+2020-02-29 17:55:54 [::1][-][-][info][application] $_GET = []
 
 $_POST = []
 
@@ -2806,15 +3522,13 @@ $_COOKIE = []
 
 $_SERVER = [
     'REDIRECT_STATUS' => '200'
-    'HTTP_HOST' => 'localhost'
-    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:73.0) Gecko/20100101 Firefox/73.0'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.23.0-beta.1'
     'HTTP_ACCEPT' => '*/*'
-    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
-    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
-    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'GET'
-    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'authorization'
-    'HTTP_ORIGIN' => 'null'
-    'HTTP_DNT' => '1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '2a29bcb6-c92c-45dd-9c21-44ce9200463e'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
     'HTTP_CONNECTION' => 'keep-alive'
     'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Marian\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
     'SystemRoot' => 'C:\\WINDOWS'
@@ -2834,25 +3548,90 @@ $_SERVER = [
     'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
     'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
     'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
-    'REMOTE_PORT' => '58538'
-    'REDIRECT_URL' => '/TenisApp/api/web/v1/config'
+    'REMOTE_PORT' => '51245'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/antrenori/lista-sportivi'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'OPTIONS'
+    'REQUEST_METHOD' => 'GET'
     'QUERY_STRING' => ''
-    'REQUEST_URI' => '/TenisApp/api/web/v1/config'
+    'REQUEST_URI' => '/TenisApp/api/web/v1/antrenori/lista-sportivi'
     'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
     'PHP_SELF' => '/TenisApp/api/web/index.php'
-    'REQUEST_TIME_FLOAT' => 1582894235.246
-    'REQUEST_TIME' => 1582894235
+    'REQUEST_TIME_FLOAT' => 1582998954.719
+    'REQUEST_TIME' => 1582998954
 ]
-2020-02-29 16:48:32 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Pagina nu a fost găsită.' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Request.php:284
+2020-02-29 17:56:09 [::1][-][-][error][yii\web\HttpException:401] exception 'yii\web\UnauthorizedHttpException' with message 'Your request was made with invalid credentials.' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\HttpHeaderAuth.php(65): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(73): yii\filters\auth\HttpHeaderAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(62): yii\filters\auth\CompositeAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#5 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#6 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(276): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('lista-sportivi', Array)
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/antrenori/li...', Array)
+#12 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#14 {main}
+2020-02-29 17:56:09 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.23.0-beta.1'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'e060ebcc-5a5c-46af-a63a-65dab8d6bb02'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Marian\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '51248'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/antrenori/lista-sportivi'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisApp/api/web/v1/antrenori/lista-sportivi'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1582998969.67
+    'REQUEST_TIME' => 1582998969
+]
+2020-03-13 06:34:11 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Pagina nu a fost găsită.' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Request.php:284
 Stack trace:
 #0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
 #1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
 #2 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
 #3 {main}
-2020-02-29 16:48:31 [::1][-][-][info][application] $_GET = []
+2020-03-13 06:34:10 [::1][-][-][info][application] $_GET = []
 
 $_POST = []
 
@@ -2863,13 +3642,13 @@ $_COOKIE = []
 $_SERVER = [
     'REDIRECT_STATUS' => '200'
     'HTTP_HOST' => 'localhost'
-    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:73.0) Gecko/20100101 Firefox/73.0'
-    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
     'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
-    'HTTP_ORIGIN' => 'null'
     'HTTP_DNT' => '1'
     'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Marian\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
@@ -2888,25 +3667,25 @@ $_SERVER = [
     'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
     'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
     'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
-    'REMOTE_PORT' => '50921'
-    'REDIRECT_URL' => '/TenisApp/api/web/v1users/login//'
+    'REMOTE_PORT' => '53547'
+    'REDIRECT_URL' => '/tenisapp/api/web/v1/localitati'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
     'REQUEST_METHOD' => 'GET'
     'QUERY_STRING' => ''
-    'REQUEST_URI' => '/TenisApp/api/web/v1users/login//'
+    'REQUEST_URI' => '/tenisapp/api/web/v1/localitati'
     'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
     'PHP_SELF' => '/TenisApp/api/web/index.php'
-    'REQUEST_TIME_FLOAT' => 1582994911.646
-    'REQUEST_TIME' => 1582994911
+    'REQUEST_TIME_FLOAT' => 1584081250.1
+    'REQUEST_TIME' => 1584081250
 ]
-2020-02-29 16:48:38 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Pagina nu a fost găsită.' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Request.php:284
+2020-03-13 06:34:32 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Pagina nu a fost găsită.' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Request.php:284
 Stack trace:
 #0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
 #1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
 #2 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
 #3 {main}
-2020-02-29 16:48:38 [::1][-][-][info][application] $_GET = []
+2020-03-13 06:34:32 [::1][-][-][info][application] $_GET = []
 
 $_POST = []
 
@@ -2917,13 +3696,13 @@ $_COOKIE = []
 $_SERVER = [
     'REDIRECT_STATUS' => '200'
     'HTTP_HOST' => 'localhost'
-    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:73.0) Gecko/20100101 Firefox/73.0'
-    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
     'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
-    'HTTP_ORIGIN' => 'null'
     'HTTP_DNT' => '1'
     'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Marian\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
@@ -2942,25 +3721,25 @@ $_SERVER = [
     'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
     'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
     'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
-    'REMOTE_PORT' => '50922'
-    'REDIRECT_URL' => '/TenisApp/api/web/v1users/login/admin@cec.ro/1234555'
+    'REMOTE_PORT' => '53550'
+    'REDIRECT_URL' => '/tenisapp/api/web/v1/config'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
     'REQUEST_METHOD' => 'GET'
     'QUERY_STRING' => ''
-    'REQUEST_URI' => '/TenisApp/api/web/v1users/login/admin%40cec.ro/1234555'
+    'REQUEST_URI' => '/tenisapp/api/web/v1/config'
     'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
     'PHP_SELF' => '/TenisApp/api/web/index.php'
-    'REQUEST_TIME_FLOAT' => 1582994918.373
-    'REQUEST_TIME' => 1582994918
+    'REQUEST_TIME_FLOAT' => 1584081272.141
+    'REQUEST_TIME' => 1584081272
 ]
-2020-02-29 16:48:54 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Pagina nu a fost găsită.' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Request.php:284
+2020-03-13 06:34:41 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Pagina nu a fost găsită.' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Request.php:284
 Stack trace:
 #0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
 #1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
 #2 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
 #3 {main}
-2020-02-29 16:48:54 [::1][-][-][info][application] $_GET = []
+2020-03-13 06:34:41 [::1][-][-][info][application] $_GET = []
 
 $_POST = []
 
@@ -2971,12 +3750,377 @@ $_COOKIE = []
 $_SERVER = [
     'REDIRECT_STATUS' => '200'
     'HTTP_HOST' => 'localhost'
-    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:73.0) Gecko/20100101 Firefox/73.0'
-    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
     'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
-    'HTTP_ORIGIN' => 'null'
     'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Marian\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '53552'
+    'REDIRECT_URL' => '/tenisapp/api/web/v1/configs'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tenisapp/api/web/v1/configs'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584081281.64
+    'REQUEST_TIME' => 1584081281
+]
+2020-03-13 06:35:03 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Pagina nu a fost găsită.' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Request.php:284
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#3 {main}
+2020-03-13 06:35:03 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'hir07ms4oho47u8pk4t6i1kbt4'
+    '_csrf-backend' => '3124ae30f81740724fa9ca6dc1cd3827f6cc3590b0428d9aa3d0857ff01ef95aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"A3uwqsxrML6GFrQ9K7w_VnvvQUKO4yBG\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://localhost/tenisapp/api/'
+    'HTTP_COOKIE' => 'advanced-backend=hir07ms4oho47u8pk4t6i1kbt4; _csrf-backend=3124ae30f81740724fa9ca6dc1cd3827f6cc3590b0428d9aa3d0857ff01ef95aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22A3uwqsxrML6GFrQ9K7w_VnvvQUKO4yBG%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Marian\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '53564'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tenisapp/api/web/'
+    'SCRIPT_NAME' => '/tenisapp/api/web/index.php'
+    'PHP_SELF' => '/tenisapp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584081303.61
+    'REQUEST_TIME' => 1584081303
+]
+2020-03-13 06:35:07 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Pagina nu a fost găsită.' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Request.php:284
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#3 {main}
+2020-03-13 06:35:07 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'hir07ms4oho47u8pk4t6i1kbt4'
+    '_csrf-backend' => '3124ae30f81740724fa9ca6dc1cd3827f6cc3590b0428d9aa3d0857ff01ef95aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"A3uwqsxrML6GFrQ9K7w_VnvvQUKO4yBG\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=hir07ms4oho47u8pk4t6i1kbt4; _csrf-backend=3124ae30f81740724fa9ca6dc1cd3827f6cc3590b0428d9aa3d0857ff01ef95aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22A3uwqsxrML6GFrQ9K7w_VnvvQUKO4yBG%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Marian\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '53564'
+    'REDIRECT_URL' => '/tenisapp/api/web/v1/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tenisapp/api/web/v1/'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584081307.191
+    'REQUEST_TIME' => 1584081307
+]
+2020-03-13 06:35:10 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Pagina nu a fost găsită.' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Request.php:284
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#3 {main}
+2020-03-13 06:35:10 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'hir07ms4oho47u8pk4t6i1kbt4'
+    '_csrf-backend' => '3124ae30f81740724fa9ca6dc1cd3827f6cc3590b0428d9aa3d0857ff01ef95aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"A3uwqsxrML6GFrQ9K7w_VnvvQUKO4yBG\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=hir07ms4oho47u8pk4t6i1kbt4; _csrf-backend=3124ae30f81740724fa9ca6dc1cd3827f6cc3590b0428d9aa3d0857ff01ef95aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22A3uwqsxrML6GFrQ9K7w_VnvvQUKO4yBG%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Marian\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '53564'
+    'REDIRECT_URL' => '/tenisapp/api/web/v1/users'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tenisapp/api/web/v1/users'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584081310.518
+    'REQUEST_TIME' => 1584081310
+]
+2020-03-13 06:35:14 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Pagina nu a fost găsită.' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Request.php:284
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#3 {main}
+2020-03-13 06:35:13 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'hir07ms4oho47u8pk4t6i1kbt4'
+    '_csrf-backend' => '3124ae30f81740724fa9ca6dc1cd3827f6cc3590b0428d9aa3d0857ff01ef95aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"A3uwqsxrML6GFrQ9K7w_VnvvQUKO4yBG\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=hir07ms4oho47u8pk4t6i1kbt4; _csrf-backend=3124ae30f81740724fa9ca6dc1cd3827f6cc3590b0428d9aa3d0857ff01ef95aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22A3uwqsxrML6GFrQ9K7w_VnvvQUKO4yBG%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Marian\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '53564'
+    'REDIRECT_URL' => '/tenisapp/api/web/v1/config'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tenisapp/api/web/v1/config'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584081313.953
+    'REQUEST_TIME' => 1584081313
+]
+2020-03-13 06:35:28 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Pagina nu a fost găsită.' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Request.php:284
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#3 {main}
+2020-03-13 06:35:28 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'hir07ms4oho47u8pk4t6i1kbt4'
+    '_csrf-backend' => '3124ae30f81740724fa9ca6dc1cd3827f6cc3590b0428d9aa3d0857ff01ef95aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"A3uwqsxrML6GFrQ9K7w_VnvvQUKO4yBG\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=hir07ms4oho47u8pk4t6i1kbt4; _csrf-backend=3124ae30f81740724fa9ca6dc1cd3827f6cc3590b0428d9aa3d0857ff01ef95aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22A3uwqsxrML6GFrQ9K7w_VnvvQUKO4yBG%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Marian\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '53569'
+    'REDIRECT_URL' => '/tenisapp/api/web/v1/localitati'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tenisapp/api/web/v1/localitati'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584081328.373
+    'REQUEST_TIME' => 1584081328
+]
+2020-03-13 08:40:05 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'Unsupported configuration type: NULL' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\BaseYii.php:356
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(284): yii\BaseYii::createObject(NULL)
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(330): yii\data\DataFilter->getSearchModel()
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(311): yii\data\DataFilter->detectSearchAttributeTypes()
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(576): yii\data\DataFilter->getSearchAttributeTypes()
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(536): yii\data\DataFilter->validateAttributeCondition('nume', Array)
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(509): yii\data\DataFilter->validateCondition(Array)
+#6 [internal function]: yii\data\DataFilter->validateFilter('filter', NULL, Object(yii\validators\InlineValidator))
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\InlineValidator.php(72): call_user_func(Array, 'filter', NULL, Object(yii\validators\InlineValidator))
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\InlineValidator->validateAttribute(Object(yii\data\ActiveDataFilter), 'filter')
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(yii\data\ActiveDataFilter), Array)
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(702): yii\base\Model->validate()
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php(100): yii\data\DataFilter->build()
+#12 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php(82): yii\rest\IndexAction->prepareDataProvider()
+#13 [internal function]: yii\rest\IndexAction->run()
+#14 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#15 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#16 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#17 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/localitati/i...', Array)
+#18 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#20 {main}
+2020-03-13 08:40:05 [::1][-][-][info][application] $_GET = [
+    'filter' => [
+        'nume' => [
+            'LIKE' => '%Alba'
+        ]
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.24.0-beta.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'f2f766a9-2599-4e6e-8614-d47b91233506'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
     'HTTP_CONNECTION' => 'keep-alive'
     'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Marian\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
     'SystemRoot' => 'C:\\WINDOWS'
@@ -2996,15 +4140,582 @@ $_SERVER = [
     'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
     'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
     'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
-    'REMOTE_PORT' => '50923'
-    'REDIRECT_URL' => '/TenisApp/api/web/v1users/login/admin@cec.ro/1234555'
+    'REMOTE_PORT' => '54969'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/localitati'
+    'REDIRECT_QUERY_STRING' => 'filter[nume][LIKE]=%Alba'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'filter[nume][LIKE]=%Alba'
+    'REQUEST_URI' => '/TenisApp/api/web/v1/localitati?filter[nume][LIKE]=%Alba'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584088805.002
+    'REQUEST_TIME' => 1584088805
+]
+2020-03-13 08:41:50 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'Unsupported configuration type: NULL' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\BaseYii.php:356
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(284): yii\BaseYii::createObject(NULL)
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(330): yii\data\DataFilter->getSearchModel()
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(311): yii\data\DataFilter->detectSearchAttributeTypes()
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(576): yii\data\DataFilter->getSearchAttributeTypes()
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(536): yii\data\DataFilter->validateAttributeCondition('nume', Array)
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(509): yii\data\DataFilter->validateCondition(Array)
+#6 [internal function]: yii\data\DataFilter->validateFilter('filter', NULL, Object(yii\validators\InlineValidator))
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\InlineValidator.php(72): call_user_func(Array, 'filter', NULL, Object(yii\validators\InlineValidator))
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\InlineValidator->validateAttribute(Object(yii\data\ActiveDataFilter), 'filter')
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(yii\data\ActiveDataFilter), Array)
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(702): yii\base\Model->validate()
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php(100): yii\data\DataFilter->build()
+#12 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php(82): yii\rest\IndexAction->prepareDataProvider()
+#13 [internal function]: yii\rest\IndexAction->run()
+#14 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#15 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#16 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#17 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/localitati/i...', Array)
+#18 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#20 {main}
+2020-03-13 08:41:50 [::1][-][-][info][application] $_GET = [
+    'filter' => [
+        'nume' => [
+            'LIKE' => [
+                0 => '%Alba'
+            ]
+        ]
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.24.0-beta.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '764438a7-60eb-4bcc-a176-9eb98baf55fe'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Marian\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '54985'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/localitati'
+    'REDIRECT_QUERY_STRING' => 'filter[nume][LIKE][]=%Alba'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'filter[nume][LIKE][]=%Alba'
+    'REQUEST_URI' => '/TenisApp/api/web/v1/localitati?filter[nume][LIKE][]=%Alba'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584088910.454
+    'REQUEST_TIME' => 1584088910
+]
+2020-03-13 08:42:09 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'Unsupported configuration type: NULL' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\BaseYii.php:356
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(284): yii\BaseYii::createObject(NULL)
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(330): yii\data\DataFilter->getSearchModel()
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(311): yii\data\DataFilter->detectSearchAttributeTypes()
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(576): yii\data\DataFilter->getSearchAttributeTypes()
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(536): yii\data\DataFilter->validateAttributeCondition('nume', Array)
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(509): yii\data\DataFilter->validateCondition(Array)
+#6 [internal function]: yii\data\DataFilter->validateFilter('filter', NULL, Object(yii\validators\InlineValidator))
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\InlineValidator.php(72): call_user_func(Array, 'filter', NULL, Object(yii\validators\InlineValidator))
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\InlineValidator->validateAttribute(Object(yii\data\ActiveDataFilter), 'filter')
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(yii\data\ActiveDataFilter), Array)
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(702): yii\base\Model->validate()
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php(100): yii\data\DataFilter->build()
+#12 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php(82): yii\rest\IndexAction->prepareDataProvider()
+#13 [internal function]: yii\rest\IndexAction->run()
+#14 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#15 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#16 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#17 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/localitati/i...', Array)
+#18 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#20 {main}
+2020-03-13 08:42:09 [::1][-][-][info][application] $_GET = [
+    'filter' => [
+        'nume' => [
+            'LIKE' => '%Alba'
+        ]
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.24.0-beta.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '4e3d2282-2700-4876-9a01-312a41d7403f'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Marian\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '54987'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/localitati'
+    'REDIRECT_QUERY_STRING' => 'filter[nume][LIKE]=%Alba'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'filter[nume][LIKE]=%Alba'
+    'REQUEST_URI' => '/TenisApp/api/web/v1/localitati?filter[nume][LIKE]=%Alba'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584088929.113
+    'REQUEST_TIME' => 1584088929
+]
+2020-03-13 08:43:54 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'Unsupported configuration type: NULL' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\BaseYii.php:356
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(284): yii\BaseYii::createObject(NULL)
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(330): yii\data\DataFilter->getSearchModel()
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(311): yii\data\DataFilter->detectSearchAttributeTypes()
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(576): yii\data\DataFilter->getSearchAttributeTypes()
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(536): yii\data\DataFilter->validateAttributeCondition('id', Array)
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(509): yii\data\DataFilter->validateCondition(Array)
+#6 [internal function]: yii\data\DataFilter->validateFilter('filter', NULL, Object(yii\validators\InlineValidator))
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\InlineValidator.php(72): call_user_func(Array, 'filter', NULL, Object(yii\validators\InlineValidator))
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\InlineValidator->validateAttribute(Object(yii\data\ActiveDataFilter), 'filter')
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(yii\data\ActiveDataFilter), Array)
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(702): yii\base\Model->validate()
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php(100): yii\data\DataFilter->build()
+#12 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php(82): yii\rest\IndexAction->prepareDataProvider()
+#13 [internal function]: yii\rest\IndexAction->run()
+#14 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#15 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#16 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#17 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/localitati/i...', Array)
+#18 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#20 {main}
+2020-03-13 08:43:54 [::1][-][-][info][application] $_GET = [
+    'filter' => [
+        'id' => [
+            0 => '1'
+        ]
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.24.0-beta.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'c8be1519-cb95-4910-aa02-d3fc265bc55b'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Marian\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '54992'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/localitati'
+    'REDIRECT_QUERY_STRING' => 'filter[id][]=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'filter[id][]=1'
+    'REQUEST_URI' => '/TenisApp/api/web/v1/localitati?filter[id][]=1'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584089034.17
+    'REQUEST_TIME' => 1584089034
+]
+2020-03-13 08:44:39 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'Unsupported configuration type: NULL' in D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\BaseYii.php:356
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(284): yii\BaseYii::createObject(NULL)
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(330): yii\data\DataFilter->getSearchModel()
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(311): yii\data\DataFilter->detectSearchAttributeTypes()
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(576): yii\data\DataFilter->getSearchAttributeTypes()
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(536): yii\data\DataFilter->validateAttributeCondition('id', Array)
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(509): yii\data\DataFilter->validateCondition(Array)
+#6 [internal function]: yii\data\DataFilter->validateFilter('filter', NULL, Object(yii\validators\InlineValidator))
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\InlineValidator.php(72): call_user_func(Array, 'filter', NULL, Object(yii\validators\InlineValidator))
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\InlineValidator->validateAttribute(Object(yii\data\ActiveDataFilter), 'filter')
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(yii\data\ActiveDataFilter), Array)
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\data\DataFilter.php(702): yii\base\Model->validate()
+#11 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php(100): yii\data\DataFilter->build()
+#12 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php(82): yii\rest\IndexAction->prepareDataProvider()
+#13 [internal function]: yii\rest\IndexAction->run()
+#14 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#15 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#16 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#17 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/localitati/i...', Array)
+#18 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#20 {main}
+2020-03-13 08:44:39 [::1][-][-][info][application] $_GET = [
+    'filter' => [
+        'id' => [
+            'IN' => '1,2,3'
+        ]
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.24.0-beta.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '5fa04fe6-f830-449b-93e3-1aae20b89a6d'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Marian\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '55002'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/localitati'
+    'REDIRECT_QUERY_STRING' => 'filter[id][IN]=1,2,3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'filter[id][IN]=1,2,3'
+    'REQUEST_URI' => '/TenisApp/api/web/v1/localitati?filter[id][IN]=1,2,3'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584089079.605
+    'REQUEST_TIME' => 1584089079
+]
+2020-03-13 08:57:34 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined method api\modules\v1\models\LocalitatiSearch::getAttributeMap()' in D:\wamp64\www\TenisApp\api\modules\v1\controllers\LocalitatiController.php:36
+Stack trace:
+#0 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\ErrorHandler.php(0): yii\base\ErrorHandler->handleFatalError()
+#1 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(225): api\modules\v1\controllers\LocalitatiController->actions()
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(126): yii\base\Controller->createAction()
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#6 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#7 {main}
+2020-03-13 08:57:34 [::1][-][-][info][application] $_GET = [
+    'filter' => [
+        'nume' => [
+            'LIKE' => '\'Alba\''
+        ]
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.24.0-beta.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'f06e6f85-eab0-4e79-ae2f-d92868182622'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Marian\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '55157'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/localitati'
+    'REDIRECT_QUERY_STRING' => 'filter[nume][LIKE]=%27Alba%27'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'filter[nume][LIKE]=%27Alba%27'
+    'REQUEST_URI' => '/TenisApp/api/web/v1/localitati?filter[nume][LIKE]=%27Alba%27'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584089853.964
+    'REQUEST_TIME' => 1584089853
+]
+2020-03-13 13:33:52 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: filterCondition' in D:\wamp64\www\TenisApp\api\modules\v1\models\LocalitatiSearch.php:69
+Stack trace:
+#0 D:\wamp64\www\TenisApp\api\modules\v1\controllers\LocalitatiController.php(69): yii\base\ErrorHandler->handleError()
+#1 D:\wamp64\www\TenisApp\api\modules\v1\controllers\LocalitatiController.php(28): api\modules\v1\models\LocalitatiSearch->search()
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php(108): api\modules\v1\controllers\LocalitatiController->prepareDataProvider()
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php(108): ::call_user_func:{D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php:108}()
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php(82): yii\rest\IndexAction->prepareDataProvider()
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): yii\rest\IndexAction->run()
+#6 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): ::call_user_func_array:{D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php:94}()
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams()
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#11 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#12 {main}
+2020-03-13 13:33:52 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'hir07ms4oho47u8pk4t6i1kbt4'
+    '_csrf-backend' => '3124ae30f81740724fa9ca6dc1cd3827f6cc3590b0428d9aa3d0857ff01ef95aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"A3uwqsxrML6GFrQ9K7w_VnvvQUKO4yBG\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://localhost/TenisApp/api/documentation/index.html'
+    'HTTP_COOKIE' => 'advanced-backend=hir07ms4oho47u8pk4t6i1kbt4; _csrf-backend=3124ae30f81740724fa9ca6dc1cd3827f6cc3590b0428d9aa3d0857ff01ef95aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22A3uwqsxrML6GFrQ9K7w_VnvvQUKO4yBG%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Marian\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '58947'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/localitati'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
     'REQUEST_METHOD' => 'GET'
     'QUERY_STRING' => ''
-    'REQUEST_URI' => '/TenisApp/api/web/v1users/login/admin%40cec.ro/1234555'
+    'REQUEST_URI' => '/TenisApp/api/web/v1/localitati'
     'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
     'PHP_SELF' => '/TenisApp/api/web/index.php'
-    'REQUEST_TIME_FLOAT' => 1582994934.004
-    'REQUEST_TIME' => 1582994934
+    'REQUEST_TIME_FLOAT' => 1584106432.023
+    'REQUEST_TIME' => 1584106432
+]
+2020-03-13 13:34:08 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: filterCondition' in D:\wamp64\www\TenisApp\api\modules\v1\models\LocalitatiSearch.php:69
+Stack trace:
+#0 D:\wamp64\www\TenisApp\api\modules\v1\controllers\LocalitatiController.php(69): yii\base\ErrorHandler->handleError()
+#1 D:\wamp64\www\TenisApp\api\modules\v1\controllers\LocalitatiController.php(28): api\modules\v1\models\LocalitatiSearch->search()
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php(108): api\modules\v1\controllers\LocalitatiController->prepareDataProvider()
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php(108): ::call_user_func:{D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php:108}()
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php(82): yii\rest\IndexAction->prepareDataProvider()
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): yii\rest\IndexAction->run()
+#6 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): ::call_user_func_array:{D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php:94}()
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams()
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#11 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#12 {main}
+2020-03-13 13:34:08 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.24.0-beta.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '25c719a7-e060-46eb-96a1-10611748f8fc'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Marian\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '58955'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/localitati'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisApp/api/web/v1/localitati'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584106448.299
+    'REQUEST_TIME' => 1584106448
+]
+2020-03-13 13:36:02 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: filterCondition' in D:\wamp64\www\TenisApp\api\modules\v1\models\LocalitatiSearch.php:73
+Stack trace:
+#0 D:\wamp64\www\TenisApp\api\modules\v1\controllers\LocalitatiController.php(73): yii\base\ErrorHandler->handleError()
+#1 D:\wamp64\www\TenisApp\api\modules\v1\controllers\LocalitatiController.php(28): api\modules\v1\models\LocalitatiSearch->search()
+#2 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php(108): api\modules\v1\controllers\LocalitatiController->prepareDataProvider()
+#3 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php(108): ::call_user_func:{D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php:108}()
+#4 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\rest\IndexAction.php(82): yii\rest\IndexAction->prepareDataProvider()
+#5 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): yii\rest\IndexAction->run()
+#6 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php(94): ::call_user_func_array:{D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Action.php:94}()
+#7 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams()
+#8 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#9 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#10 D:\wamp64\www\TenisApp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#11 D:\wamp64\www\TenisApp\api\web\index.php(22): yii\base\Application->run()
+#12 {main}
+2020-03-13 13:36:02 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.24.0-beta.3'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'cb32ba48-5aaa-4462-9602-ef9b0ee0125f'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\wamp64\\bin\\php\\php7.1.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\;D:\\Genymotion\\tools;C:\\Users\\Marian\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\Marian\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'D:/wamp64/www/TenisApp/api/web/index.php'
+    'REMOTE_PORT' => '58966'
+    'REDIRECT_URL' => '/TenisApp/api/web/v1/localitati'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/TenisApp/api/web/v1/localitati'
+    'SCRIPT_NAME' => '/TenisApp/api/web/index.php'
+    'PHP_SELF' => '/TenisApp/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584106562.068
+    'REQUEST_TIME' => 1584106562
 ]

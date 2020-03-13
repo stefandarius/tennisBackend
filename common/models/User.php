@@ -53,6 +53,7 @@ class User extends ActiveRecord implements IdentityInterface {
         return [
             ['status', 'default', 'value' => self::STATUS_INACTIVE],
             [['email'], 'unique'],
+            ['email','email'],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_INACTIVE, self::STATUS_DELETED]],
         ];
     }
@@ -201,6 +202,11 @@ class User extends ActiveRecord implements IdentityInterface {
     public function getRol() {
         return $this->hasOne(\backend\models\AuthItem::className(), 
                 ['name' => 'item_name'])->viaTable('auth_assignment', ['user_id' => 'id']);
+    }
+    
+    public function getProfil() {
+        return $this->hasOne(\backend\models\Profil::className(),
+                ['user' => 'id']);
     }
 
 }
