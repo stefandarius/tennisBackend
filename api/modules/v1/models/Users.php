@@ -54,7 +54,7 @@ class Users extends UR {
         unset($fields['created_at']);
         unset($fields['updated_at']);
         unset($fields['verification_token']);
-        if ($this->type === 'antrenor') {
+        if ($this->getRol()->one()->name === 'antrenor') {
             $fields['sportivi'] = function($model) {
 
                 return Sportivi::find()
@@ -62,8 +62,14 @@ class Users extends UR {
                                 ->innerJoin('profil p', 'p.id=ai.antrenor')->where(['p.user' => $model->id])->all();
             };
         }
+        if ($this->getRol()->one()->name === 'sportiv') {
+            $fields['detalii'] = function($model) {
+                return Sportivi::find()->alias('ds')
+                                ->innerJoin('profil p', 'p.id=ds.profil')->where(['p.user' => $model->id])->one();
+            };
+        }
         $fields['rol'] = function($model) {
-            return $model->type;
+            return $model->getRol()->one()->name;
         };
         return $fields;
     }
