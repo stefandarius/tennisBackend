@@ -5,8 +5,6 @@ namespace api\modules\v1\controllers;
 use yii\data\ActiveDataProvider;
 
 class UserController extends BApiController {
-
-    public $modelClass = 'api\modules\v1\models\Users';
 //
 ////    public function behaviors() {
 ////        $behaviors = parent::behaviors();
@@ -132,6 +130,15 @@ class UserController extends BApiController {
     
     protected function disableCheckAccessActions() {
         return ['login','create'];
+    }
+    
+    public function checkAccess($action, $model = null, $params = array()) {
+        if ($action === 'view' || $action === 'update' || $action === 'delete') {
+            /* @var $model \backend\models\Dosar */
+            if ($model->id !== \Yii::$app->user->id) {
+                throw new \yii\web\ForbiddenHttpException('We record all hacking attempts');
+            }
+        }
     }
 
 }

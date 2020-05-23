@@ -107,7 +107,7 @@ return [
             'showScriptName' => false,
             'rules' => [
                 [
-                    'class' => 'yii\rest\UrlRule',
+                    'class' => 'api\modules\v1\rules\CustomUrlRule',
                     'controller' => 'v1/antrenori', // our country api rule,
                     'pluralize' => false,
                     'tokens' => [
@@ -119,7 +119,7 @@ return [
                     //'GET save-dosar/{numar}/{institutie}' => 'save-dosar',
                     'GET lista-sportivi' => 'lista-sportivi', // 'xxxxx' refers to 'actionXxxxx'
                     ],
-                    'except' => ['delete', 'update']
+                    //'except' => ['create']
                 ],
                 [
                     'class' => 'api\modules\v1\rules\CustomUrlRule',
@@ -169,7 +169,7 @@ return [
                         '{tokens}' => '<tokens:>',
                         '{token}' => '<token:[a-zA-Z0-9\\-_]{32}>',
                     ],
-                    'except' => ['update', 'view', 'delete'],
+                    'except' => ['update', 'delete'],
                     'extraPatterns' => [
                         //      'GET block-user/{id}'=>'block-user',
                         //    'GET unblock-user/{id}'=>'unblock-user',
@@ -214,13 +214,13 @@ return [
                     'except' => ['delete', 'update'],
                 ],
                 [
-                    'class' => 'yii\rest\UrlRule',
+                    'class' => 'api\modules\v1\rules\CustomUrlRule',
                     'controller' => 'v1/istoric-antrenament', // our country api rule,
                     'pluralize' => false,
                     'tokens' => [
                         '{id}' => '<id:\\w+>'
                     ],
-                    'except' => ['delete', 'update'],
+                    'except' => ['delete'],
                 ],
             ],
         ]

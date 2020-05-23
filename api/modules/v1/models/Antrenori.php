@@ -16,64 +16,43 @@ namespace api\modules\v1\models;
 use backend\models\Profil as AN;
 
 class Antrenori extends AN {
+
     //put your code here
-    
-    public $nume;
-    public $prenume;
-    public $data_nastere;
-    public $localitate;
-    public $sex;
-    public $telefon;
+//    public $nume;
+//    public $prenume;
+//    public $data_nastere;
+//    public $localitate;
+//    public $sex;
+//    public $telefon;
+//
+//    public function rules() {
+//        $rules = parent::rules();
+//        $rules[] = [['nume', 'prenume', 'data_nastere', 'localitate', 'sex', 'telefon'], 'required'];
+//        $rules[] = [['localitate', 'sex'], 'integer'];
+//        $rules[] = [['adresa'], 'safe'];
+//        return $rules;
+//    }
 
-
-    public function rules() {
-        $rules = parent::rules();
-        $rules[] = [['nume', 'prenume', 'data_nastere', 'localitate', 'sex','telefon'], 'required'];
-        $rules[] = [['localitate', 'sex'], 'integer'];
-        $rules[] = [['adresa'], 'safe'];
-        return $rules;
+    public function beforeSave($insert) {
+        if (parent::beforeSave($insert)) {
+            $this->user = \Yii::$app->user->id;
+//            $this->localitate=10;
+//            var_dump($this);
+//            exit();
+            //    $this->localitate= intval($this->localitate);
+            return true;
+        }
+        return false;
     }
-    
+
     public function fields() {
-        $fields=parent::fields();
-        $fields['localitate']=function($model){
-            return \yii\helpers\ArrayHelper::toArray($model->localitate0, ['backend\models\Localitati' => ['id', 'nume','oras']]);     
-        };
+        $fields = parent::fields();
+//        $fields['localitate'] = function($model) {
+//            return \yii\helpers\ArrayHelper::toArray($model->localitate0, ['backend\models\Localitati' => ['id', 'nume', 'oras']]);
+//        };
+
+       
         return $fields;
     }
-    
-    public function save($runValidation = true, $attributeNames = null) {
-        $newRecord = $this->isNewRecord;
-        $transaction= \Yii::$app->db->beginTransaction();
-        $user = new \common\models\User();
-        $user->email = $this->email;
-        $user->setPassword($this->password);
-        $user->generateAuthKey();
-        $user->status = \common\models\User::STATUS_ACTIVE;
-        $result = $user->save();
-        if($result){
-            $this->user = $user->id;
-        }
-        else{
-            $this->addError($user->errors);
-        }
-        $result = $result && parent::save($runValidation, $attributeNames);
-        if ($newRecord && $result) {
-            $authAssignment = new \backend\models\AuthAssignment(
-                    ['item_name' => \backend\models\AuthItem::ROL_ANTRENOR,
-                'user_id' => strval($user->id), 'created_at' => time()]);
-            if(!$authAssignment->save()) {
-           // $authAssignment->validate();
-                $this->addError($authAssignment->errors);
-                $result = false;
-            }
-        }
-        if($result){
-            $transaction->commit();
-        }
-        else{
-            $transaction->rollBack();
-        }
-        return $result;
-    }
+
 }

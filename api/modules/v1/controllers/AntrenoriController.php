@@ -21,9 +21,9 @@ class AntrenoriController extends BApiController{
         $this->modelClass= '\api\modules\v1\models\Antrenori';
     }
     
-    protected function disableCheckAccessActions() {
-        return ['index','create'];
-    }
+//    protected function disableCheckAccessActions() {
+//        return ['index','create'];
+//    }
     
     public function actionListaSportivi() {
         return Sportivi::find()

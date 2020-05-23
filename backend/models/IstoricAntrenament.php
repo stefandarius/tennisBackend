@@ -9,17 +9,15 @@ use Yii;
  *
  * @property int $id
  * @property int $antrenor_id
- * @property int $abonamentSpotiv_id
+ * @property int $sportiv_id
  * @property int $tipAntrenament_id
  * @property int $grad_dificultate
  * @property int $rating
  * @property string $data_antrenament
- * @property string $descriere
- * @property int $created_at
  *
- * @property AbonamenteSportivi $abonamentSpotiv
- * @property TipAntrenament $tipAntrenament
  * @property Profil $antrenor
+ * @property Profil $sportiv
+ * @property TipAntrenament $tipAntrenament
  */
 class IstoricAntrenament extends \yii\db\ActiveRecord {
 
@@ -35,14 +33,24 @@ class IstoricAntrenament extends \yii\db\ActiveRecord {
      */
     public function rules() {
         return [
-            [['tipAntrenament_id', 'data_antrenament'], 'required'],
-            [['antrenor_id', 'abonamentSpotiv_id', 'tipAntrenament_id', 'grad_dificultate', 'rating', 'created_at'], 'integer'],
-            [['data_antrenament', 'grad_dificultate', 'rating'], 'safe'],
-            [['descriere'], 'string', 'max' => 500],
-            //[['abonamentSpotiv_id'], 'exist', 'skipOnError' => true, 'targetClass' => AbonamenteSportivi::className(), 'targetAttribute' => ['abonamentSpotiv_id' => 'id']],
-            [['tipAntrenament_id'], 'exist', 'skipOnError' => true, 'targetClass' => TipAntrenament::className(), 'targetAttribute' => ['tipAntrenament_id' => 'id']],
+            [['antrenor_id', 'sportiv_id', 'tipAntrenament_id', 'grad_dificultate', 'data_antrenament'], 'required'],
+            [['antrenor_id', 'sportiv_id', 'tipAntrenament_id', 'grad_dificultate', 'rating'], 'integer'],
+            ['sportiv_id', 'validateSportiv'],
+            [['data_antrenament'], 'safe'],
+            [['data_antrenament'], 'datetime', 'format' => 'php:d.m.Y H:i:s'],
             [['antrenor_id'], 'exist', 'skipOnError' => true, 'targetClass' => Profil::className(), 'targetAttribute' => ['antrenor_id' => 'id']],
+            [['sportiv_id'], 'exist', 'skipOnError' => true, 'targetClass' => Profil::className(), 'targetAttribute' => ['sportiv_id' => 'id']],
+            [['tipAntrenament_id'], 'exist', 'skipOnError' => true, 'targetClass' => TipAntrenament::className(), 'targetAttribute' => ['tipAntrenament_id' => 'id']],
         ];
+    }
+
+    public function validateSportiv($attribute, $params, $validator) {
+        if (is_null(\backend\models\AntrenoriSportivi::findOne(['antrenor' => \Yii::$app->user->identity->profil->id,
+                            'sportiv' => $this->$attribute]))) {
+            $validator->addError($this, $attribute, 'Acest sportiv nu este asociat acestui antrenor');
+            return false;
+        }
+        return true;
     }
 
     /**
@@ -52,28 +60,12 @@ class IstoricAntrenament extends \yii\db\ActiveRecord {
         return [
             'id' => 'ID',
             'antrenor_id' => 'Antrenor ID',
-            'abonamentSpotiv_id' => 'Abonament Spotiv ID',
+            'sportiv_id' => 'Sportiv ID',
             'tipAntrenament_id' => 'Tip Antrenament ID',
             'grad_dificultate' => 'Grad Dificultate',
             'rating' => 'Rating',
             'data_antrenament' => 'Data Antrenament',
-            'descriere' => 'Descriere',
-            'created_at' => 'Created At',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getAbonamentSpotiv() {
-        return $this->hasOne(AbonamenteSportivi::className(), ['id' => 'abonamentSpotiv_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getTipAntrenament() {
-        return $this->hasOne(TipAntrenament::className(), ['id' => 'tipAntrenament_id']);
     }
 
     /**
@@ -81,6 +73,20 @@ class IstoricAntrenament extends \yii\db\ActiveRecord {
      */
     public function getAntrenor() {
         return $this->hasOne(Profil::className(), ['id' => 'antrenor_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSportiv() {
+        return $this->hasOne(Profil::className(), ['id' => 'sportiv_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getTipAntrenament() {
+        return $this->hasOne(TipAntrenament::className(), ['id' => 'tipAntrenament_id']);
     }
 
 }

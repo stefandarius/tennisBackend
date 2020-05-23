@@ -24,7 +24,7 @@ use Yii;
 class Profil extends \yii\db\ActiveRecord {
 
     public $judet;
-    
+
     /**
      * {@inheritdoc}
      */
@@ -53,7 +53,7 @@ class Profil extends \yii\db\ActiveRecord {
             [['telefon'], 'unique'],
             [['adresa'], 'string', 'max' => 150],
             [['localitate'], 'exist', 'skipOnError' => true, 'targetClass' => Localitati::className(), 'targetAttribute' => ['localitate' => 'id']],
-            //[['user'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user' => 'id']],
+                //[['user'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user' => 'id']],
         ];
     }
 
@@ -97,10 +97,14 @@ class Profil extends \yii\db\ActiveRecord {
         $fields['localitateText'] = function($model) {
             return $model->localitate0->nume;
         };
+        //unset($fields['localitate']);
+        $fields['judet'] = function($model) {
+            return $model->localitate0->judet;
+        };
         $fields['data_nastere'] = function($model) {
             return sprintf('%s', \backend\components\ProjectUtils::formatedDate($model->data_nastere));
         };
-        \backend\components\ProjectUtils::unsetFields($fields, ['id', 'user']);
+        \backend\components\ProjectUtils::unsetFields($fields, ['user']);
         return $fields;
     }
 

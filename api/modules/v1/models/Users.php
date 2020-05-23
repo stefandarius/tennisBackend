@@ -68,6 +68,12 @@ class Users extends UR {
                                 ->innerJoin('profil p', 'p.id=ds.profil')->where(['p.user' => $model->id])->one();
             };
         }
+        if($this->getRol()->one()->name==='antrenor'){
+            //var_dump('here');
+             $fields['detalii'] = function($model) {
+                return ['profil'=>Antrenori::find()->alias('p')->where(['p.user' => $model->id])->one()];
+            };
+        }
         $fields['rol'] = function($model) {
             return $model->getRol()->one()->name;
         };

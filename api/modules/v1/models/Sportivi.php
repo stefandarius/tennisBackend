@@ -24,10 +24,9 @@ class Sportivi extends SP {
     public $sex;
     public $telefon;
 
-
     public function rules() {
         $rules = parent::rules();
-        $rules[] = [['nume', 'prenume', 'data_nastere', 'localitate', 'sex','telefon'], 'required'];
+        $rules[] = [['nume', 'prenume', 'data_nastere', 'localitate', 'sex', 'telefon'], 'required'];
         $rules[] = [['localitate', 'sex'], 'integer'];
         $rules[] = [['adresa'], 'safe'];
         return $rules;
@@ -42,31 +41,29 @@ class Sportivi extends SP {
         $transaction = \Yii::$app->db->beginTransaction();
         $result = true;
         $profil = new \backend\models\Profil();
-        if(!$newRecord){
-            $profil= $this->profil0;  
-        }
-        else{
-            if(\Yii::$app->user->can('sportiv'))
-            $profil->user= \Yii::$app->user->id;
+        if (!$newRecord) {
+            $profil = $this->profil0;
+        } else {
+            if (\Yii::$app->user->can('sportiv'))
+                $profil->user = \Yii::$app->user->id;
         }
         $profil->attributes = \backend\components\ProjectUtils::getPublicAttributesAndValues($this, \yii\base\Model::attributes());
-        
+        $profil->gen = $this->sex;
         if ($profil->save()) {
             $result = true;
         } else {
             $result = false;
             $this->addErrors($profil->errors);
         }
-        if($newRecord && $result){
-            $this->profil=$profil->id;
+        if ($newRecord && $result) {
+            $this->profil = $profil->id;
         }
         $result = $result && parent::save($runValidation, $attributeNames);
-        if(\Yii::$app->user->can('antrenor')){
+        if (\Yii::$app->user->can('antrenor')) {
             $antrenor_sportiv = new \backend\models\AntrenoriSportivi();
             $antrenor_sportiv->antrenor = \Yii::$app->user->identity->profil->id;
             $antrenor_sportiv->sportiv = $this->profil;
-            $result= ($result && $antrenor_sportiv->save());
-            
+            $result = ($result && $antrenor_sportiv->save());
         }
         if ($result) {
             $transaction->commit();
@@ -81,12 +78,13 @@ class Sportivi extends SP {
         $fields['nivelText'] = function($model) {
             return $model->nivel0->nume;
         };
-        $fields['profil']=function($model){
-            return \yii\helpers\ArrayHelper::toArray($model->profil0, ['backend\models\Profil' => []]);     
+        $fields['profil'] = function($model) {
+            return \yii\helpers\ArrayHelper::toArray($model->profil0, ['backend\models\Profil' => []]);
         };
         $fields['stareSanatateText'] = function($model) {
             return $model->stareSanatate->nume;
         };
+
         return $fields;
     }
 
